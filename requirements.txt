@@ -1,7 +1,7 @@
 pip~=23.0.1
 amqp~=5.2.0
 vine~=5.1.0
-Django~=5.0.1
+Django~=4.2.9
 kombu~=5.3.5
 billiard~=4.2.0
 celery~=5.3.6
@@ -12,3 +12,4 @@ sqlparse~=0.4.4
 wcwidth~=0.2.13
 six~=1.16.0
 setuptools~=66.1.1
+django-celery-beat~=2.5.0
