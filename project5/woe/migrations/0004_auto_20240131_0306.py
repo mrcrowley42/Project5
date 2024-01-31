@@ -3,13 +3,18 @@ import csv
 from django.db import migrations, models
 import os
 
+_source = apps.get_model("woe", "Source")
+ _observation = apps.get_model("woe", "Observation")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def populate_observations(apps, schema_editor):
+    for value in [2,6,3,5]:
+        obs = _observation()
+        obs.location = _source(value)
+        obs.save()
+        
 
 def populate_sources(apps, schema_editor):
-    """
-        Function to populate the sources table.
-    """
-    _source = apps.get_model("woe", "Source")
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     with open(os.path.join(BASE_DIR, '../../data/Source.csv')) as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for line in reader:
@@ -28,4 +33,5 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RunPython(populate_sources),
+        migrations.RunPython(populate_observations)
     ]
