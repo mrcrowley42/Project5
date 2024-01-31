@@ -10,7 +10,7 @@ a single CSV with a header that is de-duplicated
 At the command line the first argument is the path to the folder containing the inputs
 At the command line the second argument is the name of the output CSV file 
 Example
-python main.py "./data_folder" test2.csv 
+python json_to_csv.py "./data_folder" test2.csv 
 """
 
 
@@ -85,12 +85,16 @@ def duplicated_check(row):
 
 
 def enumerate_files(path):
+    """
+    Find the contents of the path. Don't use wildcards. Non JSON files will be ignored
+    returns: list of files by name in the folder including those that are not JSON
+    """
     # Get the list of all files and directories
     dir_list = os.listdir(path)
     return dir_list
 
 
-# Press the green button in the gutter to run the script.
+# Only to be run from the command line
 if __name__ == '__main__':
     print(f"Arguments count: {len(sys.argv)}")
     for i, arg in enumerate(sys.argv):
