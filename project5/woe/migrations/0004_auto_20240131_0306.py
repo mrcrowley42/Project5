@@ -6,14 +6,13 @@ import os
 
 def populate_sources(apps, schema_editor):
     """
-        Function to populate sources table.
+        Function to populate the sources table.
     """
-    # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    # with open(os.path.join(BASE_DIR, '../../data/Source.csv')) as csvfile:
-    with open("../../../data/Source.csv") as csvfile:
+    _source = apps.get_model("woe", "Source")
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    with open(os.path.join(BASE_DIR, '../../data/Source.csv')) as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for line in reader:
-            _source = apps.get_model("woe", "Source")
             source = _source()
             source.name = line[0]
             source.wmo_id = line[1]
