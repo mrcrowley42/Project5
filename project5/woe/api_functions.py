@@ -1,6 +1,15 @@
 import requests, json
+from models import Observation, Source
+
+# export DJANGO_SETTINGS_MODULE=project5.settings
 
 TEST_URL = "https://reg.bom.gov.au/fwo/IDN60903/IDN60903.94926.json"
+
+
+def retrieve_urls():
+    pass
+
+    # return urls
 
 
 def pull_data(url):

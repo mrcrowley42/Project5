@@ -14,7 +14,8 @@ class Observation(models.Model):
     """ Defines the Observations table."""
 
     sort_order = models.IntegerField(default=None, blank=True, null=True)
-    wmo = models.CharField(max_length=255, default=None, blank=True, null=True)
+    wmo = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
+    # wmo = models.CharField(max_length=255, default=None, blank=True, null=True)
     name = models.CharField(max_length=255, default=None, blank=True, null=True)
     history_product = models.CharField(max_length=255, default=None, blank=True, null=True)
     local_date_time = models.DateTimeField(default=None, blank=True, null=True)

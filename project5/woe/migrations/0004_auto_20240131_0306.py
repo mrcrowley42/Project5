@@ -31,7 +31,8 @@ def populate_observations(apps, schema_editor):
         for observation in dataset:
             obs = Observation()
             obs.sort_order = observation['sort_order']
-            obs.wmo = observation['wmo']
+            obs.wmo = Source(observation['wmo'])
+            # obs.wmo = observation['wmo']
             obs.name = observation['name']
             obs.history_product = observation['history_product']
             # obs.local_date_time = observation['local_date_time']
