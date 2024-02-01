@@ -15,7 +15,15 @@ def grab_data():
         with open(file) as fh:
             data = json.load(fh)
             data_collection.append([line for line in data['observations']['data']])
-    return data_collection
+
+    deduplicated_data = []
+    for dataset in data_collection:
+        for observation in dataset:
+            # ITS THE SORT ORDER COLUMN  THAT'S THE PROBLEM!!!!
+            if observation not in deduplicated_data:
+                deduplicated_data.append(observation)
+
+    return deduplicated_data
 
 
 def populate_observations(apps, schema_editor):
@@ -27,25 +35,25 @@ def populate_observations(apps, schema_editor):
     Observation = apps.get_model("woe", "Observation")
 
     data_collection = grab_data()
-    for dataset in data_collection:
-        for observation in dataset:
-            obs = Observation()
 
-            # obs.wmo = Source(observation['wmo'])
-            obs.wmo = observation['wmo']
-            obs.local_date_time_full = observation['local_date_time_full']
-            obs.air_temp = observation['air_temp']
-            obs.dewpt = observation['dewpt']
-            obs.wind_dir = observation['wind_dir']
-            obs.wind_spd_kmh = observation['wind_spd_kmh']
-            obs.save()
+    for observation in data_collection:
+        obs = Observation()
+
+        # obs.wmo = Source(observation['wmo'])
+        obs.wmo = observation['wmo']
+        obs.local_date_time_full = observation['local_date_time_full']
+        obs.air_temp = observation['air_temp']
+        obs.dewpt = observation['dewpt']
+        obs.wind_dir = observation['wind_dir']
+        obs.wind_spd_kmh = observation['wind_spd_kmh']
+        obs.save()
 
     # for value in [2, 6, 3, 5]:
     #     obs = Observation()
     #     obs.wmo = Source(value)
     #     obs.name = "canberra"
     #     obs.save()
-        
+
 
 def populate_sources(apps, schema_editor):
     """
@@ -63,7 +71,6 @@ def populate_sources(apps, schema_editor):
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('woe', '0001_initial'),
     ]
