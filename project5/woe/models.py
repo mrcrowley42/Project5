@@ -12,4 +12,14 @@ class Source(models.Model):
 
 class Observation(models.Model):
     """ Defines the Observations table."""
-    location = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
+    # temp wind speed, direciton dewpoint.
+    # wmo = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
+    wmo = models.CharField(max_length=255, default=None, blank=True, null=True)
+    local_date_time_full = models.IntegerField(default=None, blank=True, null=True)
+    air_temp = models.FloatField(max_length=255, default=None, blank=True, null=True)
+    dewpt = models.FloatField(max_length=255, default=None, blank=True, null=True)
+    wind_dir = models.CharField(max_length=255, default=None, blank=True, null=True)
+    wind_spd_kmh = models.IntegerField(default=None, blank=True, null=True)
+
+
+    # location = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
