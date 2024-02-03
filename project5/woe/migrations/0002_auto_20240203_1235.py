@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Establ
 def grab_data():
     """Returns a deduplicated list of dictionary objects representing the json data of a single observation.
     Json data is imported from the data folder."""
-    
+
     files = glob.glob(os.path.join(BASE_DIR, '../../data/*.json'))
     data_collection = []
     for file in files:
@@ -27,17 +27,14 @@ def grab_data():
 
 def populate_observations(apps, schema_editor):
     """Function to populate the Observations table with data returned by the grab_data function."""
-
     Source = apps.get_model("woe", "Source")
     Observation = apps.get_model("woe", "Observation")
-
+    wmo_dict = create_wmo_dict(apps, schema_editor)
     data_collection = grab_data()
 
     for observation in data_collection:
         obs = Observation()
-
-        # obs.wmo = Source(observation['wmo'])
-        obs.wmo = observation['wmo']
+        obs.wmo = wmo_dict[observation['wmo']]
         obs.local_date_time_full = observation['local_date_time_full']
         obs.air_temp = observation['air_temp']
         obs.dewpt = observation['dewpt']
@@ -50,6 +47,14 @@ def populate_observations(apps, schema_editor):
     #     obs.wmo = Source(value)
     #     obs.name = "canberra"
     #     obs.save()
+
+
+def create_wmo_dict(apps, schema_editor):
+    Source = apps.get_model("woe", "Source")
+    wmo_dict = dict()
+    for source in Source.objects.all():
+        wmo_dict[int(source.wmo_id)] = source
+    return wmo_dict
 
 
 def populate_sources(apps, schema_editor):
