@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Source(models.Model):
     """ Defines the Sources Table"""
@@ -25,8 +23,6 @@ class Observation(models.Model):
     wind_spd_kmh = models.IntegerField(default=None, blank=True, null=True)
 
     def __str__(self):
-
         return f"Observation object. Temperature:{self.air_temp}"
-
 
     # location = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
