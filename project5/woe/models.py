@@ -10,7 +10,7 @@ class Source(models.Model):
 
     def __str__(self):
         """Returns a basic string representation of object."""
-        return f"Source object. url:{self.url}"
+        return f"Source object: [url:{self.url}, name: {self.name}]"
 
 
 class Observation(models.Model):
@@ -28,4 +28,5 @@ class Observation(models.Model):
 
     def is_duplicate(self):
         """Returns an MD5 hash of important fields."""
-        return md5(f"{self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}".encode()).hexdigest()
+        important_fields = f"{self.wmo}, {self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
+        return md5(important_fields.encode()).hexdigest()
