@@ -14,3 +14,4 @@ six~=1.16.0
 setuptools~=66.1.1
 django-celery-beat~=2.5.0
 requests~=2.31.0
+django_extensions~=3.2.3
