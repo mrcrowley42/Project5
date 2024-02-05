@@ -1,11 +1,5 @@
 import requests
-from woe.models import Source, Observation
-
-
-TEST_URL = "https://reg.bom.gov.au/fwo/IDN60903/IDN60903.94926.json"
-
-
-# !!! PYCHARM DOESN'T LIKE THE IMPORT PATH, BUT DJANGO DOES
+from woe.models import Source, Observation  # Ignore this error -_-
 
 
 def create_wmo_dict():
@@ -35,6 +29,7 @@ def enter_observation(observation):
     """Creates a new observation row and populates it using the passed in observation data."""
     obs = Observation()
     # !!! foreign key for wmo id not done yet
+    # !!!!!!!!!!!! currently not setting wmo key and manually leaving it at 2
     # obs.wmo = wmo_dict[observation['wmo']]
     obs.wmo_id = 2
     obs.local_date_time_full = observation['local_date_time_full']
@@ -42,15 +37,20 @@ def enter_observation(observation):
     obs.dewpt = observation['dewpt']
     obs.wind_dir = observation['wind_dir']
     obs.wind_spd_kmh = observation['wind_spd_kmh']
-    obs.save()
+    return obs
 
 
 def run():
     """The function that runs when the script is executed."""
-    # !!! WE NEED to check if this data is already in database first, before saving the object.
     urls = retrieve_urls()
+    last_n_entries = [obs.is_duplicate() for obs in Observation.objects.all().order_by('-id')[:len(urls)*2]]
     # wmo_dict = create_wmo_dict()
+
     for url in urls:
         data = pull_data(url)
-        enter_observation(data)
-    print(pull_data(TEST_URL))
+        obs = enter_observation(data)
+        if obs.is_duplicate() not in last_n_entries:
+            obs.save()
+            print("Object saved!")
+        else:
+            print("This entry already exists!")

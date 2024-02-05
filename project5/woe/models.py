@@ -22,3 +22,6 @@ class Observation(models.Model):
 
     def __str__(self):
         return f"Observation object. Temperature:{self.air_temp}"
+
+    def is_duplicate(self):
+        return f"{self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
