@@ -41,9 +41,12 @@ def enter_observation(observation):
 
 
 def run():
-    """The function that runs when the script is executed."""
+    """The function that runs when the script is executed.
+
+    Retrieves the URLs for each source in the database, then pulls the most recent observation for each one.
+    Object is then saved to database if it isn't present in the last 100 entries of the db."""
     urls = retrieve_urls()
-    last_n_entries = [obs.is_duplicate() for obs in Observation.objects.all().order_by('-id')[:len(urls)*2]]
+    last_n_entries = [obs.is_duplicate() for obs in Observation.objects.all().order_by('-id')[:100]]
     # wmo_dict = create_wmo_dict()
 
     for url in urls:
@@ -51,6 +54,6 @@ def run():
         obs = enter_observation(data)
         if obs.is_duplicate() not in last_n_entries:
             obs.save()
-            print("Object saved!")
+            print(f"Object {obs.is_duplicate()} saved!")
         else:
-            print("This entry already exists!")
+            print(f"This entry {obs.is_duplicate()}  already exists!")

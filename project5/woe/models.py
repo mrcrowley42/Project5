@@ -1,4 +1,5 @@
 from django.db import models
+from hashlib import md5
 
 
 class Source(models.Model):
@@ -8,6 +9,7 @@ class Source(models.Model):
     url = models.CharField(max_length=255)
 
     def __str__(self):
+        """Returns a basic string representation of object."""
         return f"Source object. url:{self.url}"
 
 
@@ -21,7 +23,9 @@ class Observation(models.Model):
     wind_spd_kmh = models.IntegerField(default=None, blank=True, null=True)
 
     def __str__(self):
-        return f"Observation object. Temperature:{self.air_temp}"
+        """Returns a basic string representation of object."""
+        return f"Observation object: [Temperature: {self.air_temp}, Dew Point: {self.dewpt}]"
 
     def is_duplicate(self):
-        return f"{self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
+        """Returns an MD5 hash of important fields."""
+        return md5(f"{self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}".encode()).hexdigest()
