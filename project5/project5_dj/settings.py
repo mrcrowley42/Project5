@@ -57,7 +57,7 @@ ROOT_URLCONF = 'project5_dj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['woe.templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
