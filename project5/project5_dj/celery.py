@@ -20,6 +20,6 @@ app.conf.CELERYBEAT_SCHEDULE = {
     },
     'woe_update_data': {
         'task': 'woe.tasks.update_data',
-        'schedule': timedelta(seconds=10),
+        'schedule': timedelta(minutes=15),
     },
 }
