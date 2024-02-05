@@ -2,7 +2,7 @@
 
 ### Follow `SETUP.md` instructions before continuing
 
-Once cloned, run `python manage.py migrate` in the venv (cd into `project5` first) to create and insert required data into the sqlite3 database.
+Once cloned, run `python manage.py migrate` in the venv (cd into `project5_dj` first) to create and insert required data into the sqlite3 database.
 <br><br>
 Run `python manage.py runserver` to start the WOE app.
 <br><br>
@@ -12,4 +12,4 @@ In a separate terminal from the Django server, run `celery -A project5_dj worker
 <br>
 For more output add `-l info`, or `-l debug` to the end of the command.
 <br><br>
-**IMPORTANT:** For production the celery worker and beat should run separately. This can be done by running `celery -A project5 worker`, and `celery -A project5 beat` in two seperate terminals.
+**IMPORTANT:** For production the celery worker and beat should run separately. This can be done by running `celery -A project5_dj worker`, and `celery -A project5_dj beat` in two seperate terminals.
