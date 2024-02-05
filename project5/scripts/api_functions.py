@@ -19,7 +19,7 @@ def retrieve_urls():
 
 
 def pull_data(url):
-    """Function that pulls the first row of data from the BOM API for the given URL and return that row."""
+    """Function that pulls the first row of data from the BOM API for the given URL, and returns that row."""
     api_data = requests.get(url).json()
     data_set = [line for line in api_data['observations']['data']][0]
     return data_set
@@ -44,14 +44,14 @@ def run():
     Retrieves the URLs for each source in the database, then pulls the most recent observation for each one.
     Object is then saved to database if it isn't present in the last 100 entries of the db."""
     urls = retrieve_urls()
-    last_n_entries = [obs.is_duplicate() for obs in Observation.objects.all().order_by('-id')[:100]]
+    last_n_entries = [obs.md5_hash() for obs in Observation.objects.all().order_by('-id')[:100]]
     wmo_dict = create_wmo_dict()
 
     for url in urls:
         data = pull_data(url)
         obs = enter_observation(data, wmo_dict)
-        if obs.is_duplicate() not in last_n_entries:
+        if obs.md5_hash() not in last_n_entries:
             obs.save()
-            print(f"Object {obs.is_duplicate()} saved!")
+            print(f"Object {obs.md5_hash()} saved!")
         else:
-            print(f"This entry {obs.is_duplicate()}  already exists!")
+            print(f"This entry {obs.md5_hash()}  already exists!")

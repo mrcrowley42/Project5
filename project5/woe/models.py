@@ -12,6 +12,11 @@ class Source(models.Model):
         """Returns a basic string representation of object."""
         return f"Source object: [url:{self.url}, name: {self.name}]"
 
+    def md5_hash(self):
+        """Returns an MD5 hash of important fields."""
+        important_fields = f"{self.wmo_id}, {self.name}, {self.url}"
+        return md5(important_fields.encode()).hexdigest()
+
 
 class Observation(models.Model):
     """ Defines the Observations table."""
@@ -26,7 +31,7 @@ class Observation(models.Model):
         """Returns a basic string representation of object."""
         return f"Observation object: [Temperature: {self.air_temp}, Dew Point: {self.dewpt}]"
 
-    def is_duplicate(self):
+    def md5_hash(self):
         """Returns an MD5 hash of important fields."""
         important_fields = f"{self.wmo}, {self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
         return md5(important_fields.encode()).hexdigest()
