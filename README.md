@@ -8,7 +8,7 @@ Run `python manage.py runserver` to start the WOE app.
 <br><br>
 `Celery` and `Celery Beat` is used to update the database every X mins with new data from the API.
 <br>
-In a separate terminal from the Django server, run `celery -A project5 worker -B` to start the worker and the beat together.
+In a separate terminal from the Django server, run `celery -A project5_dj worker -B` to start the worker and the beat together.
 <br>
 For more output add `-l info`, or `-l debug` to the end of the command.
 <br><br>

@@ -4,9 +4,9 @@ from celery import Celery
 from datetime import timedelta
 
 # Set the default Django settings module for the 'celery' program.
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project5.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project5_dj.settings')
 
-app = Celery('project5')
+app = Celery('project5_dj')
 
 # Set namespace to use in settings.py (CELERY_X)
 app.config_from_object('django.conf:settings', namespace='CELERY')
@@ -16,10 +16,10 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 app.conf.CELERYBEAT_SCHEDULE = {
     'woe_debug_task': {
         'task': 'woe.tasks.debug_task',
-        'schedule': timedelta(minutes=1),
+        'schedule': timedelta(hours=1),
     },
     'woe_update_data': {
         'task': 'woe.tasks.update_data',
-        'schedule': timedelta(minutes=15),
+        'schedule': timedelta(seconds=10),
     },
 }
