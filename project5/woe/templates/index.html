@@ -1,1 +1,12 @@
 INDEX PAGE HTML IN HERE
+<br><br>
+
+<h2>Observations:</h2>
+
+<ul>
+    {% for obs in observations %}
+        <li>{{ obs.air_temp }}</li>
+    {% endfor %}
+</ul>
+
+
