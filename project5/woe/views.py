@@ -10,4 +10,4 @@ from .models import Source, Observation
 
 
 def index(request):
-    return render(request, 'templates/index.html')
+    return render(request, 'index.html')
