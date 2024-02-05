@@ -53,6 +53,4 @@ def run():
     for url in urls:
         data = pull_data(url)
         enter_observation(data)
-
-
-print(pull_data(TEST_URL))
+    print(pull_data(TEST_URL))
