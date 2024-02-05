@@ -36,7 +36,7 @@ def enter_observation(observation):
     obs = Observation()
     # !!! foreign key for wmo id not done yet
     # obs.wmo = wmo_dict[observation['wmo']]
-    obs.wmo = 2
+    obs.wmo_id = 2
     obs.local_date_time_full = observation['local_date_time_full']
     obs.air_temp = observation['air_temp']
     obs.dewpt = observation['dewpt']
@@ -53,6 +53,4 @@ def run():
     for url in urls:
         data = pull_data(url)
         enter_observation(data)
-
-
-print(pull_data(TEST_URL))
+    print(pull_data(TEST_URL))
