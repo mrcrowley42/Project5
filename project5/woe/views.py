@@ -10,4 +10,5 @@ from .models import Source, Observation
 
 
 def index(request):
-    return render(request, 'index.html')
+    context = {'observations': Observation.objects.all()}
+    return render(request, 'index.html', context)
