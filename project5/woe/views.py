@@ -1,5 +1,6 @@
 import json
 
+import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
@@ -33,5 +34,7 @@ def user_request(request):
     wmo = request.GET.get('wmo')
 
     if wmo:
-        data = serializers.serialize('json', Observation.objects.all().filter(wmo=wmo))
+        data = Observation.objects.all().filter(wmo=wmo)
+
+    data = serializers.serialize('json', data)
     return JsonResponse(json.loads(data), safe=False)
