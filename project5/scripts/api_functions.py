@@ -1,5 +1,7 @@
 import requests
+import logging
 from woe.models import Source, Observation  # Ignore this error -_-
+from logging_module import logging_script  # And this one
 
 
 def create_wmo_dict():
@@ -52,6 +54,7 @@ def run():
         obs = enter_observation(data, wmo_dict)
         if obs.md5_hash() not in last_n_entries:
             obs.save()
-            print(f"Object {obs.md5_hash()} saved!")
+            logging_script.log(obs.md5_hash(), logging.DEBUG)
+            # print(f"Object {obs.md5_hash()} saved!")
         else:
             print(f"This entry {obs.md5_hash()}  already exists!")

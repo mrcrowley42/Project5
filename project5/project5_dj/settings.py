@@ -132,3 +132,6 @@ CELERY_TIMEZONE = "Australia/Canberra"
 CELERY_IMPORTS = (
     "woe.tasks",
 )
+
+DEBUG_LEVEL = 'debug'
+LOGGING_OUTPUT_PATH = "example.log"
