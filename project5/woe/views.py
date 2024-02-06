@@ -8,9 +8,9 @@ from .models import Source, Observation
 
 
 def index(request):
+    locations = [source.name for source in Source.objects.all()]
     context = {
-        'observations': Observation.objects.all(),
-        'locations': ['Canberra', 'Batemans Bay']
+        'locations': locations
     }
     return render(request, 'index.html', context)
 

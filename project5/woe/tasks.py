@@ -1,15 +1,10 @@
 from celery import shared_task
-from scripts.api_functions import run
-
-
-@shared_task
-def debug_task():
-    print("WOE debug: tasks working")
-    return True
+from scripts import api_functions
 
 
 @shared_task
 def update_data():
     print("Updating data!")
-    run()
+    # Update the data via scripts.api_functions
+    api_functions.run()
     return True
