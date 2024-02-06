@@ -1,17 +1,18 @@
 from django.db import models
 from hashlib import md5
-from logging_module import logging_script
+from logging_module import logging_script  # Mysterious namespace issue just ignore for now.
 import logging
 
 
 class Source(models.Model):
-    """ Defines the Sources Table"""
+    """ Defines the Sources Table.
+    Contains the relevant information for each BOM datasource; the name of location, its wmo id and the url."""
     name = models.CharField(max_length=255)
     wmo_id = models.CharField(max_length=255)
     url = models.CharField(max_length=255)
 
     def __str__(self):
-        """Returns a basic string representation of object."""
+        """Returns a string representation of object."""
         return f"Source object: [name: {self.name}, url:{self.url}, wmo_id: {self.wmo_id}]"
 
     def md5_hash(self):
@@ -20,6 +21,7 @@ class Source(models.Model):
         return md5(important_fields.encode()).hexdigest()
 
     def save(self, *args, **kwargs):
+        """Override django save method to log the save event."""
         logging_script.log(f"{str(self)} added to database", logging.INFO)
         super(Source, self).save(*args, **kwargs)
 
@@ -34,7 +36,7 @@ class Observation(models.Model):
     wind_spd_kmh = models.IntegerField(default=None, blank=True, null=True)
 
     def __str__(self):
-        """Returns a basic string representation of object."""
+        """Returns a string representation of object."""
         return f"Observation object: [Temperature: {self.air_temp}, Dew Point: {self.dewpt}]"
 
     def md5_hash(self):
@@ -43,5 +45,6 @@ class Observation(models.Model):
         return md5(important_fields.encode()).hexdigest()
 
     def save(self, *args, **kwargs):
+        """Override django save method to log the save event."""
         logging_script.log(f"{str(self)} added to database", logging.INFO)
         super(Observation, self).save(*args, **kwargs)
