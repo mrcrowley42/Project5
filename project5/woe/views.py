@@ -6,9 +6,20 @@ from django.template import loader
 
 from .models import Source, Observation
 
-# Create your views here.
-
 
 def index(request):
-    context = {'observations': Observation.objects.all()}
+    locations = [source.name for source in Source.objects.all()]
+    context = {
+        'locations': locations
+    }
     return render(request, 'index.html', context)
+
+
+def admin(request):
+    context = {}
+    return render(request, 'admin.html', context)
+
+
+def dev_page(request):
+    context = {}
+    return render(request, 'dev.html', context)

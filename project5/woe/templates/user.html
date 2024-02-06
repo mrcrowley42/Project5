@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+
+</head>
+<body>
+    <select id="location_select" name="location_dropdown" onchange="doStuff()">
+        {% for loc in locations %}
+        <option value="{{loc}}">{{loc}}</option>
+        {% endfor %}
+    </select>
+</body>
+</html>

@@ -14,10 +14,6 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Setup tasks
 app.conf.CELERYBEAT_SCHEDULE = {
-    'woe_debug_task': {
-        'task': 'woe.tasks.debug_task',
-        'schedule': timedelta(seconds=10),
-    },
     'woe_update_data': {
         'task': 'woe.tasks.update_data',
         'schedule': timedelta(minutes=15),

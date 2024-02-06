@@ -20,5 +20,8 @@ from woe import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('admin/', admin.site.urls),
+    path('admin/', views.admin, name='admin'),
+    path('dev/', views.dev_page, name='dev_page'),
+
+    path('django_admin/', admin.site.urls),
 ]
