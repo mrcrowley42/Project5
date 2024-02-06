@@ -54,7 +54,5 @@ def run():
         obs = enter_observation(data, wmo_dict)
         if obs.md5_hash() not in last_n_entries:
             obs.save()
-            logging_script.log(obs.md5_hash(), logging.DEBUG)
-            # print(f"Object {obs.md5_hash()} saved!")
         else:
-            print(f"This entry {obs.md5_hash()}  already exists!")
+            logging_script.log(f"Entry {str(obs)} already exists", logging.DEBUG)

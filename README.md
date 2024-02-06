@@ -13,3 +13,9 @@ In a separate terminal from the Django server, run `celery -A project5_dj worker
 For more output add `-l info`, or `-l debug` to the end of the command.
 <br><br>
 **IMPORTANT:** For production the celery worker and beat should run separately. This can be done by running `celery -A project5_dj worker`, and `celery -A project5_dj beat` in two seperate terminals.
+
+### Inside the Django settings file there are the following settings
+
+'DEBUG_LEVEL' *Defines the default logging level.*
+<br>
+'LOGGING_OUTPUT_PATH' *The location to output the log file "example.log"*

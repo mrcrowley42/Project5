@@ -1,5 +1,7 @@
 from django.db import models
 from hashlib import md5
+from logging_module import logging_script
+import logging
 
 
 class Source(models.Model):
@@ -10,12 +12,16 @@ class Source(models.Model):
 
     def __str__(self):
         """Returns a basic string representation of object."""
-        return f"Source object: [url:{self.url}, name: {self.name}]"
+        return f"Source object: [name: {self.name}, url:{self.url}, wmo_id: {self.wmo_id}]"
 
     def md5_hash(self):
         """Returns an MD5 hash of important fields."""
         important_fields = f"{self.wmo_id}, {self.name}, {self.url}"
         return md5(important_fields.encode()).hexdigest()
+
+    def save(self, *args, **kwargs):
+        logging_script.log(f"{str(self)} added to database", logging.INFO)
+        super(Source, self).save(*args, **kwargs)
 
 
 class Observation(models.Model):
@@ -35,3 +41,7 @@ class Observation(models.Model):
         """Returns an MD5 hash of important fields."""
         important_fields = f"{self.wmo}, {self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
         return md5(important_fields.encode()).hexdigest()
+
+    def save(self, *args, **kwargs):
+        logging_script.log(f"{str(self)} added to database", logging.INFO)
+        super(Observation, self).save(*args, **kwargs)
