@@ -6,12 +6,11 @@ from django.template import loader
 
 from .models import Source, Observation
 
-# Create your views here.
-
 
 def index(request):
     context = {
         'observations': Observation.objects.all(),
+        'locations': ['Canberra', 'Batemans Bay']
     }
     return render(request, 'index.html', context)
 
