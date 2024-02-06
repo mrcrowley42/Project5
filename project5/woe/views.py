@@ -12,3 +12,13 @@ from .models import Source, Observation
 def index(request):
     context = {'observations': Observation.objects.all()}
     return render(request, 'index.html', context)
+
+
+def admin(request):
+    context = {}
+    return render(request, 'admin.html', context)
+
+
+def developer_page(request):
+    context = {}
+    return render(request, 'dev.html', context)
