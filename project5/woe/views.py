@@ -1,14 +1,17 @@
-from django.http import HttpResponseRedirect, HttpResponse
+import json
+
+from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from django.template import loader
+from django.core import serializers
 
 from .models import Source, Observation
 
 
 def index(request):
-    locations = [source.name for source in Source.objects.all()]
+    locations = [{'id': source.id, 'location': source.name} for source in Source.objects.all()]
     context = {
         'locations': locations
     }
@@ -23,3 +26,12 @@ def admin(request):
 def dev_page(request):
     context = {}
     return render(request, 'dev.html', context)
+
+
+def user_request(request):
+    data = {}
+    wmo = request.GET.get('wmo')
+
+    if wmo:
+        data = serializers.serialize('json', Observation.objects.all().filter(wmo=wmo))
+    return JsonResponse(json.loads(data), safe=False)
