@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
+    <script src="static/woe/WOE_JS.js"></script>
 </head>
 <body>
 
@@ -16,6 +17,20 @@ INDEX / USER PAGE STUFF IN HERE
     <br>
     <a href="dev">dev</a>
 </div>
+
+<h2>Observations:</h2>
+
+<ul>
+    {% for obs in observations %}
+        <li>{{ obs.air_temp }}</li>
+    {% endfor %}
+</ul>
+
+<select id="location_select" name="location_dropdown" onchange="show_selected(document.getElementById('location_select'))">
+    {% for loc in locations %}
+    <option value="{{loc.location}}">{{loc.location}}</option>
+    {% endfor %}
+</select>
 
 </body>
 </html>

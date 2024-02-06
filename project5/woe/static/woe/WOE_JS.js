@@ -62,4 +62,9 @@ function doStuff() {
     graphSpace = document.getElementById("graph_space");
     toggle_visibility(graphSpace);
     create_graph();
-}
+};
+
+function show_selected(element) {
+    console.log(element.value, "selected");
+};
+
