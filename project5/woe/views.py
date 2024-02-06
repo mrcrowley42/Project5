@@ -10,7 +10,9 @@ from .models import Source, Observation
 
 
 def index(request):
-    context = {'observations': Observation.objects.all()}
+    context = {
+        'observations': Observation.objects.all(),
+    }
     return render(request, 'index.html', context)
 
 
@@ -19,6 +21,6 @@ def admin(request):
     return render(request, 'admin.html', context)
 
 
-def developer_page(request):
+def dev_page(request):
     context = {}
     return render(request, 'dev.html', context)
