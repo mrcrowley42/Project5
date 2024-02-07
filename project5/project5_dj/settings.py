@@ -134,4 +134,4 @@ CELERY_IMPORTS = (
 )
 
 DEBUG_LEVEL = 'debug'
-LOGGING_OUTPUT_PATH = "logging_module/logs/woe_log"
+LOGGING_OUTPUT_PATH = "logging_module/logs/"
