@@ -1,7 +1,7 @@
 import requests
 import logging
-from woe.models import Source, Observation  # Ignore this error -_-
-from logging_module import logging_script  # And this one
+from woe.models import Source, Observation
+from logging_module import logging_script
 
 
 def create_wmo_dict() -> dict:
@@ -50,7 +50,12 @@ def run():
     wmo_dict = create_wmo_dict()
 
     for url in urls:
-        data = pull_data(url)
+        try:
+            data = pull_data(url)
+        except IndexError as error:
+            logging_script.log(f"Endpoint data is empty!", logging.WARNING)
+            continue
+
         obs = enter_observation(data, wmo_dict)
         if obs.md5_hash() not in last_n_entries:
             obs.save()
