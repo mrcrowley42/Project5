@@ -30,9 +30,13 @@ def dev_page(request):
 
 
 def user_request(request):
-    data: list = []
-    wmo = request.GET.get('wmo')
+    data = {}
+    wmo_list: list = request.GET.getlist('wmo', [])
     limit = request.GET.get('limit', 0)
+    try:
+        limit = int(limit)
+    except ValueError as e:
+        raise ValueError(f"Parameter 'limit' ({limit}) is not of type: int.\n{e}")
 
     def observation_dict(obs: Observation) -> dict:
         """ Returns the necessary items of an Observation in a dictionary """
@@ -46,14 +50,11 @@ def user_request(request):
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
-    if wmo:
-        data = [observation_dict(obs) for obs in Observation.objects.all().filter(wmo=wmo)]
+    # wmo data
+    if len(wmo_list) > 0:
+        for wmo in wmo_list:
+            wmo_data = [observation_dict(obs) for obs in Observation.objects.all().filter(wmo=wmo)]
+            if len(wmo_data) > 0:
+                data[wmo] = wmo_data if not limit else wmo_data[:limit]
 
-    # final stuff
-    try:
-        limit = int(limit)
-        if limit:
-            data = data[:limit]
-    except ValueError as e:
-        raise ValueError(f"Parameter 'limit' ({limit}) is not of type: int.\n{e}")
     return JsonResponse(data, safe=False)
