@@ -30,11 +30,30 @@ def dev_page(request):
 
 
 def user_request(request):
-    data = {}
+    data: list = []
     wmo = request.GET.get('wmo')
+    limit = request.GET.get('limit', 0)
+
+    def observation_dict(obs: Observation) -> dict:
+        """ Returns the necessary items of an Observation in a dictionary """
+        return dict(
+            id=obs.id,
+            wmo=obs.wmo.id,
+            local_time=obs.local_date_time_full,
+            air_temp=obs.air_temp,
+            dewpt=obs.dewpt,
+            wind_dir=obs.wind_dir,
+            wind_speed_kmh=obs.wind_spd_kmh
+        )
 
     if wmo:
-        data = Observation.objects.all().filter(wmo=wmo)
+        data = [observation_dict(obs) for obs in Observation.objects.all().filter(wmo=wmo)]
 
-    data = serializers.serialize('json', data)
-    return JsonResponse(json.loads(data), safe=False)
+    # final stuff
+    try:
+        limit = int(limit)
+        if limit:
+            data = data[:limit]
+    except ValueError as e:
+        raise ValueError(f"Parameter 'limit' ({limit}) is not of type: int.\n{e}")
+    return JsonResponse(data, safe=False)
