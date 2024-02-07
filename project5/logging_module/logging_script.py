@@ -1,14 +1,13 @@
 import logging
-from django.conf import settings
 from datetime import date
 from pathlib import Path
+from django.conf import settings
 
 
 output_path = settings.LOGGING_OUTPUT_PATH
 Path(output_path).mkdir(parents=True, exist_ok=True)
-log_level_dict = {'debug': logging.DEBUG,
-                  'info': logging.INFO,
-                  'warning': logging.WARNING,
+
+log_level_dict = {'debug': logging.DEBUG, 'info': logging.INFO, 'warning': logging.WARNING,
                   'critical': logging.CRITICAL}
 
 LOG_FILENAME = output_path + "woe_log_" + str(date.today()) + '.log'
