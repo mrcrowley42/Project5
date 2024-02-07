@@ -44,6 +44,7 @@ def user_request(request):
             id=obs.id,
             wmo=obs.wmo.id,
             local_time=obs.local_date_time_full,
+            location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
             wind_dir=obs.wind_dir,
@@ -58,3 +59,21 @@ def user_request(request):
                 data[wmo] = wmo_data if not limit else wmo_data[:limit]
 
     return JsonResponse(data, safe=False)
+
+
+def table_data(request):
+    request.path = '/user'
+    result = user_request(request)
+    wmo = request.GET.getlist('wmo')[0]
+    json_object = json.loads(result.content)
+    air_temp = json_object[wmo][0]['air_temp']
+    location = json_object[wmo][0]['location']
+    time = json_object[wmo][0]['local_time']
+    dew_point = json_object[wmo][0]['dewpt']
+    wind_dir = json_object[wmo][0]['wind_dir']
+    wind_spe = json_object[wmo][0]['wind_speed_kmh']
+    context = {'data': [['Location', location, 'Air Temperature', air_temp],
+                        ['Time', time, 'Dew Point', dew_point],
+                        ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
+    return render(request, 'table_data.html', context)
+

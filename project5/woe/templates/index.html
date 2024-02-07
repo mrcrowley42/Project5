@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Index</title>
     <script src="static/woe/WOE_JS.js"></script>
+    <link rel="stylesheet" href="static/woe/style.css">
 </head>
 <body>
 
@@ -27,11 +28,15 @@ INDEX / USER PAGE STUFF IN HERE
     {% endfor %}
 </ul>
 
-<select id="location_select" name="location_dropdown" onchange="show_selected(document.getElementById('location_select'))">
+<select id="location_select" name="location_dropdown" onchange="do_ajax(this, 'ajax_example')">
     {% for loc in locations %}
-    <option value="{{loc.location}}">{{loc.location}}</option>
+    <option value="{{loc.id}}">{{loc.location}}</option>
     {% endfor %}
 </select>
+
+<div id="ajax_example" name="ajax_example">
+
+</div>
 
 </body>
 </html>

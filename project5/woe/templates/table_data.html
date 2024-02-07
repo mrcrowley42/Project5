@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Value</th>
+        <th>Name</th>
+        <th>Value</th>
+    </tr>
+    {% for column in data %}
+    <tr>
+        <td>{{column.0}}</td>
+        <td>{{column.1}}</td>
+        <td>{{column.2}}</td>
+        <td>{{column.3}}</td>
+    </tr>
+    {% endfor %}
+</table>

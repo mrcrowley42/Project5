@@ -68,3 +68,19 @@ function show_selected(element) {
     console.log(element.value, "selected");
 };
 
+function do_ajax(dropdown, div_id) {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+        document.getElementById(div_id).innerHTML = '' + this.responseText;
+    }
+    };
+    //xhttp.open("GET", "table_data.html", true);
+    let resource = 'table_data?limit=1&wmo=' + dropdown.value;
+    xhttp.open('GET', resource, true);
+    xhttp.send();
+}
+
+document.addEventListener("DOMContentLoaded", (event)=>{
+    do_ajax(document.getElementById('location_select'), 'ajax_example');
+});
