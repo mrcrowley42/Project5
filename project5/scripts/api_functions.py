@@ -55,6 +55,9 @@ def run():
         except IndexError as error:
             logging_script.log(f"Endpoint data is empty!", logging.WARNING)
             continue
+        except requests.exceptions.ConnectionError as error:
+            logging_script.log(f"Endpoint could not be reached", logging.WARNING)
+            continue
 
         obs = enter_observation(data, wmo_dict)
         if obs.md5_hash() not in last_n_entries:
