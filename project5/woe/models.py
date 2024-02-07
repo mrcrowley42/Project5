@@ -11,11 +11,11 @@ class Source(models.Model):
     wmo_id = models.CharField(max_length=255)
     url = models.CharField(max_length=255)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns a string representation of object."""
         return f"Source object: [name: {self.name}, url:{self.url}, wmo_id: {self.wmo_id}]"
 
-    def md5_hash(self):
+    def md5_hash(self) -> str:
         """Returns an MD5 hash of important fields."""
         important_fields = f"{self.wmo_id}, {self.name}, {self.url}"
         return md5(important_fields.encode()).hexdigest()
@@ -35,11 +35,11 @@ class Observation(models.Model):
     wind_dir = models.CharField(max_length=255, default=None, blank=True, null=True)
     wind_spd_kmh = models.IntegerField(default=None, blank=True, null=True)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns a string representation of object."""
         return f"Observation object: [Temperature: {self.air_temp}, Dew Point: {self.dewpt}]"
 
-    def md5_hash(self):
+    def md5_hash(self) -> str:
         """Returns an MD5 hash of important fields."""
         important_fields = f"{self.wmo}, {self.local_date_time_full}, {self.dewpt, self.air_temp}, {self.wind_dir}"
         return md5(important_fields.encode()).hexdigest()

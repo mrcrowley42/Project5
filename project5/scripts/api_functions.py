@@ -4,7 +4,7 @@ from woe.models import Source, Observation  # Ignore this error -_-
 from logging_module import logging_script  # And this one
 
 
-def create_wmo_dict():
+def create_wmo_dict() -> dict:
     """Returns a dictionary that translates a wmo_id number to the corresponding primary key in the sources table."""
     wmo_dict = dict()
     for source in Source.objects.all():
@@ -12,7 +12,7 @@ def create_wmo_dict():
     return wmo_dict
 
 
-def retrieve_urls():
+def retrieve_urls() -> list:
     """Retrieves the URLS from the source table and returns them in a list."""
     urls = []
     for source in Source.objects.all():
@@ -20,14 +20,14 @@ def retrieve_urls():
     return urls
 
 
-def pull_data(url):
+def pull_data(url: str) -> list:
     """Function that pulls the first row of data from the BOM API for the given URL, and returns that row."""
     api_data = requests.get(url).json()
     data_set = [line for line in api_data['observations']['data']][0]
     return data_set
 
 
-def enter_observation(observation, wmo_dict):
+def enter_observation(observation: dict, wmo_dict: dict) -> Observation:
     """Creates a new observation row and populates it using the passed in observation data.
     Assigns the appropriate foreign key using the wmo_dict."""
     obs = Observation()
