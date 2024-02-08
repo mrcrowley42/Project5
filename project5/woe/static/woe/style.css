@@ -1,5 +1,11 @@
 table, th, td {
     border: 1px solid black;
+    padding: 5px;
     border-collapse: collapse;
 }
 
+.navigation {
+    padding: 20px;
+    font-size: 200%;
+    background-color: #EEE
+}

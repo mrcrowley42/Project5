@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <script src="static/woe/WOE_JS.js"></script>
-    <link rel="stylesheet" href="static/woe/style.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block scripts %}{% endblock %}
+{% block content %}
 
+
+<br>
 INDEX / USER PAGE STUFF IN HERE
-<br><br>
+<br>
 
-<div>
-    current pages:
-    <br>
-    <p>User</p>
-    <br>
-    <a href="admin">Admin</a>
-    <br>
-    <a href="dev">Dev</a>
-</div>
+
 
 <div>
     <select id="view_select" onchange="show_hide_divs(this);">
@@ -67,7 +55,4 @@ INDEX / USER PAGE STUFF IN HERE
 
 </div>
 
-</body>
-</html>
-
-
+{% endblock %}
