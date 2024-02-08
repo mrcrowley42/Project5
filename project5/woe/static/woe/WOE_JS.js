@@ -1,11 +1,8 @@
-function toggle_visibility(element) {
-    if (element.hidden == false) {
-        console.log("hey")
-        element.setAttribute("hidden", true);
+function toggle_visibility(element, force) {
+    if (element.hidden == false || force == false) {
+        element.hidden = true;
     } else {
         element.hidden = false;
-
-        console.log("hi")
     }
 }
  
@@ -84,3 +81,10 @@ function do_ajax(dropdown, div_id) {
 document.addEventListener("DOMContentLoaded", (event)=>{
     do_ajax(document.getElementById('location_select'), 'ajax_example');
 });
+
+function show_hide_divs(dropdown) {
+    let div_list = document.getElementsByClassName(dropdown.value);
+    for (item in div_list) {
+        toggle_visibility(item, item.id === dropdown.value)
+    }
+}
