@@ -1,4 +1,6 @@
 import json
+import time
+from datetime import datetime
 
 import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
@@ -31,12 +33,20 @@ def dev_page(request):
 
 def user_request(request):
     data = {}
-    wmo_list: list = request.GET.getlist('wmo', [])
+    wmo_list: list = request.GET.getlist('wmo')
+    before_time = request.GET.get('before')
+    after_time = request.GET.get('after')
     limit = request.GET.get('limit', 0)
     try:
-        limit = int(limit)
+        limit = max(0, int(limit))
     except ValueError as e:
-        raise ValueError(f"Parameter 'limit' ({limit}) is not of type: int.\n{e}")
+        raise ValueError(f"Parameter 'limit' ({limit}) is not a valid number.\n{e}")
+
+    def get_datetime_from_data(string):
+        try:
+            return datetime.strptime(str(string), '%Y%m%d%H%M%S')
+        except ValueError:
+            return 0
 
     def observation_dict(obs: Observation) -> dict:
         """ Returns the necessary items of an Observation in a dictionary """
@@ -44,6 +54,7 @@ def user_request(request):
             id=obs.id,
             wmo=obs.wmo.id,
             local_time=obs.local_date_time_full,
+            formatted_datetime=get_datetime_from_data(obs.local_date_time_full),
             location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
@@ -54,7 +65,8 @@ def user_request(request):
     # wmo data
     if len(wmo_list) > 0:
         for wmo in wmo_list:
-            wmo_data = [observation_dict(obs) for obs in Observation.objects.all().filter(wmo=wmo)]
+            kwargs = dict(wmo=wmo)
+            wmo_data = [observation_dict(obs) for obs in Observation.objects.all().filter(**kwargs)]
             if len(wmo_data) > 0:
                 data[wmo] = wmo_data if not limit else wmo_data[:limit]
 
