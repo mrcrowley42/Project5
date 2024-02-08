@@ -33,6 +33,8 @@ def dev_page(request):
 
 def user_request(request):
     data = {}
+    datetime_format = '%Y%m%d%H%M%S'
+
     wmo_list: list = request.GET.getlist('wmo')
     before_time = request.GET.get('before')
     after_time = request.GET.get('after')
@@ -42,11 +44,11 @@ def user_request(request):
     except ValueError as e:
         raise ValueError(f"Parameter 'limit' ({limit}) is not a valid number.\n{e}")
 
-    def get_datetime_from_data(string):
-        try:
-            return datetime.strptime(str(string), '%Y%m%d%H%M%S')
-        except ValueError:
-            return 0
+    def convert_time(obs_time, before=False):
+        default = 0
+        if before:
+            default = datetime.strftime(datetime.now(), datetime_format)
+        return obs_time if obs_time else default
 
     def observation_dict(obs: Observation) -> dict:
         """ Returns the necessary items of an Observation in a dictionary """
@@ -54,7 +56,7 @@ def user_request(request):
             id=obs.id,
             wmo=obs.wmo.id,
             local_time=obs.local_date_time_full,
-            formatted_datetime=get_datetime_from_data(obs.local_date_time_full),
+            formatted_datetime=datetime.strptime(str(obs.local_date_time_full), datetime_format),
             location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
@@ -62,11 +64,14 @@ def user_request(request):
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
-    # wmo data
+    # wmo data filtered and sorted by local time (latest first)
     if len(wmo_list) > 0:
         for wmo in wmo_list:
-            kwargs = dict(wmo=wmo)
-            wmo_data = [observation_dict(obs) for obs in Observation.objects.all().filter(**kwargs)]
+            kwargs = dict(wmo=wmo,
+                          local_date_time_full__gt=convert_time(after_time),
+                          local_date_time_full__lt=convert_time(before_time, True))
+            obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
+            wmo_data = [observation_dict(obs) for obs in obs_objects]
             if len(wmo_data) > 0:
                 data[wmo] = wmo_data if not limit else wmo_data[:limit]
 
@@ -91,4 +96,3 @@ def table_data(request):
                         ['Time', local_time, 'Dew Point', dew_point],
                         ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
     return render(request, 'table_data.html', context)
-
