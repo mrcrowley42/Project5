@@ -1,11 +1,12 @@
-from django.http import HttpResponse
-from django.test import TestCase
 import pytest
-from django.core import serializers
-# from project5 import logging_module
-# from project5.woe.models import Source, Observation
-
+import json
+# from django.http import HttpResponse
+# from django.test import TestCase
+# from django.core import serializers
+# from project5.logging_module import logging_script
+from project5.woe.models import Source, Observation
 # from project5.scripts.api_functions import retrieve_urls
+
 
 @pytest.fixture
 def database():
@@ -19,13 +20,11 @@ def test_what(database):
 
 
 def test_api_to_db():
-    """Test that json data from api source, is correctly recorded in database."""
-    assert 1 == 0
-
-
-def test_migration():
-    """Test that the deduplicated json in data folder matches the serialized database following a migration."""
-    assert 2 == 1
+    """Test that json data is correctly recorded in database."""
+    with open('tests/data/dummy.json') as fh:
+        data = json.load(fh)
+    api_data = [line for line in data['observations']['data']][0]
+    assert 1 == api_data
 
 
 def test_filter_wmo():

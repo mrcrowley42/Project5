@@ -1,7 +1,7 @@
-from django.db import models
 from hashlib import md5
-from logging_module import logging_script  # Mysterious namespace issue just ignore for now.
 import logging
+from django.db import models
+from logging_module import logging_script
 
 
 class Source(models.Model):

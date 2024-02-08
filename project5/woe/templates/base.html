@@ -9,12 +9,14 @@
     <script src="{% static 'woe/WOE_JS.js' %}"></script>
     <link rel="stylesheet" href="{% static 'woe/style.css' %}">
 </head>
-        <div class="navigation">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'admin' %}">Admin</a>
-            <a href="{% url 'dev_page' %}">Dev</a>
-        </div>
 <body>
+<div class="navigation">
+            <button><a href="{% url 'index' %}">Home</a></button>
+            <button><a href="{% url 'admin' %}">Admin</a></button>
+            <button><a href="{% url 'dev_page' %}">Dev</a></button>
+        </div>
+<div class="content">
 {% block content %}{% endblock %}
+</div>
 </body>
 </html>

@@ -1,11 +1,56 @@
 table, th, td {
     border: 1px solid black;
-    padding: 5px;
+    padding: 8px;
+    font-size: 1.2rem;
     border-collapse: collapse;
+    margin-top: 20px;
+
 }
 
 .navigation {
     padding: 20px;
-    font-size: 200%;
-    background-color: #EEE
+    background-color: #CCC;
 }
+
+.navigation a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navigation button{
+padding: 10px;
+
+margin-right 10px;
+}
+
+table tr:nth-child(odd) {
+    background: #EEE;
+}
+
+table tr:nth-child(even) {
+    background: #FFF;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+
+
+.content {
+    background-color: rgb(244,248,255);
+    font-size 16px;
+    line-height: 135%;
+    margin: 20px;
+}
+
+.navigation button{
+    font-size: 200%;
+    padding: 12px;
+    margin-right: 5px;
+    }
+select {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: inherit;
+    cursor: pointer;
+ }
