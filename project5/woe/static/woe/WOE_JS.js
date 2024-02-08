@@ -73,7 +73,7 @@ function do_ajax(dropdown, div_id) {
     }
     };
     //xhttp.open("GET", "table_data.html", true);
-    let resource = 'table_data?limit=1&wmo=' + dropdown.value;
+    let resource = '/table_data?limit=1&wmo=' + dropdown.value;
     xhttp.open('GET', resource, true);
     xhttp.send();
 }

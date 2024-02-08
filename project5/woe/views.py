@@ -31,6 +31,14 @@ def dev_page(request):
     return render(request, 'dev.html', context)
 
 
+def user_page(request):
+    locations = [{'id': source.id, 'location': source.name} for source in Source.objects.all()]
+    context = {
+        'locations': locations
+    }
+    return render(request, 'user_page.html', context)
+
+
 def user_request(request):
     data = {}
     datetime_format = '%Y%m%d%H%M%S'

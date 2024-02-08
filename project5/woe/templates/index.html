@@ -6,53 +6,6 @@
 
 <br>
 INDEX / USER PAGE STUFF IN HERE
-<br>
 
-
-
-<div>
-    <select id="view_select" onchange="show_hide_divs(this);">
-        <option value="observation_div">Single Observation</option>
-        <option value="compare_div">Compare Two Locations</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-    </select>
-</div>
-
-<div id="observation_div" name="observation_div" class="div_hideable">
-    <h2>Observations:</h2>
-
-    <ul>
-        {% for obs in observations %}
-            <li>{{ obs.air_temp }}</li>
-        {% endfor %}
-    </ul>
-
-    <select id="location_select" name="location_dropdown" onchange="do_ajax(this, 'ajax_example')">
-        {% for loc in locations %}
-        <option value="{{loc.id}}">{{loc.location}}</option>
-        {% endfor %}
-    </select>
-
-    <div id="ajax_example" name="ajax_example">
-
-    </div>
-</div>
-
-<div id="compare_div" name="compare_div" class="div_hideable">
-    <p>Hi</p>
-    <div id="observation1" name="observation1" class="div_hideable">
-
-    </div>
-    <div id="observation2" name="observation2" class="div_hideable">
-
-    </div>
-</div>
-
-<div id="">
-
-</div>
 
 {% endblock %}
