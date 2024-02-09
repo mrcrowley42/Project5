@@ -4,7 +4,6 @@ table, th, td {
     font-size: 1.2rem;
     border-collapse: collapse;
     margin-top: 20px;
-
 }
 
 .navigation {
@@ -18,9 +17,10 @@ table, th, td {
 }
 
 .navigation button{
-padding: 10px;
-
-margin-right 10px;
+    padding: 10px;
+    /*border-radius: 20px;
+    border: 2px solid #999;*/
+    margin-right 10px;
 }
 
 table tr:nth-child(odd) {
@@ -54,3 +54,13 @@ select {
     font-size: inherit;
     cursor: pointer;
  }
+
+.fileUpload  button,.fileUpload input{
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.fileUpload{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
