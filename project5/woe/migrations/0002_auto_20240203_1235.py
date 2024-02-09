@@ -1,28 +1,16 @@
+import os
+import glob
+import csv
 from django.db import migrations
-import os, json, glob, csv
-
+from scripts import api_functions
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Establish a relative filepath
 
 
 def grab_data():
     """Returns a deduplicated list of dictionary objects representing the json data of a single observation.
     Json data is imported from the data folder."""
-
-    files = glob.glob(os.path.join(BASE_DIR, '../../data/*.json'))
-    data_collection = []
-    for file in files:
-        with open(file) as fh:
-            data = json.load(fh)
-            data_collection.append([line for line in data['observations']['data']])
-
-    deduplicated_data = []
-    for dataset in data_collection:
-        for observation in dataset:
-            observation.pop('sort_order')
-            if observation not in deduplicated_data:
-                deduplicated_data.append(observation)
-
-    return deduplicated_data
+    filenames = glob.glob(os.path.join(BASE_DIR, '../../data/*.json'))
+    return api_functions.load_json_from_file(filenames)
 
 
 def populate_observations(apps, schema_editor):
@@ -41,12 +29,6 @@ def populate_observations(apps, schema_editor):
         obs.wind_dir = observation['wind_dir']
         obs.wind_spd_kmh = observation['wind_spd_kmh']
         obs.save()
-
-    # for value in [2, 6, 3, 5]:
-    #     obs = Observation()
-    #     obs.wmo = Source(value)
-    #     obs.name = "canberra"
-    #     obs.save()
 
 
 def create_wmo_dict(apps, schema_editor):

@@ -1,7 +1,27 @@
 import requests
 import logging
+import json
 from woe.models import Source, Observation
 from logging_module import logging_script
+
+
+def load_json_from_file(filenames) -> list:
+    """Returns a deduplicated list of dictionary objects representing the json data of a single observation.
+    Json data is loaded from the filename(s) passed in."""
+    data_collection = []
+    for filename in filenames:
+        with open(filename) as fh:
+            data = json.load(fh)
+            data_collection.append([line for line in data['observations']['data']])
+
+    deduplicated_data = []
+    for dataset in data_collection:
+        for observation in dataset:
+            observation.pop('sort_order')
+            if observation not in deduplicated_data:
+                deduplicated_data.append(observation)
+
+    return deduplicated_data
 
 
 def create_wmo_dict() -> dict:
@@ -29,7 +49,10 @@ def pull_data(url: str) -> list:
 
 def enter_observation(observation: dict, wmo_dict: dict) -> Observation:
     """Creates a new observation row and populates it using the passed in observation data.
-    Assigns the appropriate foreign key using the wmo_dict."""
+    Assigns the appropriate foreign key using the wmo_dict.
+
+    Returns:
+        object: """
     obs = Observation()
     obs.wmo = wmo_dict[observation['wmo']]
     obs.local_date_time_full = observation['local_date_time_full']
