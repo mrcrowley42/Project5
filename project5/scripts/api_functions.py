@@ -49,10 +49,7 @@ def pull_data(url: str) -> list:
 
 def enter_observation(observation: dict, wmo_dict: dict) -> Observation:
     """Creates a new observation row and populates it using the passed in observation data.
-    Assigns the appropriate foreign key using the wmo_dict.
-
-    Returns:
-        object: """
+    Assigns the appropriate foreign key using the wmo_dict."""
     obs = Observation()
     obs.wmo = wmo_dict[observation['wmo']]
     obs.local_date_time_full = observation['local_date_time_full']

@@ -1,13 +1,15 @@
 {% extends "base.html" %}
 {% block title %}User{% endblock %}
-{% block scripts %}{% endblock %}
+{% block scripts %}
+{% load static %}
+<script src="{% static 'woe/Chart.js' %}"></script>
+{% endblock %}
 {% block content %}
 
 
 <br>
 INDEX / USER PAGE STUFF IN HERE
 <br>
-
 
 
 <div>
@@ -26,7 +28,7 @@ INDEX / USER PAGE STUFF IN HERE
 
     <ul>
         {% for obs in observations %}
-            <li>{{ obs.air_temp }}</li>
+        <li>{{ obs.air_temp }}</li>
         {% endfor %}
     </ul>
 
@@ -52,7 +54,6 @@ INDEX / USER PAGE STUFF IN HERE
 </div>
 
 <div id="">
-
 </div>
 
 {% endblock %}

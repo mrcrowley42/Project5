@@ -23,3 +23,26 @@ class ApiTests(TestCase):
         self.assertEqual(last_entry.dewpt, api_data['dewpt'])
         self.assertEqual(last_entry.wind_dir, api_data['wind_dir'])
         self.assertEqual(last_entry.wind_spd_kmh, api_data['wind_spd_kmh'])
+
+    def test_duplicates(self):
+        """Test that duplicate entries when loading json from file are ignored."""
+        filenames = ['woe/tests/data/duplicates.json',]  # Expected number of entries is 2.
+        wmo_dict = create_wmo_dict()
+        data_collection = load_json_from_file(filenames)
+        start_value = len(Observation.objects.all())
+        for observation in data_collection:
+            obs = Observation()
+            obs.wmo = wmo_dict[observation['wmo']]
+            obs.local_date_time_full = observation['local_date_time_full']
+            obs.air_temp = observation['air_temp']
+            obs.dewpt = observation['dewpt']
+            obs.wind_dir = observation['wind_dir']
+            obs.wind_spd_kmh = observation['wind_spd_kmh']
+            obs.save()
+        last_entries = Observation.objects.all().order_by('-id')[:2]
+        end_value = len(Observation.objects.all())
+        self.assertEqual(end_value, start_value + 2)
+        self.assertNotEquals(last_entries[0], last_entries[1])
+
+
+

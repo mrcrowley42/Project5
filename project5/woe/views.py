@@ -27,6 +27,12 @@ def admin(request):
 
 
 def dev_page(request):
+    if request.method == "POST":
+        try:
+            uploaded_file = request.FILES['document']
+            print(uploaded_file.name, uploaded_file.size)
+        except KeyError:
+            pass
     context = {}
     return render(request, 'dev.html', context)
 
