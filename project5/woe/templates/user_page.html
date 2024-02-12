@@ -16,10 +16,9 @@ INDEX / USER PAGE STUFF IN HERE
     <select id="view_select" onchange="show_hide_divs(this);">
         <option value="observation_div">Single Observation</option>
         <option value="compare_div">Compare Two Locations</option>
-        <option value="test2"></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+        <option value="single_chart_div">Single Chart</option>
+        <option value="double_chart_div">Double Chart</option>
+        <option value="single_chart_multi_div">Single Chart Multi</option>
     </select>
 </div>
 
@@ -44,17 +43,29 @@ INDEX / USER PAGE STUFF IN HERE
 </div>
 
 <div id="compare_div" name="compare_div" class="div_hideable">
-    <p>Hi</p>
-    <div id="observation1" name="observation1" class="div_hideable">
-
+    <p>Compare</p>
+    <div id="observation1" name="observation1">
+        <p>Observation 1</p>
     </div>
-    <div id="observation2" name="observation2" class="div_hideable">
-
+    <div id="observation2" name="observation2">
+        <p>Observation 2</p>
     </div>
 </div>
 
-<div id="test2" class="div_hideable">
-    <p>3</p>
+<div id="single_chart_div" class="div_hideable">
+    <p>Single Chart</p>
+    <canvas id="chart_single" style="width:100%;max-width:700px;"></canvas>
+</div>
+
+<div id="double_chart_div" class="div_hideable">
+    <p>Double Chart</p>
+    <canvas id="chart_compare_obs1" style="width:100%;max-width:700px;"></canvas>
+    <canvas id="chart_compare_obs2" style="width:100%;max-width:700px;"></canvas>
+</div>
+
+<div id="single_chart_multi_div" class="div_hideable">
+    <p>Single Chart Multi</p>
+    <canvas id="chart_multi" style="width:100%;max-width:700px;"></canvas>
 </div>
 
 {% endblock %}
