@@ -2,5 +2,24 @@
 {% block title %}Admin{% endblock %}
 {% block scripts %}{% endblock %}
 {% block content %}
-<p>ADMI N page</p>
+<h1>Admin Page</h1>
+<h2>Sources table</h2>
+<form class="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<table class="editableTable">
+    <tr>
+        <th>Name</th>
+        <th>WMO_id</th>
+        <th>URL</th>
+    </tr>
+    {% for source in data %}
+    <tr>
+        <td><input value="{{source.name}}"></td>
+        <td><input value="{{source.wmo_id}}"></td>
+        <td><input style="min-width:500px" value="{{source.url}}"></td>
+    </tr>
+    {% endfor %}
+</table>
+    <button class="submitButton" type="submit">Update</button>
+</form>
 {% endblock %}

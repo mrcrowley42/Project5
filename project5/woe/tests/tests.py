@@ -51,20 +51,20 @@ class UserRequestTests(TestCase):
         user_request_data = json.load(fh)
 
     def test_basic_user_request(self):
-        """ Test response gotten from `wmo = 2` """
+        """ Test response received from `wmo = 2` """
         response = self.client.get('/user', {'wmo': 2}).json()
 
         self.assertEqual(self.user_request_data, response)
 
     def test_limited_user_request(self):
-        """ Test response gotten from `wmo = 2` and `limit = 3` """
+        """ Test response received from `wmo = 2` and `limit = 3` """
         response = self.client.get('/user', {'wmo': 2, 'limit': 3}).json()
         expected = self.user_request_data
         expected['2'] = expected['2'][:3]  # remove last object
         self.assertEqual(expected, response)
 
     def test_time_restricted_user_request(self):
-        """ Test response gotten from `wmo = 2` and `before = 20240201090000` and `after = 20240129090000`
+        """ Test response received from `wmo = 2` and `before = 20240201090000` and `after = 20240129090000`
 
         Essentially getting everything before the first `wmo=2` object and after the last `wmo=2` object """
         response = self.client.get('/user', {'wmo': 2, 'before': 20240201090000, 'after': 20240129090000}).json()
