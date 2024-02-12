@@ -100,6 +100,18 @@ def user_request(request):
     return JsonResponse(data, safe=False)
 
 
+def user_request_chart(request):
+    data_type = request.GET.get('type')
+    wmo = request.GET.get('wmo')
+
+    request.path = '/user'
+    usr_request_data = json.loads(user_request(request).content)
+    observations = usr_request_data[wmo]
+
+    data = [obs[data_type] for obs in observations]
+    return JsonResponse(data, safe=False)
+
+
 def table_data(request):
     request.path = '/user'
     result = user_request(request)
