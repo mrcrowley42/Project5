@@ -14,7 +14,7 @@ table, th, td {
 .navigation {
     padding: 20px;
     padding-bottom: 10px;
-    background-color: #CCC;
+    background-color: #e8e8e8;
     /* position: fixed; */
     /* width: 100%; */
     display: block;
@@ -57,12 +57,14 @@ body {
 
 .navigation button{
     font-size: 18px;
-    border: 1px solid rgb(212, 206, 206);
+    /* border: 1px solid rgb(212, 206, 206); */
+    border: none;
     border-radius: 4px;
     
     padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
+    background-color: #e8e8e8;
     }
 
 .navigation button:hover{
