@@ -7,7 +7,7 @@ DEV STUFF HERE
 
 <form class="fileUpload" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="document">
+    <input type="file" name="document" multiple>
     <button type="submit">Upload Json</button>
 </form>
 

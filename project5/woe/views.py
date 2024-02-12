@@ -1,7 +1,7 @@
 import json
 import time
 from datetime import datetime
-
+import logging
 import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
 from django.shortcuts import get_object_or_404, render
@@ -11,6 +11,7 @@ from django.template import loader
 from django.core import serializers
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
+from logging_module import logging_script
 
 
 def index(request):
@@ -27,20 +28,20 @@ def admin(request):
 
 
 def dev_page(request):
-    # SOME ERROR HANDLING HERE WOULD BE NICE!
-    # THIS ALSO SUPPORTS 1 FILE AT A TIME ONLY
-    # limit to only json files
-    if request.method == "POST":
-        try:
-            uploaded_file_contents = request.FILES['document'].file.read()
-            wmo_dict = create_wmo_dict()
-            observations = load_json_from_memory(uploaded_file_contents)
-            for observation in observations:
-                obs = enter_observation(observation, wmo_dict)
-                obs.save()
-        except KeyError:
-            pass
     context = {}
+    if request.method == "POST":
+        wmo_dict = create_wmo_dict()
+        try:
+            json_files = [file for file in request.FILES.getlist('document') if file.content_type == "application/json"]
+            for json_file in json_files:
+                file_contents = json_file.file.read()
+                observations = load_json_from_memory(file_contents)
+                for observation in observations:
+                    obs = enter_observation(observation, wmo_dict)
+                    obs.save()
+        except Exception as error:
+            pass
+
     return render(request, 'dev.html', context)
 
 
