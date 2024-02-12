@@ -1,5 +1,5 @@
 function toggle_visibility(element, force) {
-    if (element.hidden == false || force == false) {
+    if (force == false) {
         element.hidden = true;
     } else {
         element.hidden = false;
@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", (event)=>{
 });
 
 function show_hide_divs(dropdown) {
-    let div_list = document.getElementsByClassName(dropdown.value);
-    for (item in div_list) {
-        toggle_visibility(item, item.id === dropdown.value)
+    let div_list = document.getElementsByClassName("div_hideable");
+    for (let i = 0; i < div_list.length; i++) {
+        toggle_visibility(div_list[i], div_list[i].id === dropdown.value);
     }
 }
