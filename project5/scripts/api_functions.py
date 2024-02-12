@@ -24,6 +24,14 @@ def load_json_from_file(filenames) -> list:
     return deduplicated_data
 
 
+def load_json_from_memory(file):
+    """Returns a list of dictionary objects for each observation present in json file.
+    Intended for use with in-memory files uploaded on dev page."""
+    raw_data = json.loads(file)
+    data = [line for line in raw_data['observations']['data']]
+    return data
+
+
 def create_wmo_dict() -> dict:
     """Returns a dictionary that translates a wmo_id number to the corresponding primary key in the sources table."""
     wmo_dict = dict()

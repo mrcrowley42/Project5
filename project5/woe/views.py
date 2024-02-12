@@ -9,7 +9,7 @@ from django.urls import reverse
 from django.views import generic
 from django.template import loader
 from django.core import serializers
-
+from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 
 
@@ -27,10 +27,17 @@ def admin(request):
 
 
 def dev_page(request):
+    # SOME ERROR HANDLING HERE WOULD BE NICE!
+    # THIS ALSO SUPPORTS 1 FILE AT A TIME ONLY
+    # limit to only json files
     if request.method == "POST":
         try:
-            uploaded_file = request.FILES['document']
-            print(uploaded_file.name, uploaded_file.size)
+            uploaded_file_contents = request.FILES['document'].file.read()
+            wmo_dict = create_wmo_dict()
+            observations = load_json_from_memory(uploaded_file_contents)
+            for observation in observations:
+                obs = enter_observation(observation, wmo_dict)
+                obs.save()
         except KeyError:
             pass
     context = {}
