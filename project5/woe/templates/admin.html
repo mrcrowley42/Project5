@@ -4,9 +4,9 @@
 {% block content %}
 <h1>Admin Page</h1>
 <h2>Sources table</h2>
-<form class="" method="post" enctype="multipart/form-data">
+<form class="" name="hi" method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
-<table class="editableTable">
+<table class="editableTable" id="myTable">
     <tr>
         <th>Name</th>
         <th>WMO_id</th>
@@ -14,12 +14,30 @@
     </tr>
     {% for source in data %}
     <tr>
-        <td><input value="{{source.name}}"></td>
-        <td><input value="{{source.wmo_id}}"></td>
-        <td><input style="min-width:500px" value="{{source.url}}"></td>
+        <td><input name="name" value="{{source.name}}"></td>
+        <td><input name="wmo_id" value="{{source.wmo_id}}"></td>
+        <td><input name="url" style="min-width:500px" value="{{source.url}}"></td>
     </tr>
     {% endfor %}
 </table>
-    <button class="submitButton" type="submit">Update</button>
+    <button class="submitButton" role="submit" type="submit">Update</button>
+    <button class="submitButton"  type="button" onclick="myFunction()">Add Source</button>
 </form>
+
+
+
+<script>
+function myFunction() {
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(-1);
+  var cell1 = row.insertCell();
+  var cell2 = row.insertCell();
+  var cell3 = row.insertCell();
+  cell1.innerHTML = "<input>";
+
+  cell1.id = "hellpe";
+  cell2.innerHTML = "<input>";
+  cell3.innerHTML = "<input style='min-width:500px'>";
+}
+</script>
 {% endblock %}

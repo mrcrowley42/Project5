@@ -12,7 +12,7 @@ padding:0px;
 }
 
 html{
-    min-height: 2000px;
+
     color: rgb(30,30,30);
 }
 
@@ -33,7 +33,7 @@ table, th, td {
     display: block;
     overflow: hidden;
     top: 0px;
-    
+
 }
 
 .navigation a{
@@ -73,7 +73,7 @@ body {
     /* border: 1px solid rgb(212, 206, 206); */
     border: none;
     border-radius: 4px;
-    
+
     padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -83,7 +83,7 @@ body {
 .navigation button:hover{
     background-color: rgb(151, 84, 210);
     color:white;
-}    
+}
 select {
     margin-top: 5px;
     padding: 8px;
@@ -103,10 +103,10 @@ select {
 
 .submitButton {
     border: none;
-    font-size: 24px;
+    font-size: 16px;
     border-radius: 4px;
     margin-top: 20px;
-    padding: 16px;
+    padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
     background-color: rgb(27, 117, 208);

@@ -23,6 +23,9 @@ def index(request):
 
 
 def admin(request):
+    if request.method == "POST":
+        print(request.POST.dict())
+
     context = {'data': Source.objects.all()}
     return render(request, 'admin.html', context)
 
