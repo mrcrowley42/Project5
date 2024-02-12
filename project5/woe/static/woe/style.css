@@ -1,3 +1,16 @@
+input {
+background-color: transparent;
+font-size: 16px;
+border: none;
+margin: 0px;
+padding: 8px;
+}
+
+.editableTable td{
+
+padding:0px;
+}
+
 html{
     min-height: 2000px;
     color: rgb(30,30,30);
@@ -87,3 +100,16 @@ select {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.submitButton {
+    border: none;
+    font-size: 24px;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 16px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(27, 117, 208);
+    color: white;
+    cursor: pointer;
+    }

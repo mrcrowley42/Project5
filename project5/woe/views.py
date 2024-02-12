@@ -23,7 +23,7 @@ def index(request):
 
 
 def admin(request):
-    context = {}
+    context = {'data': Source.objects.all()}
     return render(request, 'admin.html', context)
 
 
@@ -39,7 +39,9 @@ def dev_page(request):
                 for observation in observations:
                     obs = enter_observation(observation, wmo_dict)
                     obs.save()
+        # IMPROVE THIS
         except Exception as error:
+            print(type(error).__name__, error.args)
             pass
 
     return render(request, 'dev.html', context)
