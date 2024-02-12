@@ -1,5 +1,10 @@
+html{
+    min-height: 2000px;
+    color: rgb(30,30,30);
+}
+
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid rgb(189, 187, 187);
     padding: 8px;
     font-size: 1.2rem;
     border-collapse: collapse;
@@ -8,7 +13,14 @@ table, th, td {
 
 .navigation {
     padding: 20px;
+    padding-bottom: 10px;
     background-color: #CCC;
+    /* position: fixed; */
+    /* width: 100%; */
+    display: block;
+    overflow: hidden;
+    top: 0px;
+    
 }
 
 .navigation a{
@@ -16,38 +28,47 @@ table, th, td {
     color: inherit;
 }
 
-.navigation button{
-    padding: 10px;
-    /*border-radius: 20px;
-    border: 2px solid #999;*/
-    margin-right 10px;
-}
 
 table tr:nth-child(odd) {
-    background: #EEE;
+    background-color: rgb(249,249,252);
 }
 
 table tr:nth-child(even) {
-    background: #FFF;
+    background-color: #FFF;
 }
 
 body {
     font-family: sans-serif;
     margin: 0px;
+    background-color:rgb(249,249,252);
+}
 
 
 .content {
-    background-color: rgb(244,248,255);
-    font-size 16px;
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
     line-height: 135%;
     margin: 20px;
+    /* margin-top: 113px; */
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    padding: 20px;
 }
 
 .navigation button{
-    font-size: 200%;
+    font-size: 18px;
+    border: 1px solid rgb(212, 206, 206);
+    border-radius: 4px;
+    
     padding: 12px;
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     }
+
+.navigation button:hover{
+    background-color: rgb(151, 84, 210);
+    color:white;
+}    
 select {
     margin-top: 5px;
     padding: 8px;

@@ -11,10 +11,10 @@
 </head>
 <body>
 <div class="navigation">
-            <button><a href="{% url 'index' %}">Home</a></button>
-            <button><a href="{% url 'admin' %}">Admin</a></button>
-            <button><a href="{% url 'dev_page' %}">Dev</a></button>
-            <button><a href="{% url 'user_page' %}">User</a></button>
+            <a href="{% url 'index' %}"><button>Home</button></a>
+    <a href="{% url 'admin' %}"><button>Admin</button></a>
+    <a href="{% url 'dev_page' %}"><button>Dev</button></a>
+            <a href="{% url 'user_page' %}"><button>User</button></a>
         </div>
 <div class="content">
 {% block content %}{% endblock %}
