@@ -64,6 +64,8 @@ def user_request(request):
     """
     Request for data from the server
 
+    Data format: [{wmo_id: x, location: y, observations: [{...}]}, ...]
+
     Parameters:
 
     - wmo = location ID (supports multiple)
@@ -90,8 +92,7 @@ def user_request(request):
         return obs_time if obs_time else default
 
     def convert_wind_dir(wind_dir):
-        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW',
-                         'NNW']
+        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
         if wind_dir in wind_dir_list:
             dir_index = wind_dir_list.index(wind_dir)
             return dir_index * 22.5
@@ -128,7 +129,7 @@ def user_request(request):
 
 def user_request_chart(request):
     """
-    Request for formatted chart data
+    Request for formatted chart data (data format same as user request)
 
     Parameters:
 
@@ -139,13 +140,12 @@ def user_request_chart(request):
     wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
-    usr_request_data = json.loads(user_request(request).content)
+    data = json.loads(user_request(request).content)
 
-    data = []
     for i, wmo in enumerate(wmo_list):
-        source = Source.objects.get(id=wmo)
-        data.append(dict(wmo_id=wmo, location=source.name, observations=[]))
-        for observation in usr_request_data[i]['observations']:
+        observations = data[i]['observations']
+        data[i]['observations'] = []
+        for observation in observations:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
             data_types['date_time'] = observation['formatted_datetime']
             data[i]['observations'].append(data_types)
