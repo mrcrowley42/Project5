@@ -43,6 +43,10 @@ td {
     color: inherit;
 }
 
+.nav-title {
+    font-weight: bold;
+}
+
 
 table tr:nth-child(odd) {
     background-color: rgb(249, 249, 252);
