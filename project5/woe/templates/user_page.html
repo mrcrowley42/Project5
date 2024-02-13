@@ -64,17 +64,46 @@
 
 <div id="single_chart_div" class="div_hideable">
     <p>Single Chart</p>
+    <select id="location_select_opt4" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_single" style="width:100%;max-width:700px;"></canvas>
 </div>
 
 <div id="double_chart_div" class="div_hideable">
     <p>Double Chart</p>
+    <select id="location_select_opt5" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <select id="location_select_opt6" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_compare_obs1" style="width:100%;max-width:700px;"></canvas>
+    <br>
     <canvas id="chart_compare_obs2" style="width:100%;max-width:700px;"></canvas>
 </div>
 
 <div id="single_chart_multi_div" class="div_hideable">
     <p>Single Chart Multi</p>
+    <select id="location_select_opt7" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <select id="location_select_opt8" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_multi" style="width:100%;max-width:700px;"></canvas>
 </div>
 
