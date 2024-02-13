@@ -7,6 +7,7 @@
 
 <table id="myTable" class="sourceTable">
     <tr>
+        <th class="idColumn">ID</th>
         <th>Name</th>
         <th>WMO_id</th>
         <th>URL</th>
@@ -14,6 +15,7 @@
     </tr>
     {% for source in data.data %}
     <tr>
+        <td class="idColumn">{{source.id}}</td>
         <td>{{source.name}}</td>
         <td>{{source.wmo_id}}</td>
         <td>{{source.url}}</td>
@@ -21,7 +23,7 @@
     </tr>
     {% endfor %}
 </table>
-    <button class="submitButton" type="button">Add Source +</button>
+    <button class="submitButton" type="button" onclick="editSource()">Add Source +</button>
 
 <div id="myModal" class="modal">
   <div class="modal-content">
@@ -30,12 +32,14 @@
     {% csrf_token %}
 <table class="editableTable" id="blah">
     <tr>
+        <th class="idColumn">ID</th>
         <th>Name</th>
         <th>WMO_id</th>
         <th>URL</th>
     </tr>
 
     <tr>
+        <td class="idColumn"><input id="new_id" name="id" value="{{source.id}}"></td>
         <td><input id="new_name" name="name" value="{{source.name}}"></td>
         <td><input id="new_wmo" name="wmo_id" value="{{source.wmo_id}}"></td>
         <td><input id="new_url" name="url" value="{{source.url}}"></td>
@@ -47,12 +51,14 @@
 </div>
 
 <script>
-function editSource(element) {
-    var wmo_id = element.parentElement.cells[1].innerHTML;
+function editSource(element=false) {
+    if (element != false){
+    var wmo_id = element.parentElement.cells[2].innerHTML;
     console.log(wmo_id);
     var wmo_mapping = {{ data.wmo_dict| safe }};
     console.log(wmo_mapping[wmo_id]);
     observation = wmo_mapping[wmo_id];
+    document.getElementById("new_id").value = observation.id;
     document.getElementById("new_name").value = observation.name;
     document.getElementById("new_wmo").value = observation.wmo_id;
     document.getElementById("new_url").value = observation.url;
@@ -74,6 +80,10 @@ function editSource(element) {
         if (event.target == modal) {
             modal.style.display = "none";
             }
+        }
+         }
+        else{
+        console.log('hello');
         }
 }
 </script>

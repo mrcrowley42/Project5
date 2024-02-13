@@ -175,6 +175,7 @@ padding: 12px;
 
 .editRow {
 color: rgb(150,150,150);
+
 }
 
 .editRow:hover{
@@ -217,3 +218,10 @@ cursor:pointer;
     text-decoration: none;
     cursor: pointer;
   }
+
+.idColumn{
+
+    visibility: hidden;
+border:none;
+display: none;
+}
