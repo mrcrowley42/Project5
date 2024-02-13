@@ -68,9 +68,6 @@ def user_request(request):
     - before = before datetime (format: YYYYMMDDhhmmss)
     - after = after datetime (format: YYYYMMDDhhmmss)
     - limit = limit results by amount (must be a number)
-
-    :param request:
-    :return: JsonResponse
     """
     data = {}
     datetime_format = '%Y%m%d%H%M%S'
@@ -100,7 +97,7 @@ def user_request(request):
             location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
-            wind_dir=obs.wind_dir,
+            wind_dir=obs.wind_dir,  # todo convert data
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
@@ -125,12 +122,9 @@ def user_request_chart(request):
     Parameters:
 
     - All the same as user request
-    - type = the type of data (e.g. air_temp, dewpt)
-
-    :param request:
-    :return: JsonResponse
+    - type = the type of data (multiple supported, e.g. air_temp, dewpt)
     """
-    data_type = request.GET.get('type')
+    data_type_list = request.GET.getlist('type')
     wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
@@ -138,8 +132,11 @@ def user_request_chart(request):
 
     data = {}
     for wmo in wmo_list:
-        observations = usr_request_data[wmo]
-        data[wmo] = [{'date_time': obs['formatted_datetime'], data_type: obs[data_type]} for obs in observations]
+        data[wmo] = []
+        for observation in usr_request_data[wmo]:
+            data_types = {data_type: observation[data_type] for data_type in data_type_list}
+            data_types['date_time'] = observation['formatted_datetime']
+            data[wmo].append(data_types)
     return JsonResponse(data, safe=False)
 
 
