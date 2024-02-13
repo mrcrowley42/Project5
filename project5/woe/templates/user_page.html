@@ -25,13 +25,13 @@
         {% endfor %}
     </ul>
 
-    <select id="location_select" name="location_dropdown" onchange="do_ajax(this, 'ajax_example')">
+    <select id="location_select_opt1" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_1')">
         {% for loc in locations %}
         <option value="{{loc.id}}">{{loc.location}}</option>
         {% endfor %}
     </select>
 
-    <div id="ajax_example" name="ajax_example">
+    <div id="ajax_location_1" name="ajax_location_1">
 
     </div>
 </div>
@@ -40,9 +40,25 @@
     <p>Compare</p>
     <div id="observation1" name="observation1">
         <p>Observation 1</p>
+        <select id="location_select_opt2" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_2')">
+            {% for loc in locations %}
+            <option value="{{loc.id}}">{{loc.location}}</option>
+            {% endfor %}
+        </select>
+        <div id="ajax_location_2" name="ajax_location_2">
+
+        </div>
     </div>
     <div id="observation2" name="observation2">
         <p>Observation 2</p>
+        <select id="location_select_opt3" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_3')">
+            {% for loc in locations %}
+            <option value="{{loc.id}}">{{loc.location}}</option>
+            {% endfor %}
+        </select>
+        <div id="ajax_location_3" name="ajax_location_3">
+
+        </div>
     </div>
 </div>
 
