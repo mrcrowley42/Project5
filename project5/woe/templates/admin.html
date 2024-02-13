@@ -5,11 +5,11 @@
 <h1>Admin Page</h1>
 <h2>Sources table</h2>
 
-<table id="myTable" class="sourceTable">
+<table id="myTable" class="rounded-corners">
     <tr>
         <th class="idColumn">ID</th>
         <th>Name</th>
-        <th>WMO_id</th>
+        <th>WMO id</th>
         <th>URL</th>
         <th style="border: none; background-color:white;"></th>
     </tr>
@@ -52,16 +52,18 @@
 
 <script>
 function editSource(element=false) {
-    if (element != false){
-    var wmo_id = element.parentElement.cells[2].innerHTML;
-    console.log(wmo_id);
     var wmo_mapping = {{ data.wmo_dict| safe }};
-    console.log(wmo_mapping[wmo_id]);
-    observation = wmo_mapping[wmo_id];
-    document.getElementById("new_id").value = observation.id;
-    document.getElementById("new_name").value = observation.name;
-    document.getElementById("new_wmo").value = observation.wmo_id;
-    document.getElementById("new_url").value = observation.url;
+    if (element != false){
+        var wmo_id = element.parentElement.cells[2].innerHTML;
+        console.log(wmo_id);
+        console.log(wmo_mapping[wmo_id]);
+        observation = wmo_mapping[wmo_id];
+        document.getElementById("new_id").value = observation.id;
+        document.getElementById("new_name").value = observation.name;
+        document.getElementById("new_wmo").value = observation.wmo_id;
+        document.getElementById("new_url").value = observation.url;
+       }
+
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -81,10 +83,8 @@ function editSource(element=false) {
             modal.style.display = "none";
             }
         }
-         }
-        else{
-        console.log('hello');
-        }
+
+
 }
 </script>
 
