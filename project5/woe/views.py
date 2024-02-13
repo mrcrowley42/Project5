@@ -15,10 +15,7 @@ from logging_module import logging_script
 
 
 def index(request):
-    locations = [{'id': source.id, 'location': source.name} for source in Source.objects.all()]
-    context = {
-        'locations': locations
-    }
+    context = {}
     return render(request, 'index.html', context)
 
 

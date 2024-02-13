@@ -8,7 +8,7 @@
             "location": "Batemans Bay",
             "air_temp": 21.0,
             "dewpt": 19.4,
-            "wind_dir": "NNE",
+            "wind_dir": 22.5,
             "wind_speed_kmh": 4
         },
         {
@@ -19,7 +19,7 @@
             "location": "Batemans Bay",
             "air_temp": 21.1,
             "dewpt": 19.8,
-            "wind_dir": "SW",
+            "wind_dir": 225,
             "wind_speed_kmh": 2
         },
         {
@@ -30,7 +30,7 @@
             "location": "Batemans Bay",
             "air_temp": 22.0,
             "dewpt": 19.0,
-            "wind_dir": "SSW",
+            "wind_dir": 202.5,
             "wind_speed_kmh": 4
         },
         {
@@ -41,7 +41,7 @@
             "location": "Batemans Bay",
             "air_temp": 22.6,
             "dewpt": 19.3,
-            "wind_dir": "NNE",
+            "wind_dir": 22.5,
             "wind_speed_kmh": 4
         }
     ]
