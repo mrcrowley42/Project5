@@ -107,13 +107,15 @@ def user_request(request):
 
 def user_request_chart(request):
     data_type = request.GET.get('type')
-    wmo = request.GET.get('wmo')
+    wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
     usr_request_data = json.loads(user_request(request).content)
-    observations = usr_request_data[wmo]
 
-    data = [obs[data_type] for obs in observations]
+    data = {}
+    for wmo in wmo_list:
+        observations = usr_request_data[wmo]
+        data[wmo] = [{'date_time': obs['formatted_datetime'], data_type: obs[data_type]} for obs in observations]
     return JsonResponse(data, safe=False)
 
 
