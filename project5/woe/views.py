@@ -59,6 +59,19 @@ def user_page(request):
 
 
 def user_request(request):
+    """
+    Request for data from the server
+
+    Parameters:
+
+    - wmo = location ID (supports multiple)
+    - before = before datetime (format: YYYYMMDDhhmmss)
+    - after = after datetime (format: YYYYMMDDhhmmss)
+    - limit = limit results by amount (must be a number)
+
+    :param request:
+    :return: JsonResponse
+    """
     data = {}
     datetime_format = '%Y%m%d%H%M%S'
 
@@ -106,14 +119,27 @@ def user_request(request):
 
 
 def user_request_chart(request):
+    """
+    Request for formatted chart data
+
+    Parameters:
+
+    - All the same as user request
+    - type = the type of data (e.g. air_temp, dewpt)
+
+    :param request:
+    :return: JsonResponse
+    """
     data_type = request.GET.get('type')
-    wmo = request.GET.get('wmo')
+    wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
     usr_request_data = json.loads(user_request(request).content)
-    observations = usr_request_data[wmo]
 
-    data = [obs[data_type] for obs in observations]
+    data = {}
+    for wmo in wmo_list:
+        observations = usr_request_data[wmo]
+        data[wmo] = [{'date_time': obs['formatted_datetime'], data_type: obs[data_type]} for obs in observations]
     return JsonResponse(data, safe=False)
 
 
