@@ -1,0 +1,169 @@
+{
+    "2": [
+        {
+            "id": 2438,
+            "wmo": 2,
+            "local_time": 20240211090000,
+            "formatted_datetime": "2024-02-11T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 18.9,
+            "dewpt": 18.4,
+            "wind_dir": 0,
+            "wind_speed_kmh": 0
+        },
+        {
+            "id": 6524,
+            "wmo": 2,
+            "local_time": 20240211090000,
+            "formatted_datetime": "2024-02-11T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 18.9,
+            "dewpt": 18.4,
+            "wind_dir": 0,
+            "wind_speed_kmh": 0
+        },
+        {
+            "id": 951,
+            "wmo": 2,
+            "local_time": 20240201090000,
+            "formatted_datetime": "2024-02-01T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.0,
+            "dewpt": 19.4,
+            "wind_dir": 22.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3366,
+            "wmo": 2,
+            "local_time": 20240201090000,
+            "formatted_datetime": "2024-02-01T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.0,
+            "dewpt": 19.4,
+            "wind_dir": 22.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 490,
+            "wmo": 2,
+            "local_time": 20240131090000,
+            "formatted_datetime": "2024-01-31T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.1,
+            "dewpt": 19.8,
+            "wind_dir": 225.0,
+            "wind_speed_kmh": 2
+        },
+        {
+            "id": 3367,
+            "wmo": 2,
+            "local_time": 20240131090000,
+            "formatted_datetime": "2024-01-31T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.1,
+            "dewpt": 19.8,
+            "wind_dir": 225.0,
+            "wind_speed_kmh": 2
+        },
+        {
+            "id": 3369,
+            "wmo": 2,
+            "local_time": 20240131090000,
+            "formatted_datetime": "2024-01-31T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.1,
+            "dewpt": 19.8,
+            "wind_dir": 225.0,
+            "wind_speed_kmh": 2
+        },
+        {
+            "id": 3372,
+            "wmo": 2,
+            "local_time": 20240131090000,
+            "formatted_datetime": "2024-01-31T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 21.1,
+            "dewpt": 19.8,
+            "wind_dir": 225.0,
+            "wind_speed_kmh": 2
+        },
+        {
+            "id": 491,
+            "wmo": 2,
+            "local_time": 20240130090000,
+            "formatted_datetime": "2024-01-30T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.0,
+            "dewpt": 19.0,
+            "wind_dir": 202.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3368,
+            "wmo": 2,
+            "local_time": 20240130090000,
+            "formatted_datetime": "2024-01-30T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.0,
+            "dewpt": 19.0,
+            "wind_dir": 202.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3370,
+            "wmo": 2,
+            "local_time": 20240130090000,
+            "formatted_datetime": "2024-01-30T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.0,
+            "dewpt": 19.0,
+            "wind_dir": 202.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3373,
+            "wmo": 2,
+            "local_time": 20240130090000,
+            "formatted_datetime": "2024-01-30T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.0,
+            "dewpt": 19.0,
+            "wind_dir": 202.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 492,
+            "wmo": 2,
+            "local_time": 20240129090000,
+            "formatted_datetime": "2024-01-29T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.6,
+            "dewpt": 19.3,
+            "wind_dir": 22.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3371,
+            "wmo": 2,
+            "local_time": 20240129090000,
+            "formatted_datetime": "2024-01-29T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.6,
+            "dewpt": 19.3,
+            "wind_dir": 22.5,
+            "wind_speed_kmh": 4
+        },
+        {
+            "id": 3374,
+            "wmo": 2,
+            "local_time": 20240129090000,
+            "formatted_datetime": "2024-01-29T09:00:00",
+            "location": "Batemans Bay",
+            "air_temp": 22.6,
+            "dewpt": 19.3,
+            "wind_dir": 22.5,
+            "wind_speed_kmh": 4
+        }
+    ]
+}
