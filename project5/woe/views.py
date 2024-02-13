@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.template import loader
@@ -25,10 +25,24 @@ def admin(request):
     serialized_dict = {}
     for key, object in wmo_dict.items():
         serialized_dict[key] = model_to_dict(object)
-    if request.method == "POST":
-        print(request.POST.dict())
-
     context = {'data': Source.objects.all(), 'wmo_dict': json.dumps(serialized_dict)}
+    if request.method == "POST":
+        post_data = request.POST.dict()
+        print(post_data)
+        source = Source()
+        source.name = post_data['name']
+
+        source.url = post_data['url']
+        print(post_data['wmo_id'].isnumeric())
+
+        source.wmo_id = int(post_data['wmo_id']) if post_data['wmo_id'].isnumeric() else 0
+        if post_data['id']:
+            source.id = int(post_data['id'])
+        print(source)
+        source.save()
+        return redirect('admin')
+
+
     return render(request, 'admin.html', context={'data': context})
 
 
