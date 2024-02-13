@@ -87,6 +87,13 @@ def user_request(request):
             default = datetime.strftime(datetime.now(), datetime_format)
         return obs_time if obs_time else default
 
+    def convert_wind_dir(wind_dir):
+        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+        if wind_dir in wind_dir_list:
+            dir_index = wind_dir_list.index(wind_dir)
+            return dir_index * 22.5
+        return 0
+
     def observation_dict(obs: Observation) -> dict:
         """ Returns the necessary items of an Observation in a dictionary """
         return dict(
@@ -97,7 +104,7 @@ def user_request(request):
             location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
-            wind_dir=obs.wind_dir,  # todo convert data
+            wind_dir=convert_wind_dir(obs.wind_dir),
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
