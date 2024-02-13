@@ -85,7 +85,8 @@ def user_request(request):
         return obs_time if obs_time else default
 
     def convert_wind_dir(wind_dir):
-        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
+        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW',
+                         'NNW']
         if wind_dir in wind_dir_list:
             dir_index = wind_dir_list.index(wind_dir)
             return dir_index * 22.5
@@ -103,17 +104,6 @@ def user_request(request):
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
-    def wmo_data_dict(wmo_id, wmo_name, obs_data):
-        dic = dict(
-            wmo_id=wmo_id,
-            location=wmo_name,
-            observations=obs_data
-        )
-        if limit:
-            dic['observations'] = dic['observations'][:limit]
-        return dic
-
-    # wmo data filtered and sorted by local time (latest first)
     if len(wmo_list) > 0:
         for wmo in wmo_list:
             kwargs = dict(wmo=wmo,
@@ -122,7 +112,11 @@ def user_request(request):
             obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
             wmo_data = [observation_dict(obs) for obs in obs_objects]
             if len(wmo_data) > 0:
-                data.append(wmo_data_dict(wmo, Source.objects.get(id=wmo).name, wmo_data))
+                data.append(dict(
+                    wmo_id=wmo,
+                    location=Source.objects.get(id=wmo).name,
+                    observations=wmo_data if not limit else wmo_data[:limit]
+                ))
 
     return JsonResponse(data, safe=False)
 
