@@ -150,12 +150,12 @@ def user_request_chart(request):
 def table_data(request):
     request.path = '/user'
     result = user_request(request)
-    wmo = request.GET.getlist('wmo')[0]
-    json_object = json.loads(result.content)
 
-    first_obj = json_object[wmo][0]
+    first_wmo = json.loads(result.content)[0]
+    first_obj = first_wmo['observations'][0]
+
     air_temp = first_obj['air_temp']
-    location = first_obj['location']
+    location = first_wmo['location']
     local_time = first_obj['local_time']
     dew_point = first_obj['dewpt']
     wind_dir = first_obj['wind_dir']
