@@ -66,7 +66,7 @@ def user_request(request):
     - after = after datetime (format: YYYYMMDDhhmmss)
     - limit = limit results by amount (must be a number)
     """
-    data = {}
+    data = []
     datetime_format = '%Y%m%d%H%M%S'
 
     wmo_list: list = request.GET.getlist('wmo')
@@ -95,10 +95,8 @@ def user_request(request):
         """ Returns the necessary items of an Observation in a dictionary """
         return dict(
             id=obs.id,
-            wmo=obs.wmo.id,
             local_time=obs.local_date_time_full,
             formatted_datetime=datetime.strptime(str(obs.local_date_time_full), datetime_format),
-            location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
             wind_dir=convert_wind_dir(obs.wind_dir),
@@ -114,7 +112,11 @@ def user_request(request):
             obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
             wmo_data = [observation_dict(obs) for obs in obs_objects]
             if len(wmo_data) > 0:
-                data[wmo] = wmo_data if not limit else wmo_data[:limit]
+                data.append(dict(
+                    wmo_id=wmo,
+                    location=Source.objects.get(id=wmo).name,
+                    observations=wmo_data
+                ) if not limit else wmo_data[:limit])
 
     return JsonResponse(data, safe=False)
 
@@ -134,13 +136,14 @@ def user_request_chart(request):
     request.path = '/user'
     usr_request_data = json.loads(user_request(request).content)
 
-    data = {}
-    for wmo in wmo_list:
-        data[wmo] = []
-        for observation in usr_request_data[wmo]:
+    data = []
+    for i, wmo in enumerate(wmo_list):
+        source = Source.objects.get(id=wmo)
+        data.append(dict(wmo_id=wmo, location=source.name, observations=[]))
+        for observation in usr_request_data[i]['observations']:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
             data_types['date_time'] = observation['formatted_datetime']
-            data[wmo].append(data_types)
+            data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
 
 
