@@ -137,6 +137,11 @@ select {
     cursor: pointer;
 }
 
+.fileUpload button  :hover{
+
+background-color: #0069d9;
+}
+
 .fileUpload {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -151,10 +156,15 @@ select {
     padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: rgb(27, 117, 208);
+    background-color: #007bff;
     color: white;
     cursor: pointer;
     display: inline-block;
+}
+
+.submitButton:hover{
+
+background-color: #0069d9;
 }
 
 h1 {

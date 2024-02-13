@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.template import loader
@@ -40,6 +40,8 @@ def admin(request):
             source.id = int(post_data['id'])
         print(source)
         source.save()
+        return redirect('admin')
+
 
     return render(request, 'admin.html', context={'data': context})
 
