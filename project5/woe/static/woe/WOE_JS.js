@@ -79,7 +79,9 @@ function do_ajax(dropdown, div_id) {
 }
 
 document.addEventListener("DOMContentLoaded", (event)=>{
-    do_ajax(document.getElementById('location_select'), 'ajax_example');
+    do_ajax(document.getElementById('location_select_opt1'), 'ajax_location_1');
+    do_ajax(document.getElementById('location_select_opt2'), 'ajax_location_2');
+    do_ajax(document.getElementById('location_select_opt3'), 'ajax_location_3');
 });
 
 function show_hide_divs(dropdown) {
