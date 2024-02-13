@@ -90,3 +90,16 @@ function show_hide_divs(dropdown) {
         toggle_visibility(div_list[i], div_list[i].id === dropdown.value);
     }
 }
+
+function get_data_example() {
+    console.log("hey");
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log(this.responseText);
+        }
+    }
+    let resource = '/user_request_chart?wmo=1&type=dewpt';
+    xhttp.open('GET', resource, true);
+    xhttp.send();
+}
