@@ -16,10 +16,7 @@ from django.forms.models import model_to_dict
 
 
 def index(request):
-    locations = [{'id': source.id, 'location': source.name} for source in Source.objects.all()]
-    context = {
-        'locations': locations
-    }
+    context = {}
     return render(request, 'index.html', context)
 
 
@@ -64,7 +61,17 @@ def user_page(request):
 
 
 def user_request(request):
-    data = {}
+    """
+    Request for data from the server
+
+    Parameters:
+
+    - wmo = location ID (supports multiple)
+    - before = before datetime (format: YYYYMMDDhhmmss)
+    - after = after datetime (format: YYYYMMDDhhmmss)
+    - limit = limit results by amount (must be a number)
+    """
+    data = []
     datetime_format = '%Y%m%d%H%M%S'
 
     wmo_list: list = request.GET.getlist('wmo')
@@ -82,21 +89,26 @@ def user_request(request):
             default = datetime.strftime(datetime.now(), datetime_format)
         return obs_time if obs_time else default
 
+    def convert_wind_dir(wind_dir):
+        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW',
+                         'NNW']
+        if wind_dir in wind_dir_list:
+            dir_index = wind_dir_list.index(wind_dir)
+            return dir_index * 22.5
+        return 0
+
     def observation_dict(obs: Observation) -> dict:
         """ Returns the necessary items of an Observation in a dictionary """
         return dict(
             id=obs.id,
-            wmo=obs.wmo.id,
             local_time=obs.local_date_time_full,
             formatted_datetime=datetime.strptime(str(obs.local_date_time_full), datetime_format),
-            location=obs.wmo.name,
             air_temp=obs.air_temp,
             dewpt=obs.dewpt,
-            wind_dir=obs.wind_dir,
+            wind_dir=convert_wind_dir(obs.wind_dir),
             wind_speed_kmh=obs.wind_spd_kmh
         )
 
-    # wmo data filtered and sorted by local time (latest first)
     if len(wmo_list) > 0:
         for wmo in wmo_list:
             kwargs = dict(wmo=wmo,
@@ -105,32 +117,50 @@ def user_request(request):
             obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
             wmo_data = [observation_dict(obs) for obs in obs_objects]
             if len(wmo_data) > 0:
-                data[wmo] = wmo_data if not limit else wmo_data[:limit]
+                data.append(dict(
+                    wmo_id=wmo,
+                    location=Source.objects.get(id=wmo).name,
+                    observations=wmo_data if not limit else wmo_data[:limit]
+                ))
 
     return JsonResponse(data, safe=False)
 
 
 def user_request_chart(request):
-    data_type = request.GET.get('type')
-    wmo = request.GET.get('wmo')
+    """
+    Request for formatted chart data
+
+    Parameters:
+
+    - All the same as user request
+    - type = the type of data (multiple supported, e.g. air_temp, dewpt)
+    """
+    data_type_list = request.GET.getlist('type')
+    wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
     usr_request_data = json.loads(user_request(request).content)
-    observations = usr_request_data[wmo]
 
-    data = [obs[data_type] for obs in observations]
+    data = []
+    for i, wmo in enumerate(wmo_list):
+        source = Source.objects.get(id=wmo)
+        data.append(dict(wmo_id=wmo, location=source.name, observations=[]))
+        for observation in usr_request_data[i]['observations']:
+            data_types = {data_type: observation[data_type] for data_type in data_type_list}
+            data_types['date_time'] = observation['formatted_datetime']
+            data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
 
 
 def table_data(request):
     request.path = '/user'
     result = user_request(request)
-    wmo = request.GET.getlist('wmo')[0]
-    json_object = json.loads(result.content)
 
-    first_obj = json_object[wmo][0]
+    first_wmo = json.loads(result.content)[0]
+    first_obj = first_wmo['observations'][0]
+
     air_temp = first_obj['air_temp']
-    location = first_obj['location']
+    location = first_wmo['location']
     local_time = first_obj['local_time']
     dew_point = first_obj['dewpt']
     wind_dir = first_obj['wind_dir']

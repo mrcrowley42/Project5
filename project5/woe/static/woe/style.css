@@ -45,6 +45,10 @@ border: 1px solid rgb(189, 187, 187);}
     color: inherit;
 }
 
+.nav-title {
+    font-weight: bold;
+}
+
 
 table tr:nth-child(odd) {
     background-color: rgb(249, 249, 252);

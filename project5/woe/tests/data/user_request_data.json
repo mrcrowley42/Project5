@@ -1,48 +1,44 @@
-{
-    "2": [
-        {
-            "id": 951,
-            "wmo": 2,
-            "local_time": 20240201090000,
-            "formatted_datetime": "2024-02-01T09:00:00",
-            "location": "Batemans Bay",
-            "air_temp": 21.0,
-            "dewpt": 19.4,
-            "wind_dir": "NNE",
-            "wind_speed_kmh": 4
-        },
-        {
-            "id": 490,
-            "wmo": 2,
-            "local_time": 20240131090000,
-            "formatted_datetime": "2024-01-31T09:00:00",
-            "location": "Batemans Bay",
-            "air_temp": 21.1,
-            "dewpt": 19.8,
-            "wind_dir": "SW",
-            "wind_speed_kmh": 2
-        },
-        {
-            "id": 491,
-            "wmo": 2,
-            "local_time": 20240130090000,
-            "formatted_datetime": "2024-01-30T09:00:00",
-            "location": "Batemans Bay",
-            "air_temp": 22.0,
-            "dewpt": 19.0,
-            "wind_dir": "SSW",
-            "wind_speed_kmh": 4
-        },
-        {
-            "id": 492,
-            "wmo": 2,
-            "local_time": 20240129090000,
-            "formatted_datetime": "2024-01-29T09:00:00",
-            "location": "Batemans Bay",
-            "air_temp": 22.6,
-            "dewpt": 19.3,
-            "wind_dir": "NNE",
-            "wind_speed_kmh": 4
-        }
-    ]
-}
+[
+    {
+        "wmo_id": "2",
+        "location": "Batemans Bay",
+        "observations": [
+            {
+                "id": 951,
+                "local_time": 20240201090000,
+                "formatted_datetime": "2024-02-01T09:00:00",
+                "air_temp": 21.0,
+                "dewpt": 19.4,
+                "wind_dir": 22.5,
+                "wind_speed_kmh": 4
+            },
+            {
+                "id": 490,
+                "local_time": 20240131090000,
+                "formatted_datetime": "2024-01-31T09:00:00",
+                "air_temp": 21.1,
+                "dewpt": 19.8,
+                "wind_dir": 225.0,
+                "wind_speed_kmh": 2
+            },
+            {
+                "id": 491,
+                "local_time": 20240130090000,
+                "formatted_datetime": "2024-01-30T09:00:00",
+                "air_temp": 22.0,
+                "dewpt": 19.0,
+                "wind_dir": 202.5,
+                "wind_speed_kmh": 4
+            },
+            {
+                "id": 492,
+                "local_time": 20240129090000,
+                "formatted_datetime": "2024-01-29T09:00:00",
+                "air_temp": 22.6,
+                "dewpt": 19.3,
+                "wind_dir": 22.5,
+                "wind_speed_kmh": 4
+            }
+        ]
+    }
+]

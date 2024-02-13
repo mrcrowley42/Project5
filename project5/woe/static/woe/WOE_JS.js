@@ -79,7 +79,6 @@ function do_ajax(dropdown, div_id) {
 }
 
 
-
 function show_hide_divs(dropdown) {
     let div_list = document.getElementsByClassName("div_hideable");
     for (let i = 0; i < div_list.length; i++) {

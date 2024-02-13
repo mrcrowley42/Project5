@@ -5,7 +5,9 @@
 <script src="{% static 'woe/Chart.js' %}"></script>
 <script>
     document.addEventListener("DOMContentLoaded", (event)=>{
-    do_ajax(document.getElementById('location_select'), 'ajax_example');
+    do_ajax(document.getElementById('location_select_opt1'), 'ajax_location_1');
+    do_ajax(document.getElementById('location_select_opt2'), 'ajax_location_2');
+    do_ajax(document.getElementById('location_select_opt3'), 'ajax_location_3');
 });
 </script>
 {% endblock %}
@@ -30,13 +32,13 @@
         {% endfor %}
     </ul>
 
-    <select id="location_select" name="location_dropdown" onchange="do_ajax(this, 'ajax_example')">
+    <select id="location_select_opt1" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_1')">
         {% for loc in locations %}
         <option value="{{loc.id}}">{{loc.location}}</option>
         {% endfor %}
     </select>
 
-    <div id="ajax_example" name="ajax_example">
+    <div id="ajax_location_1" name="ajax_location_1">
 
     </div>
 </div>
@@ -45,25 +47,70 @@
     <p>Compare</p>
     <div id="observation1" name="observation1">
         <p>Observation 1</p>
+        <select id="location_select_opt2" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_2')">
+            {% for loc in locations %}
+            <option value="{{loc.id}}">{{loc.location}}</option>
+            {% endfor %}
+        </select>
+        <div id="ajax_location_2" name="ajax_location_2">
+
+        </div>
     </div>
     <div id="observation2" name="observation2">
         <p>Observation 2</p>
+        <select id="location_select_opt3" name="location_dropdown" onchange="do_ajax(this, 'ajax_location_3')">
+            {% for loc in locations %}
+            <option value="{{loc.id}}">{{loc.location}}</option>
+            {% endfor %}
+        </select>
+        <div id="ajax_location_3" name="ajax_location_3">
+
+        </div>
     </div>
 </div>
 
 <div id="single_chart_div" class="div_hideable">
     <p>Single Chart</p>
+    <select id="location_select_opt4" name="location_dropdown" onchange="console.log('loaded')">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_single" style="width:100%;max-width:700px;"></canvas>
 </div>
 
 <div id="double_chart_div" class="div_hideable">
     <p>Double Chart</p>
+    <select id="location_select_opt5" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <select id="location_select_opt6" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_compare_obs1" style="width:100%;max-width:700px;"></canvas>
+    <br>
     <canvas id="chart_compare_obs2" style="width:100%;max-width:700px;"></canvas>
 </div>
 
 <div id="single_chart_multi_div" class="div_hideable">
     <p>Single Chart Multi</p>
+    <select id="location_select_opt7" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <select id="location_select_opt8" name="location_dropdown" onchange="console.log(this.value)">
+        {% for loc in locations %}
+        <option value="{{loc.id}}">{{loc.location}}</option>
+        {% endfor %}
+    </select>
+    <br>
     <canvas id="chart_multi" style="width:100%;max-width:700px;"></canvas>
 </div>
 
