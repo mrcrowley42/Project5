@@ -1,0 +1,16 @@
+The queries for the example data:
+
+
+user_request_example(1)
+    /user?wmo=2
+
+user_request_example(2)
+    /user?wmo=2&wmo=3
+
+
+user_chart_request_example(1)
+    /user-chart?type=air_temp&wmo=2
+
+user_chart_request_example(2)
+    /user-chart?type=air_temp&type=dewpt&wmo=3&wmo=2
+
