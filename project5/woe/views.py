@@ -12,6 +12,7 @@ from django.core import serializers
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from logging_module import logging_script
+from django.forms.models import model_to_dict
 
 
 def index(request):
@@ -23,11 +24,15 @@ def index(request):
 
 
 def admin(request):
+    wmo_dict = create_wmo_dict()
+    serialized_dict = {}
+    for key, object in wmo_dict.items():
+        serialized_dict[key] = model_to_dict(object)
     if request.method == "POST":
         print(request.POST.dict())
 
-    context = {'data': Source.objects.all()}
-    return render(request, 'admin.html', context)
+    context = {'data': Source.objects.all(), 'wmo_dict': json.dumps(serialized_dict)}
+    return render(request, 'admin.html', context={'data': context})
 
 
 def dev_page(request):

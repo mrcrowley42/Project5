@@ -78,9 +78,7 @@ function do_ajax(dropdown, div_id) {
     xhttp.send();
 }
 
-document.addEventListener("DOMContentLoaded", (event)=>{
-    do_ajax(document.getElementById('location_select'), 'ajax_example');
-});
+
 
 function show_hide_divs(dropdown) {
     let div_list = document.getElementsByClassName("div_hideable");

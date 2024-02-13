@@ -4,40 +4,78 @@
 {% block content %}
 <h1>Admin Page</h1>
 <h2>Sources table</h2>
-<form class="" name="hi" method="post" enctype="multipart/form-data" action="">
+
+<table id="myTable" class="sourceTable">
+    <tr>
+        <th>Name</th>
+        <th>WMO_id</th>
+        <th>URL</th>
+        <th style="border: none; background-color:white;"></th>
+    </tr>
+    {% for source in data.data %}
+    <tr>
+        <td>{{source.name}}</td>
+        <td>{{source.wmo_id}}</td>
+        <td>{{source.url}}</td>
+        <td onclick="editSource(this)" class="editRow">Edit</td>
+    </tr>
+    {% endfor %}
+</table>
+    <button class="submitButton" type="button">Add Source +</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <form class="" name="hi" method="post" enctype="multipart/form-data" action="">
     {% csrf_token %}
-<table class="editableTable" id="myTable">
+<table class="editableTable" id="blah">
     <tr>
         <th>Name</th>
         <th>WMO_id</th>
         <th>URL</th>
     </tr>
-    {% for source in data %}
+
     <tr>
-        <td><input name="name" value="{{source.name}}"></td>
-        <td><input name="wmo_id" value="{{source.wmo_id}}"></td>
-        <td><input name="url" style="min-width:500px" value="{{source.url}}"></td>
+        <td><input id="new_name" name="name" value="{{source.name}}"></td>
+        <td><input id="new_wmo" name="wmo_id" value="{{source.wmo_id}}"></td>
+        <td><input id="new_url" name="url" value="{{source.url}}"></td>
     </tr>
-    {% endfor %}
 </table>
     <button class="submitButton" role="submit" type="submit">Update</button>
-    <button class="submitButton"  type="button" onclick="myFunction()">Add Source +</button>
 </form>
-
-
+  </div>
+</div>
 
 <script>
-function myFunction() {
-  var table = document.getElementById("myTable");
-  var row = table.insertRow(-1);
-  var cell1 = row.insertCell();
-  var cell2 = row.insertCell();
-  var cell3 = row.insertCell();
-  cell1.innerHTML = "<input>";
+function editSource(element) {
+    var wmo_id = element.parentElement.cells[1].innerHTML;
+    console.log(wmo_id);
+    var wmo_mapping = {{ data.wmo_dict| safe }};
+    console.log(wmo_mapping[wmo_id]);
+    observation = wmo_mapping[wmo_id];
+    document.getElementById("new_name").value = observation.name;
+    document.getElementById("new_wmo").value = observation.wmo_id;
+    document.getElementById("new_url").value = observation.url;
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-  cell1.id = "hellpe";
-  cell2.innerHTML = "<input>";
-  cell3.innerHTML = "<input style='min-width:500px'>";
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    modal.style.display = "block";
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+        }
+
+    // When the user clicks anywhere outside the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
 }
 </script>
+
 {% endblock %}
