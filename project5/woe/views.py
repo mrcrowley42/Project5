@@ -64,7 +64,7 @@ def user_request(request):
     """
     Request for data from the server
 
-    Data format: [{wmo_id: x, location: y, observations: [{...}]}, ...]
+    Data format: [{wmo_id: x, location: y, observations: [{...}, {...}]}, ...]
 
     Parameters:
 
@@ -115,8 +115,8 @@ def user_request(request):
             kwargs = dict(wmo=wmo,
                           local_date_time_full__gt=convert_time(after_time),
                           local_date_time_full__lt=convert_time(before_time, True))
-            obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
-            wmo_data = [observation_dict(obs) for obs in obs_objects]
+            observations = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
+            wmo_data = [observation_dict(obs) for obs in observations]
             if len(wmo_data) > 0:
                 data.append(dict(
                     wmo_id=wmo,
@@ -147,7 +147,8 @@ def user_request_chart(request):
         data[i]['observations'] = []
         for observation in observations:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
-            data_types['date_time'] = observation['formatted_datetime']
+            data_types['local_time'] = observation['local_time']
+            data_types['formatted_datetime'] = observation['formatted_datetime']
             data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
 
@@ -157,14 +158,14 @@ def table_data(request):
     result = user_request(request)
 
     first_wmo = json.loads(result.content)[0]
-    first_obj = first_wmo['observations'][0]
+    first_obs = first_wmo['observations'][0]
 
-    air_temp = first_obj['air_temp']
+    air_temp = first_obs['air_temp']
     location = first_wmo['location']
-    local_time = first_obj['local_time']
-    dew_point = first_obj['dewpt']
-    wind_dir = first_obj['wind_dir']
-    wind_spe = first_obj['wind_speed_kmh']
+    local_time = first_obs['local_time']
+    dew_point = first_obs['dewpt']
+    wind_dir = first_obs['wind_dir']
+    wind_spe = first_obs['wind_speed_kmh']
 
     context = {'data': [['Location', location, 'Air Temperature', air_temp],
                         ['Time', local_time, 'Dew Point', dew_point],
