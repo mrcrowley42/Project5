@@ -19,10 +19,9 @@
         <td>{{source.name}}</td>
         <td>{{source.wmo_id}}</td>
         <td>{{source.url}}</td>
-        <td onclick="editSource(this)" class="editRow">Edit</td>
-        <td onclick="removeSource(this)" style="padding-left:15px; padding-right:15px; font-weight:500; font-size:30px;"
-            class="editRow">-
-        </td>
+        <td title="Edit" onclick="editSource(this)" class="editRow">🖉</td>
+        <td title="Remove" onclick="removeSource(this)"
+            class="editRow">🗑</td>
     </tr>
     {% endfor %}
 </table>
@@ -56,19 +55,24 @@
 
 <script>
     function removeSource(element) {
-    if (confirm("Press a button!")){
+    if (confirm("Are you sure you want to delete this entry?")){
         console.log("pressed ok");
-        var url = "{% url 'index' %}";
-        fetchAsync(url);
+        source_id = element.parentElement.cells[0].innerHTML;
+        console.log(element.parentElement.cells[0].innerHTML)
+        var request = new XMLHttpRequest();
+        request.ready
+        url = "{% url 'delete_source' %}" ;
+        request.open("POST", url) ;
+        var CSRF_TOKEN = '{{ csrf_token }}';
+        request.setRequestHeader("X-CSRFToken", CSRF_TOKEN);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send("id=" + source_id);
+
+
     }
 }
 
 
-async function fetchAsync (url) {
-  let response = await fetch(url);
-  let data = await response.json();
-  return data;
-}
 
     function editSource(element=false) {
         var wmo_mapping = {{ data.wmo_dict| safe }};

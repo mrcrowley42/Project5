@@ -184,3 +184,15 @@ def table_data(request):
                         ['Time', local_time, 'Dew Point', dew_point],
                         ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
     return render(request, 'table_data.html', context)
+
+
+def remove_from_source_table(request):
+    """Removes a source entry from the sources table. """
+    post_data = int(request.POST['id'])
+    print(post_data)
+    try:
+        Source.objects.get(pk=post_data).delete()
+    except KeyError:
+        pass
+
+    return redirect('admin')
