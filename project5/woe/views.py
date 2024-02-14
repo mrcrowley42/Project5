@@ -160,7 +160,6 @@ def user_request_chart(request):
         data[i]['observations'] = []
         for observation in observations:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
-            data_types['local_time'] = observation['local_time']
             data_types['formatted_datetime'] = observation['formatted_datetime']
             data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
