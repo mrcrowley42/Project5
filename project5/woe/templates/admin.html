@@ -4,13 +4,13 @@
 {% block content %}
 <h1>Admin Page</h1>
 <h2>Sources table</h2>
-
-<table id="myTable" class="rounded-corners">
+<table id="myTable" class="sourceTable">
     <tr>
         <th class="idColumn">ID</th>
         <th>Name</th>
         <th>WMO id</th>
         <th>URL</th>
+        <th style="border: none; background-color:white;"></th>
         <th style="border: none; background-color:white;"></th>
     </tr>
     {% for source in data.data %}
@@ -20,72 +20,89 @@
         <td>{{source.wmo_id}}</td>
         <td>{{source.url}}</td>
         <td onclick="editSource(this)" class="editRow">Edit</td>
+        <td onclick="removeSource(this)" style="padding-left:15px; padding-right:15px; font-weight:500; font-size:30px;"
+            class="editRow">-
+        </td>
     </tr>
     {% endfor %}
 </table>
-    <button class="submitButton" type="button" onclick="editSource()">Add Source +</button>
+<button class="submitButton" type="button" onclick="editSource()">Add Source +</button>
+<button class="submitButton" type="button">Manual Refresh</button>
+<!--Popup Window-->
 
 <div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-      <form class="" name="hi" method="post" enctype="multipart/form-data" action="">
-    {% csrf_token %}
-<table class="editableTable" id="blah">
-    <tr>
-        <th class="idColumn">ID</th>
-        <th>Name</th>
-        <th>WMO_id</th>
-        <th>URL</th>
-    </tr>
-
-    <tr>
-        <td class="idColumn"><input id="new_id" name="id" value="{{source.id}}"></td>
-        <td><input id="new_name" name="name" value="{{source.name}}"></td>
-        <td><input id="new_wmo" name="wmo_id" value="{{source.wmo_id}}"></td>
-        <td><input id="new_url" name="url" value="{{source.url}}"></td>
-    </tr>
-</table>
-    <button class="submitButton" role="submit" type="submit">Update</button>
-</form>
-  </div>
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="test" name="hi" method="post" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            <table class="editableTable" id="editSourceTable">
+                <tr>
+                    <th class="idColumn">ID</th>
+                    <th>Name</th>
+                    <th>WMO_id</th>
+                    <th>URL</th>
+                </tr>
+                <tr>
+                    <td class="idColumn"><input id="new_id" name="id" value="{{source.id}}"></td>
+                    <td><input id="new_name" name="name" value="{{source.name}}"></td>
+                    <td><input id="new_wmo" name="wmo_id" value="{{source.wmo_id}}"></td>
+                    <td><input id="new_url" name="url" value="{{source.url}}"></td>
+                </tr>
+            </table>
+            <button class="submitButton" role="submit" type="submit">Update</button>
+        </form>
+    </div>
 </div>
 
 <script>
-function editSource(element=false) {
-    var wmo_mapping = {{ data.wmo_dict| safe }};
-    if (element != false){
-        var wmo_id = element.parentElement.cells[2].innerHTML;
-        console.log(wmo_id);
-        console.log(wmo_mapping[wmo_id]);
-        observation = wmo_mapping[wmo_id];
-        document.getElementById("new_id").value = observation.id;
-        document.getElementById("new_name").value = observation.name;
-        document.getElementById("new_wmo").value = observation.wmo_id;
-        document.getElementById("new_url").value = observation.url;
-       }
+    function removeSource(element) {
+    if (confirm("Press a button!")){
+        console.log("pressed ok");
+        var url = "{% url 'index' %}";
+        fetchAsync(url);
+    }
+}
 
-    // Get the modal
-    var modal = document.getElementById("myModal");
 
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+async function fetchAsync (url) {
+  let response = await fetch(url);
+  let data = await response.json();
+  return data;
+}
 
-    // When the user clicks the button, open the modal
-    modal.style.display = "block";
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-        }
+    function editSource(element=false) {
+        var wmo_mapping = {{ data.wmo_dict| safe }};
+        if (element != false){
+            var wmo_id = element.parentElement.cells[2].innerHTML;
+            console.log(wmo_id);
+            console.log(wmo_mapping[wmo_id]);
+            observation = wmo_mapping[wmo_id];
+            document.getElementById("new_id").value = observation.id;
+            document.getElementById("new_name").value = observation.name;
+            document.getElementById("new_wmo").value = observation.wmo_id;
+            document.getElementById("new_url").value = observation.url;
+           }
 
-    // When the user clicks anywhere outside the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal
+        modal.style.display = "block";
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
             modal.style.display = "none";
             }
-        }
 
-
-}
+        // When the user clicks anywhere outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+    }
 </script>
 
 {% endblock %}

@@ -42,7 +42,6 @@ def admin(request):
         source.save()
         return redirect('admin')
 
-
     return render(request, 'admin.html', context={'data': context})
 
 
