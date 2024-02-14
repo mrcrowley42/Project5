@@ -19,15 +19,14 @@
         <td>{{source.name}}</td>
         <td>{{source.wmo_id}}</td>
         <td>{{source.url}}</td>
-        <td onclick="editSource(this)" class="editRow">Edit</td>
-        <td onclick="removeSource(this)" style="padding-left:15px; padding-right:15px; font-weight:500; font-size:30px;"
-            class="editRow">-
-        </td>
+        <td title="Edit" onclick="editSource(this)" class="editRow">🖉</td>
+        <td title="Remove" onclick="removeSource(this)"
+            class="editRow">🗑</td>
     </tr>
     {% endfor %}
 </table>
 <button class="submitButton" type="button" onclick="editSource()">Add Source +</button>
-<button class="submitButton" type="button">Manual Refresh</button>
+<button title="Click to ingest new data from sources" class="submitButton" type="button" onclick="manualIngest()">Do Manual Ingest</button>
 <!--Popup Window-->
 
 <div id="myModal" class="modal">
@@ -56,19 +55,24 @@
 
 <script>
     function removeSource(element) {
-    if (confirm("Press a button!")){
+    if (confirm("Are you sure you want to delete this entry?")){
         console.log("pressed ok");
-        var url = "{% url 'index' %}";
-        fetchAsync(url);
+        source_id = element.parentElement.cells[0].innerHTML;
+        console.log(element.parentElement.cells[0].innerHTML)
+        var request = new XMLHttpRequest();
+        request.ready
+        url = "{% url 'delete_source' %}" ;
+        request.open("POST", url) ;
+        var CSRF_TOKEN = '{{ csrf_token }}';
+        request.setRequestHeader("X-CSRFToken", CSRF_TOKEN);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send("id=" + source_id);
+
+
     }
 }
 
 
-async function fetchAsync (url) {
-  let response = await fetch(url);
-  let data = await response.json();
-  return data;
-}
 
     function editSource(element=false) {
         var wmo_mapping = {{ data.wmo_dict| safe }};
@@ -77,11 +81,21 @@ async function fetchAsync (url) {
             console.log(wmo_id);
             console.log(wmo_mapping[wmo_id]);
             observation = wmo_mapping[wmo_id];
+            document.getElementById("new_wmo").readOnly = true;
             document.getElementById("new_id").value = observation.id;
             document.getElementById("new_name").value = observation.name;
             document.getElementById("new_wmo").value = observation.wmo_id;
             document.getElementById("new_url").value = observation.url;
            }
+        else {
+        document.getElementById("new_wmo").readOnly = false;
+        document.getElementById("new_id").value = "";
+        document.getElementById("new_name").value = "";
+        document.getElementById("new_wmo").value = "";
+        document.getElementById("new_url").value = "";
+        }
+
+
 
         // Get the modal
         var modal = document.getElementById("myModal");
@@ -102,6 +116,11 @@ async function fetchAsync (url) {
                 modal.style.display = "none";
                 }
             }
+    }
+
+    function manualIngest() {
+        location.href = '/do_manual_ingest';
+        alert('Ingesting data...')
     }
 </script>
 

@@ -24,9 +24,10 @@ urlpatterns = [
     path('dev/', views.dev_page, name='dev_page'),
     path('user/', views.user_page, name='user_page'),
 
+    path('do_manual_ingest', views.do_manual_ingest, name='do_manual_ingest'),
     path('user', views.user_request, name='user_request'),
     path('user-chart', views.user_request_chart, name='user_request_chard'),
     path('table_data', views.table_data, name="table_data"),
-
+    path('remove_from_source_table', views.remove_from_source_table, name='delete_source'),
     path('django_admin/', admin.site.urls),
 ]

@@ -9,6 +9,7 @@ from django.urls import reverse
 from django.views import generic
 from django.template import loader
 from django.core import serializers
+from scripts import api_functions
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from logging_module import logging_script
@@ -160,6 +161,7 @@ def user_request_chart(request):
         data[i]['observations'] = []
         for observation in observations:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
+            data_types['local_time'] = observation['local_time']
             data_types['formatted_datetime'] = observation['formatted_datetime']
             data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
@@ -183,3 +185,24 @@ def table_data(request):
                         ['Time', local_time, 'Dew Point', dew_point],
                         ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
     return render(request, 'table_data.html', context)
+
+
+def do_manual_ingest(request):
+    """ calls api_functions to ingest data """
+    api_functions.run()
+    return redirect('admin')
+
+
+def remove_from_source_table(request):
+    """Removes a source entry from the sources table. """
+    post_data = int(request.POST['id'])
+    if post_data != 1:
+        # Canberra is the default foreign key.
+
+        try:
+            Source.objects.get(pk=post_data).delete()
+        except KeyError:
+            pass
+
+
+    return redirect('admin')
