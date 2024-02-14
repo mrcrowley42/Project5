@@ -93,15 +93,21 @@ function show_hide_divs(dropdown) {
     }
 }
 
-function get_data_example() {
-    console.log("hey");
+function get_data_example(canvas) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            console.log(this.responseText);
+            create_chart_from_data(canvas, this.responseText);
         }
     }
-    let resource = '/user_request_chart?wmo=1&type=dewpt';
+    let resource = '/user-chart?wmo=1&type=dewpt';
     xhttp.open('GET', resource, true);
     xhttp.send();
+}
+
+function create_chart_from_data(canvas_input, response) {
+    canvas = document.getElementById(canvas_input);
+    console.log(response);
+    //chart_data = get_data_example();
+    //console.log(chart_data);
 }
