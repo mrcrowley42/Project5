@@ -196,10 +196,13 @@ def do_manual_ingest(request):
 def remove_from_source_table(request):
     """Removes a source entry from the sources table. """
     post_data = int(request.POST['id'])
-    print(post_data)
-    try:
-        Source.objects.get(pk=post_data).delete()
-    except KeyError:
-        pass
+    if post_data != 1:
+        # Canberra is the default foreign key.
+
+        try:
+            Source.objects.get(pk=post_data).delete()
+        except KeyError:
+            pass
+
 
     return redirect('admin')
