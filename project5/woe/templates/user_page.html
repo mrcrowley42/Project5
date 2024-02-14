@@ -64,7 +64,7 @@
 
 <div id="single_chart_div" class="div_hideable">
     <p>Single Chart</p>
-    <select id="location_select_opt4" name="location_dropdown" onchange="console.log('loaded')">
+    <select id="location_select_opt4" name="location_dropdown" onchange="get_data_example(this)">
         {% for loc in locations %}
         <option value="{{loc.id}}">{{loc.location}}</option>
         {% endfor %}

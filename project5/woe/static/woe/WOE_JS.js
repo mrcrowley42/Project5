@@ -91,7 +91,7 @@ function show_hide_divs(dropdown) {
     }
 }
 
-function get_data_example() {
+function get_data_example(selected_opt) {
     console.log("hey");
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -99,7 +99,7 @@ function get_data_example() {
             console.log(this.responseText);
         }
     }
-    let resource = '/user_request_chart?wmo=1&type=dewpt';
+    let resource = '/user-chart?type=dewpt&wmo=' + selected_opt.value;
     xhttp.open('GET', resource, true);
     xhttp.send();
 }
