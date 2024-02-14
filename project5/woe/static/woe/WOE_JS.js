@@ -78,10 +78,30 @@ function do_ajax(dropdown, div_id) {
     xhttp.send();
 }
 
+/*
+document.addEventListener("DOMContentLoaded", (event)=>{
+    do_ajax(document.getElementById('location_select_opt1'), 'ajax_location_1');
+    do_ajax(document.getElementById('location_select_opt2'), 'ajax_location_2');
+    do_ajax(document.getElementById('location_select_opt3'), 'ajax_location_3');
+});
+*/
 
 function show_hide_divs(dropdown) {
     let div_list = document.getElementsByClassName("div_hideable");
     for (let i = 0; i < div_list.length; i++) {
         toggle_visibility(div_list[i], div_list[i].id === dropdown.value);
     }
+}
+
+function get_data_example() {
+    console.log("hey");
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            console.log(this.responseText);
+        }
+    }
+    let resource = '/user_request_chart?wmo=1&type=dewpt';
+    xhttp.open('GET', resource, true);
+    xhttp.send();
 }

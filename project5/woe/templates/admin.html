@@ -26,7 +26,7 @@
     {% endfor %}
 </table>
 <button class="submitButton" type="button" onclick="editSource()">Add Source +</button>
-<button class="submitButton" type="button">Manual Refresh</button>
+<button title="Click to ingest new data" class="submitButton" type="button" onclick="manualIngest()">Do Manual Ingest</button>
 <!--Popup Window-->
 
 <div id="myModal" class="modal">
@@ -106,6 +106,11 @@
                 modal.style.display = "none";
                 }
             }
+    }
+
+    function manualIngest() {
+        location.href = '/do_manual_ingest';
+        alert('Ingesting data...')
     }
 </script>
 

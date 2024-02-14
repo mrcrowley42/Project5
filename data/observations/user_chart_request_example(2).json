@@ -4,2115 +4,1783 @@
         "location": "Braidwood",
         "observations": [
             {
+                "air_temp": 19.6,
+                "dewpt": 17.2,
+                "formatted_datetime": "2024-02-14T11:30:00"
+            },
+            {
+                "air_temp": 22.0,
+                "dewpt": 16.9,
+                "formatted_datetime": "2024-02-14T10:00:00"
+            },
+            {
+                "air_temp": 21.0,
+                "dewpt": 17.0,
+                "formatted_datetime": "2024-02-14T09:30:00"
+            },
+            {
+                "air_temp": 19.2,
+                "dewpt": 16.6,
+                "formatted_datetime": "2024-02-14T09:00:00"
+            },
+            {
                 "air_temp": 29.5,
                 "dewpt": 19.2,
-                "local_time": 20240213143000,
                 "formatted_datetime": "2024-02-13T14:30:00"
             },
             {
                 "air_temp": 22.7,
                 "dewpt": 17.6,
-                "local_time": 20240204210000,
                 "formatted_datetime": "2024-02-04T21:00:00"
             },
             {
                 "air_temp": 22.9,
                 "dewpt": 18.0,
-                "local_time": 20240204203000,
                 "formatted_datetime": "2024-02-04T20:30:00"
             },
             {
                 "air_temp": 24.0,
                 "dewpt": 18.4,
-                "local_time": 20240204200000,
                 "formatted_datetime": "2024-02-04T20:00:00"
             },
             {
                 "air_temp": 26.0,
                 "dewpt": 18.4,
-                "local_time": 20240204193000,
                 "formatted_datetime": "2024-02-04T19:30:00"
             },
             {
                 "air_temp": 27.3,
                 "dewpt": 18.3,
-                "local_time": 20240204190000,
                 "formatted_datetime": "2024-02-04T19:00:00"
             },
             {
                 "air_temp": 27.3,
                 "dewpt": 18.3,
-                "local_time": 20240204183000,
                 "formatted_datetime": "2024-02-04T18:30:00"
             },
             {
                 "air_temp": 28.0,
                 "dewpt": 19.5,
-                "local_time": 20240204180000,
                 "formatted_datetime": "2024-02-04T18:00:00"
             },
             {
                 "air_temp": 28.9,
                 "dewpt": 16.8,
-                "local_time": 20240204173000,
                 "formatted_datetime": "2024-02-04T17:30:00"
             },
             {
                 "air_temp": 28.8,
                 "dewpt": 18.0,
-                "local_time": 20240204170000,
                 "formatted_datetime": "2024-02-04T17:00:00"
             },
             {
                 "air_temp": 28.9,
                 "dewpt": 16.8,
-                "local_time": 20240204163000,
                 "formatted_datetime": "2024-02-04T16:30:00"
             },
             {
                 "air_temp": 29.1,
                 "dewpt": 16.3,
-                "local_time": 20240204160000,
                 "formatted_datetime": "2024-02-04T16:00:00"
             },
             {
                 "air_temp": 30.1,
                 "dewpt": 13.4,
-                "local_time": 20240204153000,
                 "formatted_datetime": "2024-02-04T15:30:00"
             },
             {
                 "air_temp": 30.1,
                 "dewpt": 11.6,
-                "local_time": 20240204150000,
                 "formatted_datetime": "2024-02-04T15:00:00"
             },
             {
                 "air_temp": 29.1,
                 "dewpt": 14.9,
-                "local_time": 20240204143000,
                 "formatted_datetime": "2024-02-04T14:30:00"
             },
             {
                 "air_temp": 29.6,
                 "dewpt": 15.7,
-                "local_time": 20240204140000,
                 "formatted_datetime": "2024-02-04T14:00:00"
             },
             {
                 "air_temp": 29.7,
                 "dewpt": 15.0,
-                "local_time": 20240204133000,
                 "formatted_datetime": "2024-02-04T13:30:00"
             },
             {
                 "air_temp": 29.9,
                 "dewpt": 16.0,
-                "local_time": 20240204130000,
                 "formatted_datetime": "2024-02-04T13:00:00"
             },
             {
                 "air_temp": 28.8,
                 "dewpt": 18.3,
-                "local_time": 20240204123000,
                 "formatted_datetime": "2024-02-04T12:30:00"
             },
             {
                 "air_temp": 27.8,
                 "dewpt": 19.3,
-                "local_time": 20240204120000,
                 "formatted_datetime": "2024-02-04T12:00:00"
             },
             {
                 "air_temp": 26.9,
                 "dewpt": 20.5,
-                "local_time": 20240204113000,
                 "formatted_datetime": "2024-02-04T11:30:00"
             },
             {
                 "air_temp": 24.2,
                 "dewpt": 19.7,
-                "local_time": 20240204110000,
                 "formatted_datetime": "2024-02-04T11:00:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 19.7,
-                "local_time": 20240204103000,
                 "formatted_datetime": "2024-02-04T10:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 19.6,
-                "local_time": 20240204102600,
                 "formatted_datetime": "2024-02-04T10:26:00"
             },
             {
                 "air_temp": 20.5,
                 "dewpt": 19.2,
-                "local_time": 20240204100000,
                 "formatted_datetime": "2024-02-04T10:00:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 18.3,
-                "local_time": 20240204093000,
                 "formatted_datetime": "2024-02-04T09:30:00"
             },
             {
                 "air_temp": 17.5,
                 "dewpt": 17.0,
-                "local_time": 20240204090000,
                 "formatted_datetime": "2024-02-04T09:00:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 17.1,
-                "local_time": 20240204083000,
                 "formatted_datetime": "2024-02-04T08:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.6,
-                "local_time": 20240204080000,
                 "formatted_datetime": "2024-02-04T08:00:00"
             },
             {
                 "air_temp": 15.6,
                 "dewpt": 15.3,
-                "local_time": 20240204073000,
                 "formatted_datetime": "2024-02-04T07:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.5,
-                "local_time": 20240204070000,
                 "formatted_datetime": "2024-02-04T07:00:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 14.0,
-                "local_time": 20240204063000,
                 "formatted_datetime": "2024-02-04T06:30:00"
             },
             {
                 "air_temp": 14.6,
                 "dewpt": 14.1,
-                "local_time": 20240204060000,
                 "formatted_datetime": "2024-02-04T06:00:00"
             },
             {
                 "air_temp": 15.6,
                 "dewpt": 15.1,
-                "local_time": 20240204053000,
                 "formatted_datetime": "2024-02-04T05:30:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 15.2,
-                "local_time": 20240204050000,
                 "formatted_datetime": "2024-02-04T05:00:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 15.4,
-                "local_time": 20240204043000,
                 "formatted_datetime": "2024-02-04T04:30:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 15.5,
-                "local_time": 20240204040000,
                 "formatted_datetime": "2024-02-04T04:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 15.9,
-                "local_time": 20240204033000,
                 "formatted_datetime": "2024-02-04T03:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.4,
-                "local_time": 20240204030000,
                 "formatted_datetime": "2024-02-04T03:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 16.5,
-                "local_time": 20240204023000,
                 "formatted_datetime": "2024-02-04T02:30:00"
             },
             {
                 "air_temp": 17.2,
                 "dewpt": 16.7,
-                "local_time": 20240204020000,
                 "formatted_datetime": "2024-02-04T02:00:00"
             },
             {
                 "air_temp": 17.5,
                 "dewpt": 17.0,
-                "local_time": 20240204013000,
                 "formatted_datetime": "2024-02-04T01:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 17.6,
-                "local_time": 20240204010000,
                 "formatted_datetime": "2024-02-04T01:00:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 17.5,
-                "local_time": 20240204003000,
                 "formatted_datetime": "2024-02-04T00:30:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 17.5,
-                "local_time": 20240204000000,
                 "formatted_datetime": "2024-02-04T00:00:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 17.7,
-                "local_time": 20240203233000,
                 "formatted_datetime": "2024-02-03T23:30:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 17.7,
-                "local_time": 20240203230000,
                 "formatted_datetime": "2024-02-03T23:00:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 17.8,
-                "local_time": 20240203223000,
                 "formatted_datetime": "2024-02-03T22:30:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 17.9,
-                "local_time": 20240203221900,
                 "formatted_datetime": "2024-02-03T22:19:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 17.7,
-                "local_time": 20240203220000,
                 "formatted_datetime": "2024-02-03T22:00:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 17.9,
-                "local_time": 20240203213000,
                 "formatted_datetime": "2024-02-03T21:30:00"
             },
             {
                 "air_temp": 19.4,
                 "dewpt": 18.1,
-                "local_time": 20240203210000,
                 "formatted_datetime": "2024-02-03T21:00:00"
             },
             {
                 "air_temp": 20.4,
                 "dewpt": 18.5,
-                "local_time": 20240203203000,
                 "formatted_datetime": "2024-02-03T20:30:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 18.8,
-                "local_time": 20240203200000,
                 "formatted_datetime": "2024-02-03T20:00:00"
             },
             {
                 "air_temp": 24.5,
                 "dewpt": 18.2,
-                "local_time": 20240203193000,
                 "formatted_datetime": "2024-02-03T19:30:00"
             },
             {
                 "air_temp": 28.4,
                 "dewpt": 16.3,
-                "local_time": 20240203190000,
                 "formatted_datetime": "2024-02-03T19:00:00"
             },
             {
                 "air_temp": 28.9,
                 "dewpt": 14.3,
-                "local_time": 20240203183000,
                 "formatted_datetime": "2024-02-03T18:30:00"
             },
             {
                 "air_temp": 29.3,
                 "dewpt": 15.4,
-                "local_time": 20240203180000,
                 "formatted_datetime": "2024-02-03T18:00:00"
             },
             {
                 "air_temp": 29.6,
                 "dewpt": 15.7,
-                "local_time": 20240203173000,
                 "formatted_datetime": "2024-02-03T17:30:00"
             },
             {
                 "air_temp": 29.2,
                 "dewpt": 15.7,
-                "local_time": 20240203170000,
                 "formatted_datetime": "2024-02-03T17:00:00"
             },
             {
                 "air_temp": 29.1,
                 "dewpt": 16.3,
-                "local_time": 20240203163000,
                 "formatted_datetime": "2024-02-03T16:30:00"
             },
             {
                 "air_temp": 28.9,
                 "dewpt": 16.1,
-                "local_time": 20240203160000,
                 "formatted_datetime": "2024-02-03T16:00:00"
             },
             {
                 "air_temp": 28.4,
                 "dewpt": 16.0,
-                "local_time": 20240203153000,
                 "formatted_datetime": "2024-02-03T15:30:00"
             },
             {
                 "air_temp": 28.4,
                 "dewpt": 16.0,
-                "local_time": 20240203150000,
                 "formatted_datetime": "2024-02-03T15:00:00"
             },
             {
                 "air_temp": 27.8,
                 "dewpt": 17.3,
-                "local_time": 20240203143000,
                 "formatted_datetime": "2024-02-03T14:30:00"
             },
             {
                 "air_temp": 26.7,
                 "dewpt": 16.9,
-                "local_time": 20240203140000,
                 "formatted_datetime": "2024-02-03T14:00:00"
             },
             {
                 "air_temp": 26.0,
                 "dewpt": 18.9,
-                "local_time": 20240203133000,
                 "formatted_datetime": "2024-02-03T13:30:00"
             },
             {
                 "air_temp": 24.8,
                 "dewpt": 17.8,
-                "local_time": 20240203130000,
                 "formatted_datetime": "2024-02-03T13:00:00"
             },
             {
                 "air_temp": 23.1,
                 "dewpt": 15.9,
-                "local_time": 20240203123000,
                 "formatted_datetime": "2024-02-03T12:30:00"
             },
             {
                 "air_temp": 23.1,
                 "dewpt": 16.4,
-                "local_time": 20240203120000,
                 "formatted_datetime": "2024-02-03T12:00:00"
             },
             {
                 "air_temp": 22.3,
                 "dewpt": 14.9,
-                "local_time": 20240203113000,
                 "formatted_datetime": "2024-02-03T11:30:00"
             },
             {
                 "air_temp": 22.4,
                 "dewpt": 15.5,
-                "local_time": 20240203110000,
                 "formatted_datetime": "2024-02-03T11:00:00"
             },
             {
                 "air_temp": 20.8,
                 "dewpt": 15.6,
-                "local_time": 20240203103000,
                 "formatted_datetime": "2024-02-03T10:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 15.7,
-                "local_time": 20240203100000,
                 "formatted_datetime": "2024-02-03T10:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 16.3,
-                "local_time": 20240203093000,
                 "formatted_datetime": "2024-02-03T09:30:00"
             },
             {
                 "air_temp": 18.6,
                 "dewpt": 15.8,
-                "local_time": 20240203090500,
                 "formatted_datetime": "2024-02-03T09:05:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 15.9,
-                "local_time": 20240203090000,
                 "formatted_datetime": "2024-02-03T09:00:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 15.8,
-                "local_time": 20240203083000,
                 "formatted_datetime": "2024-02-03T08:30:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 15.8,
-                "local_time": 20240203080000,
                 "formatted_datetime": "2024-02-03T08:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 15.4,
-                "local_time": 20240203073000,
                 "formatted_datetime": "2024-02-03T07:30:00"
             },
             {
                 "air_temp": 16.2,
                 "dewpt": 15.2,
-                "local_time": 20240203070000,
                 "formatted_datetime": "2024-02-03T07:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 15.0,
-                "local_time": 20240203063000,
                 "formatted_datetime": "2024-02-03T06:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.9,
-                "local_time": 20240203060000,
                 "formatted_datetime": "2024-02-03T06:00:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.8,
-                "local_time": 20240203053000,
                 "formatted_datetime": "2024-02-03T05:30:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 14.9,
-                "local_time": 20240203050000,
                 "formatted_datetime": "2024-02-03T05:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 14.9,
-                "local_time": 20240203043000,
                 "formatted_datetime": "2024-02-03T04:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.8,
-                "local_time": 20240203040500,
                 "formatted_datetime": "2024-02-03T04:05:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.8,
-                "local_time": 20240203040000,
                 "formatted_datetime": "2024-02-03T04:00:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.6,
-                "local_time": 20240203033000,
                 "formatted_datetime": "2024-02-03T03:30:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 14.8,
-                "local_time": 20240203030000,
                 "formatted_datetime": "2024-02-03T03:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 14.7,
-                "local_time": 20240203023000,
                 "formatted_datetime": "2024-02-03T02:30:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 14.8,
-                "local_time": 20240203020000,
                 "formatted_datetime": "2024-02-03T02:00:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 14.8,
-                "local_time": 20240203013000,
                 "formatted_datetime": "2024-02-03T01:30:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 14.7,
-                "local_time": 20240203010000,
                 "formatted_datetime": "2024-02-03T01:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 14.9,
-                "local_time": 20240203003000,
                 "formatted_datetime": "2024-02-03T00:30:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 14.9,
-                "local_time": 20240203001600,
                 "formatted_datetime": "2024-02-03T00:16:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 14.9,
-                "local_time": 20240203000000,
                 "formatted_datetime": "2024-02-03T00:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 14.9,
-                "local_time": 20240202233000,
                 "formatted_datetime": "2024-02-02T23:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 15.2,
-                "local_time": 20240202230000,
                 "formatted_datetime": "2024-02-02T23:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 15.3,
-                "local_time": 20240202223000,
                 "formatted_datetime": "2024-02-02T22:30:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 15.3,
-                "local_time": 20240202220000,
                 "formatted_datetime": "2024-02-02T22:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 15.2,
-                "local_time": 20240202213000,
                 "formatted_datetime": "2024-02-02T21:30:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 15.3,
-                "local_time": 20240202210000,
                 "formatted_datetime": "2024-02-02T21:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 15.3,
-                "local_time": 20240202204000,
                 "formatted_datetime": "2024-02-02T20:40:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 15.4,
-                "local_time": 20240202203000,
                 "formatted_datetime": "2024-02-02T20:30:00"
             },
             {
                 "air_temp": 17.2,
                 "dewpt": 15.5,
-                "local_time": 20240202202100,
                 "formatted_datetime": "2024-02-02T20:21:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 15.5,
-                "local_time": 20240202200000,
                 "formatted_datetime": "2024-02-02T20:00:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 15.7,
-                "local_time": 20240202193000,
                 "formatted_datetime": "2024-02-02T19:30:00"
             },
             {
                 "air_temp": 19.2,
                 "dewpt": 16.2,
-                "local_time": 20240202190000,
                 "formatted_datetime": "2024-02-02T19:00:00"
             },
             {
                 "air_temp": 20.4,
                 "dewpt": 17.0,
-                "local_time": 20240202183000,
                 "formatted_datetime": "2024-02-02T18:30:00"
             },
             {
                 "air_temp": 21.5,
                 "dewpt": 17.3,
-                "local_time": 20240202180000,
                 "formatted_datetime": "2024-02-02T18:00:00"
             },
             {
                 "air_temp": 22.4,
                 "dewpt": 17.8,
-                "local_time": 20240202173000,
                 "formatted_datetime": "2024-02-02T17:30:00"
             },
             {
                 "air_temp": 23.9,
                 "dewpt": 18.8,
-                "local_time": 20240202170000,
                 "formatted_datetime": "2024-02-02T17:00:00"
             },
             {
                 "air_temp": 24.3,
                 "dewpt": 18.7,
-                "local_time": 20240202163000,
                 "formatted_datetime": "2024-02-02T16:30:00"
             },
             {
                 "air_temp": 26.0,
                 "dewpt": 19.2,
-                "local_time": 20240202160000,
                 "formatted_datetime": "2024-02-02T16:00:00"
             },
             {
                 "air_temp": 27.6,
                 "dewpt": 10.3,
-                "local_time": 20240202153000,
                 "formatted_datetime": "2024-02-02T15:30:00"
             },
             {
                 "air_temp": 27.7,
                 "dewpt": 12.5,
-                "local_time": 20240202150000,
                 "formatted_datetime": "2024-02-02T15:00:00"
             },
             {
                 "air_temp": 27.4,
                 "dewpt": 13.7,
-                "local_time": 20240202143000,
                 "formatted_datetime": "2024-02-02T14:30:00"
             },
             {
                 "air_temp": 26.9,
                 "dewpt": 13.6,
-                "local_time": 20240202140000,
                 "formatted_datetime": "2024-02-02T14:00:00"
             },
             {
                 "air_temp": 26.3,
                 "dewpt": 12.0,
-                "local_time": 20240202133000,
                 "formatted_datetime": "2024-02-02T13:30:00"
             },
             {
                 "air_temp": 26.5,
                 "dewpt": 15.8,
-                "local_time": 20240202130000,
                 "formatted_datetime": "2024-02-02T13:00:00"
             },
             {
                 "air_temp": 26.0,
                 "dewpt": 15.1,
-                "local_time": 20240202123000,
                 "formatted_datetime": "2024-02-02T12:30:00"
             },
             {
                 "air_temp": 24.4,
                 "dewpt": 16.4,
-                "local_time": 20240202120000,
                 "formatted_datetime": "2024-02-02T12:00:00"
             },
             {
                 "air_temp": 23.4,
                 "dewpt": 16.4,
-                "local_time": 20240202113000,
                 "formatted_datetime": "2024-02-02T11:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 15.7,
-                "local_time": 20240202110000,
                 "formatted_datetime": "2024-02-02T11:00:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 16.4,
-                "local_time": 20240202103000,
                 "formatted_datetime": "2024-02-02T10:30:00"
             },
             {
                 "air_temp": 20.6,
                 "dewpt": 15.8,
-                "local_time": 20240202100000,
                 "formatted_datetime": "2024-02-02T10:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 15.0,
-                "local_time": 20240202093000,
                 "formatted_datetime": "2024-02-02T09:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 16.8,
-                "local_time": 20240202090000,
                 "formatted_datetime": "2024-02-02T09:00:00"
             },
             {
                 "air_temp": 17.6,
                 "dewpt": 16.5,
-                "local_time": 20240202085500,
                 "formatted_datetime": "2024-02-02T08:55:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 16.8,
-                "local_time": 20240202083000,
                 "formatted_datetime": "2024-02-02T08:30:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 15.9,
-                "local_time": 20240202080000,
                 "formatted_datetime": "2024-02-02T08:00:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 15.3,
-                "local_time": 20240202073000,
                 "formatted_datetime": "2024-02-02T07:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 14.2,
-                "local_time": 20240202070000,
                 "formatted_datetime": "2024-02-02T07:00:00"
             },
             {
                 "air_temp": 12.9,
                 "dewpt": 12.3,
-                "local_time": 20240202063000,
                 "formatted_datetime": "2024-02-02T06:30:00"
             },
             {
                 "air_temp": 12.7,
                 "dewpt": 11.8,
-                "local_time": 20240202061900,
                 "formatted_datetime": "2024-02-02T06:19:00"
             },
             {
                 "air_temp": 13.8,
                 "dewpt": 12.7,
-                "local_time": 20240202060000,
                 "formatted_datetime": "2024-02-02T06:00:00"
             },
             {
                 "air_temp": 14.3,
                 "dewpt": 13.3,
-                "local_time": 20240202055400,
                 "formatted_datetime": "2024-02-02T05:54:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 14.3,
-                "local_time": 20240202053000,
                 "formatted_datetime": "2024-02-02T05:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 15.1,
-                "local_time": 20240202050000,
                 "formatted_datetime": "2024-02-02T05:00:00"
             },
             {
                 "air_temp": 16.2,
                 "dewpt": 15.2,
-                "local_time": 20240202043000,
                 "formatted_datetime": "2024-02-02T04:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 15.8,
-                "local_time": 20240202040000,
                 "formatted_datetime": "2024-02-02T04:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 16.7,
-                "local_time": 20240202033000,
                 "formatted_datetime": "2024-02-02T03:30:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 16.8,
-                "local_time": 20240202030400,
                 "formatted_datetime": "2024-02-02T03:04:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 16.8,
-                "local_time": 20240202030000,
                 "formatted_datetime": "2024-02-02T03:00:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 16.9,
-                "local_time": 20240202023000,
                 "formatted_datetime": "2024-02-02T02:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 16.9,
-                "local_time": 20240202021000,
                 "formatted_datetime": "2024-02-02T02:10:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 17.0,
-                "local_time": 20240202020000,
                 "formatted_datetime": "2024-02-02T02:00:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 16.8,
-                "local_time": 20240202013000,
                 "formatted_datetime": "2024-02-02T01:30:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 16.9,
-                "local_time": 20240202010000,
                 "formatted_datetime": "2024-02-02T01:00:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 16.9,
-                "local_time": 20240202003000,
                 "formatted_datetime": "2024-02-02T00:30:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 17.4,
-                "local_time": 20240202000000,
                 "formatted_datetime": "2024-02-02T00:00:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 17.5,
-                "local_time": 20240201233000,
                 "formatted_datetime": "2024-02-01T23:30:00"
             },
             {
                 "air_temp": 18.7,
                 "dewpt": 17.7,
-                "local_time": 20240201230000,
                 "formatted_datetime": "2024-02-01T23:00:00"
             },
             {
                 "air_temp": 18.6,
                 "dewpt": 17.6,
-                "local_time": 20240201223000,
                 "formatted_datetime": "2024-02-01T22:30:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 17.3,
-                "local_time": 20240201220000,
                 "formatted_datetime": "2024-02-01T22:00:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 17.0,
-                "local_time": 20240201213000,
                 "formatted_datetime": "2024-02-01T21:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 15.4,
-                "local_time": 20240201093000,
                 "formatted_datetime": "2024-02-01T09:30:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 15.2,
-                "local_time": 20240201090000,
                 "formatted_datetime": "2024-02-01T09:00:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 15.0,
-                "local_time": 20240201083000,
                 "formatted_datetime": "2024-02-01T08:30:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 14.5,
-                "local_time": 20240201080000,
                 "formatted_datetime": "2024-02-01T08:00:00"
             },
             {
                 "air_temp": 15.1,
                 "dewpt": 14.3,
-                "local_time": 20240201073000,
                 "formatted_datetime": "2024-02-01T07:30:00"
             },
             {
                 "air_temp": 15.0,
                 "dewpt": 14.4,
-                "local_time": 20240201070000,
                 "formatted_datetime": "2024-02-01T07:00:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.3,
-                "local_time": 20240201063000,
                 "formatted_datetime": "2024-02-01T06:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.3,
-                "local_time": 20240201060000,
                 "formatted_datetime": "2024-02-01T06:00:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.3,
-                "local_time": 20240201053000,
                 "formatted_datetime": "2024-02-01T05:30:00"
             },
             {
                 "air_temp": 15.0,
                 "dewpt": 14.4,
-                "local_time": 20240201050000,
                 "formatted_datetime": "2024-02-01T05:00:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.1,
-                "local_time": 20240201043000,
                 "formatted_datetime": "2024-02-01T04:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.1,
-                "local_time": 20240201040000,
                 "formatted_datetime": "2024-02-01T04:00:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.2,
-                "local_time": 20240201033000,
                 "formatted_datetime": "2024-02-01T03:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201030000,
                 "formatted_datetime": "2024-02-01T03:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201023000,
                 "formatted_datetime": "2024-02-01T02:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.2,
-                "local_time": 20240201020000,
                 "formatted_datetime": "2024-02-01T02:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201013000,
                 "formatted_datetime": "2024-02-01T01:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201010000,
                 "formatted_datetime": "2024-02-01T01:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201003000,
                 "formatted_datetime": "2024-02-01T00:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240201000000,
                 "formatted_datetime": "2024-02-01T00:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.2,
-                "local_time": 20240131233000,
                 "formatted_datetime": "2024-01-31T23:30:00"
             },
             {
                 "air_temp": 14.6,
                 "dewpt": 14.1,
-                "local_time": 20240131230000,
                 "formatted_datetime": "2024-01-31T23:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240131223000,
                 "formatted_datetime": "2024-01-31T22:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.1,
-                "local_time": 20240131220000,
                 "formatted_datetime": "2024-01-31T22:00:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.2,
-                "local_time": 20240131213000,
                 "formatted_datetime": "2024-01-31T21:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.3,
-                "local_time": 20240131210000,
                 "formatted_datetime": "2024-01-31T21:00:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.2,
-                "local_time": 20240131203000,
                 "formatted_datetime": "2024-01-31T20:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.3,
-                "local_time": 20240131200000,
                 "formatted_datetime": "2024-01-31T20:00:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 14.6,
-                "local_time": 20240131193000,
                 "formatted_datetime": "2024-01-31T19:30:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 14.7,
-                "local_time": 20240131190000,
                 "formatted_datetime": "2024-01-31T19:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 14.6,
-                "local_time": 20240131183000,
                 "formatted_datetime": "2024-01-31T18:30:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 14.6,
-                "local_time": 20240131180000,
                 "formatted_datetime": "2024-01-31T18:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 15.1,
-                "local_time": 20240131173000,
                 "formatted_datetime": "2024-01-31T17:30:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 15.1,
-                "local_time": 20240131170000,
                 "formatted_datetime": "2024-01-31T17:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 15.2,
-                "local_time": 20240131163000,
                 "formatted_datetime": "2024-01-31T16:30:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 15.7,
-                "local_time": 20240131160000,
                 "formatted_datetime": "2024-01-31T16:00:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 15.8,
-                "local_time": 20240131153000,
                 "formatted_datetime": "2024-01-31T15:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 16.1,
-                "local_time": 20240131150000,
                 "formatted_datetime": "2024-01-31T15:00:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 16.3,
-                "local_time": 20240131143000,
                 "formatted_datetime": "2024-01-31T14:30:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 16.8,
-                "local_time": 20240131140000,
                 "formatted_datetime": "2024-01-31T14:00:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 17.1,
-                "local_time": 20240131133000,
                 "formatted_datetime": "2024-01-31T13:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 16.4,
-                "local_time": 20240131130000,
                 "formatted_datetime": "2024-01-31T13:00:00"
             },
             {
                 "air_temp": 17.6,
                 "dewpt": 16.3,
-                "local_time": 20240131123000,
                 "formatted_datetime": "2024-01-31T12:30:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 16.4,
-                "local_time": 20240131120000,
                 "formatted_datetime": "2024-01-31T12:00:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 16.5,
-                "local_time": 20240131113000,
                 "formatted_datetime": "2024-01-31T11:30:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 16.3,
-                "local_time": 20240131110000,
                 "formatted_datetime": "2024-01-31T11:00:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 16.0,
-                "local_time": 20240131103000,
                 "formatted_datetime": "2024-01-31T10:30:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 15.6,
-                "local_time": 20240131100000,
                 "formatted_datetime": "2024-01-31T10:00:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 15.9,
-                "local_time": 20240131093000,
                 "formatted_datetime": "2024-01-31T09:30:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 15.9,
-                "local_time": 20240131090000,
                 "formatted_datetime": "2024-01-31T09:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 15.6,
-                "local_time": 20240131083000,
                 "formatted_datetime": "2024-01-31T08:30:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 15.8,
-                "local_time": 20240131080000,
                 "formatted_datetime": "2024-01-31T08:00:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 15.9,
-                "local_time": 20240131073000,
                 "formatted_datetime": "2024-01-31T07:30:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 16.7,
-                "local_time": 20240131070000,
                 "formatted_datetime": "2024-01-31T07:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 16.3,
-                "local_time": 20240131063000,
                 "formatted_datetime": "2024-01-31T06:30:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 16.2,
-                "local_time": 20240131062400,
                 "formatted_datetime": "2024-01-31T06:24:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 15.4,
-                "local_time": 20240131060000,
                 "formatted_datetime": "2024-01-31T06:00:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 15.5,
-                "local_time": 20240131053000,
                 "formatted_datetime": "2024-01-31T05:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 16.2,
-                "local_time": 20240131050000,
                 "formatted_datetime": "2024-01-31T05:00:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 16.2,
-                "local_time": 20240131044800,
                 "formatted_datetime": "2024-01-31T04:48:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.4,
-                "local_time": 20240131043000,
                 "formatted_datetime": "2024-01-31T04:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 16.3,
-                "local_time": 20240131040000,
                 "formatted_datetime": "2024-01-31T04:00:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.4,
-                "local_time": 20240131033000,
                 "formatted_datetime": "2024-01-31T03:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 16.5,
-                "local_time": 20240131030000,
                 "formatted_datetime": "2024-01-31T03:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 16.1,
-                "local_time": 20240131023000,
                 "formatted_datetime": "2024-01-31T02:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 16.3,
-                "local_time": 20240131020000,
                 "formatted_datetime": "2024-01-31T02:00:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.4,
-                "local_time": 20240131013000,
                 "formatted_datetime": "2024-01-31T01:30:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 16.3,
-                "local_time": 20240131010000,
                 "formatted_datetime": "2024-01-31T01:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 16.2,
-                "local_time": 20240131003000,
                 "formatted_datetime": "2024-01-31T00:30:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 16.2,
-                "local_time": 20240131000000,
                 "formatted_datetime": "2024-01-31T00:00:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.1,
-                "local_time": 20240130233000,
                 "formatted_datetime": "2024-01-30T23:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.3,
-                "local_time": 20240130230000,
                 "formatted_datetime": "2024-01-30T23:00:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.1,
-                "local_time": 20240130223000,
                 "formatted_datetime": "2024-01-30T22:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 16.1,
-                "local_time": 20240130220000,
                 "formatted_datetime": "2024-01-30T22:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 16.0,
-                "local_time": 20240130213000,
                 "formatted_datetime": "2024-01-30T21:30:00"
             },
             {
                 "air_temp": 17.2,
                 "dewpt": 16.2,
-                "local_time": 20240130210000,
                 "formatted_datetime": "2024-01-30T21:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 16.6,
-                "local_time": 20240130203000,
                 "formatted_datetime": "2024-01-30T20:30:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 16.7,
-                "local_time": 20240130201700,
                 "formatted_datetime": "2024-01-30T20:17:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 17.0,
-                "local_time": 20240130200000,
                 "formatted_datetime": "2024-01-30T20:00:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 16.9,
-                "local_time": 20240130193000,
                 "formatted_datetime": "2024-01-30T19:30:00"
             },
             {
                 "air_temp": 20.8,
                 "dewpt": 17.4,
-                "local_time": 20240130190000,
                 "formatted_datetime": "2024-01-30T19:00:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 17.8,
-                "local_time": 20240130183000,
                 "formatted_datetime": "2024-01-30T18:30:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 18.1,
-                "local_time": 20240130180000,
                 "formatted_datetime": "2024-01-30T18:00:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 17.7,
-                "local_time": 20240130173000,
                 "formatted_datetime": "2024-01-30T17:30:00"
             },
             {
                 "air_temp": 23.1,
                 "dewpt": 17.8,
-                "local_time": 20240130170000,
                 "formatted_datetime": "2024-01-30T17:00:00"
             },
             {
                 "air_temp": 22.7,
                 "dewpt": 17.2,
-                "local_time": 20240130163000,
                 "formatted_datetime": "2024-01-30T16:30:00"
             },
             {
                 "air_temp": 23.6,
                 "dewpt": 18.9,
-                "local_time": 20240130160000,
                 "formatted_datetime": "2024-01-30T16:00:00"
             },
             {
                 "air_temp": 23.2,
                 "dewpt": 18.7,
-                "local_time": 20240130153000,
                 "formatted_datetime": "2024-01-30T15:30:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 17.6,
-                "local_time": 20240130150000,
                 "formatted_datetime": "2024-01-30T15:00:00"
             },
             {
                 "air_temp": 22.3,
                 "dewpt": 17.0,
-                "local_time": 20240130143000,
                 "formatted_datetime": "2024-01-30T14:30:00"
             },
             {
                 "air_temp": 23.8,
                 "dewpt": 18.0,
-                "local_time": 20240130140000,
                 "formatted_datetime": "2024-01-30T14:00:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 16.4,
-                "local_time": 20240130133000,
                 "formatted_datetime": "2024-01-30T13:30:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 16.8,
-                "local_time": 20240130130000,
                 "formatted_datetime": "2024-01-30T13:00:00"
             },
             {
                 "air_temp": 20.9,
                 "dewpt": 16.1,
-                "local_time": 20240130123000,
                 "formatted_datetime": "2024-01-30T12:30:00"
             },
             {
                 "air_temp": 20.6,
                 "dewpt": 15.8,
-                "local_time": 20240130120000,
                 "formatted_datetime": "2024-01-30T12:00:00"
             },
             {
                 "air_temp": 20.0,
                 "dewpt": 14.6,
-                "local_time": 20240130113000,
                 "formatted_datetime": "2024-01-30T11:30:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 14.4,
-                "local_time": 20240130110000,
                 "formatted_datetime": "2024-01-30T11:00:00"
             },
             {
                 "air_temp": 18.6,
                 "dewpt": 15.7,
-                "local_time": 20240130103000,
                 "formatted_datetime": "2024-01-30T10:30:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 15.1,
-                "local_time": 20240130100000,
                 "formatted_datetime": "2024-01-30T10:00:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 14.5,
-                "local_time": 20240130093000,
                 "formatted_datetime": "2024-01-30T09:30:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 14.4,
-                "local_time": 20240130090000,
                 "formatted_datetime": "2024-01-30T09:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 14.4,
-                "local_time": 20240130083000,
                 "formatted_datetime": "2024-01-30T08:30:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 14.7,
-                "local_time": 20240130080000,
                 "formatted_datetime": "2024-01-30T08:00:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.3,
-                "local_time": 20240130073000,
                 "formatted_datetime": "2024-01-30T07:30:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 13.5,
-                "local_time": 20240130070000,
                 "formatted_datetime": "2024-01-30T07:00:00"
             },
             {
                 "air_temp": 12.2,
                 "dewpt": 11.4,
-                "local_time": 20240130063000,
                 "formatted_datetime": "2024-01-30T06:30:00"
             },
             {
                 "air_temp": 12.7,
                 "dewpt": 11.8,
-                "local_time": 20240130060000,
                 "formatted_datetime": "2024-01-30T06:00:00"
             },
             {
                 "air_temp": 13.3,
                 "dewpt": 12.2,
-                "local_time": 20240130053000,
                 "formatted_datetime": "2024-01-30T05:30:00"
             },
             {
                 "air_temp": 13.4,
                 "dewpt": 11.8,
-                "local_time": 20240130050000,
                 "formatted_datetime": "2024-01-30T05:00:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 12.7,
-                "local_time": 20240130043000,
                 "formatted_datetime": "2024-01-30T04:30:00"
             },
             {
                 "air_temp": 14.3,
                 "dewpt": 12.3,
-                "local_time": 20240130040000,
                 "formatted_datetime": "2024-01-30T04:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 12.6,
-                "local_time": 20240130033000,
                 "formatted_datetime": "2024-01-30T03:30:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 12.8,
-                "local_time": 20240130030000,
                 "formatted_datetime": "2024-01-30T03:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 13.1,
-                "local_time": 20240130023000,
                 "formatted_datetime": "2024-01-30T02:30:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 13.7,
-                "local_time": 20240130020000,
                 "formatted_datetime": "2024-01-30T02:00:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 14.4,
-                "local_time": 20240130013000,
                 "formatted_datetime": "2024-01-30T01:30:00"
             },
             {
                 "air_temp": 17.2,
                 "dewpt": 14.7,
-                "local_time": 20240130010000,
                 "formatted_datetime": "2024-01-30T01:00:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 14.4,
-                "local_time": 20240130003000,
                 "formatted_datetime": "2024-01-30T00:30:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 14.3,
-                "local_time": 20240130000000,
                 "formatted_datetime": "2024-01-30T00:00:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 14.7,
-                "local_time": 20240129233000,
                 "formatted_datetime": "2024-01-29T23:30:00"
             },
             {
                 "air_temp": 18.6,
                 "dewpt": 15.3,
-                "local_time": 20240129230000,
                 "formatted_datetime": "2024-01-29T23:00:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 16.0,
-                "local_time": 20240129223000,
                 "formatted_datetime": "2024-01-29T22:30:00"
             },
             {
                 "air_temp": 19.1,
                 "dewpt": 16.1,
-                "local_time": 20240129220000,
                 "formatted_datetime": "2024-01-29T22:00:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 15.7,
-                "local_time": 20240129213000,
                 "formatted_datetime": "2024-01-29T21:30:00"
             },
             {
                 "air_temp": 19.7,
                 "dewpt": 14.3,
-                "local_time": 20240129210000,
                 "formatted_datetime": "2024-01-29T21:00:00"
             },
             {
                 "air_temp": 20.4,
                 "dewpt": 15.4,
-                "local_time": 20240129203000,
                 "formatted_datetime": "2024-01-29T20:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 17.0,
-                "local_time": 20240129200000,
                 "formatted_datetime": "2024-01-29T20:00:00"
             },
             {
                 "air_temp": 23.2,
                 "dewpt": 18.9,
-                "local_time": 20240129193000,
                 "formatted_datetime": "2024-01-29T19:30:00"
             },
             {
                 "air_temp": 24.5,
                 "dewpt": 19.6,
-                "local_time": 20240129190000,
                 "formatted_datetime": "2024-01-29T19:00:00"
             },
             {
                 "air_temp": 25.9,
                 "dewpt": 19.8,
-                "local_time": 20240129183000,
                 "formatted_datetime": "2024-01-29T18:30:00"
             },
             {
                 "air_temp": 29.2,
                 "dewpt": 15.0,
-                "local_time": 20240129180000,
                 "formatted_datetime": "2024-01-29T18:00:00"
             },
             {
                 "air_temp": 29.4,
                 "dewpt": 15.9,
-                "local_time": 20240129173000,
                 "formatted_datetime": "2024-01-29T17:30:00"
             },
             {
                 "air_temp": 29.7,
                 "dewpt": 14.3,
-                "local_time": 20240129170000,
                 "formatted_datetime": "2024-01-29T17:00:00"
             },
             {
                 "air_temp": 30.1,
                 "dewpt": 15.8,
-                "local_time": 20240129163000,
                 "formatted_datetime": "2024-01-29T16:30:00"
             },
             {
                 "air_temp": 29.7,
                 "dewpt": 14.3,
-                "local_time": 20240129160000,
                 "formatted_datetime": "2024-01-29T16:00:00"
             },
             {
                 "air_temp": 29.7,
                 "dewpt": 16.1,
-                "local_time": 20240129153000,
                 "formatted_datetime": "2024-01-29T15:30:00"
             },
             {
                 "air_temp": 29.3,
                 "dewpt": 16.8,
-                "local_time": 20240129150000,
                 "formatted_datetime": "2024-01-29T15:00:00"
             },
             {
                 "air_temp": 28.8,
                 "dewpt": 15.3,
-                "local_time": 20240129143000,
                 "formatted_datetime": "2024-01-29T14:30:00"
             },
             {
                 "air_temp": 28.6,
                 "dewpt": 16.8,
-                "local_time": 20240129140000,
                 "formatted_datetime": "2024-01-29T14:00:00"
             },
             {
                 "air_temp": 28.3,
                 "dewpt": 15.9,
-                "local_time": 20240129133000,
                 "formatted_datetime": "2024-01-29T13:30:00"
             },
             {
                 "air_temp": 27.9,
                 "dewpt": 18.3,
-                "local_time": 20240129130000,
                 "formatted_datetime": "2024-01-29T13:00:00"
             },
             {
                 "air_temp": 27.2,
                 "dewpt": 18.8,
-                "local_time": 20240129123000,
                 "formatted_datetime": "2024-01-29T12:30:00"
             },
             {
                 "air_temp": 26.4,
                 "dewpt": 18.0,
-                "local_time": 20240129120000,
                 "formatted_datetime": "2024-01-29T12:00:00"
             },
             {
                 "air_temp": 25.2,
                 "dewpt": 18.4,
-                "local_time": 20240129113000,
                 "formatted_datetime": "2024-01-29T11:30:00"
             },
             {
                 "air_temp": 24.4,
                 "dewpt": 17.4,
-                "local_time": 20240129110000,
                 "formatted_datetime": "2024-01-29T11:00:00"
             },
             {
                 "air_temp": 23.5,
                 "dewpt": 17.5,
-                "local_time": 20240129103000,
                 "formatted_datetime": "2024-01-29T10:30:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 17.3,
-                "local_time": 20240129100000,
                 "formatted_datetime": "2024-01-29T10:00:00"
             },
             {
                 "air_temp": 21.0,
                 "dewpt": 17.0,
-                "local_time": 20240129093000,
                 "formatted_datetime": "2024-01-29T09:30:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 17.2,
-                "local_time": 20240129091000,
                 "formatted_datetime": "2024-01-29T09:10:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 15.4,
-                "local_time": 20240129090000,
                 "formatted_datetime": "2024-01-29T09:00:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 16.3,
-                "local_time": 20240129083000,
                 "formatted_datetime": "2024-01-29T08:30:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 16.2,
-                "local_time": 20240129082500,
                 "formatted_datetime": "2024-01-29T08:25:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 16.5,
-                "local_time": 20240129082200,
                 "formatted_datetime": "2024-01-29T08:22:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 16.2,
-                "local_time": 20240129080000,
                 "formatted_datetime": "2024-01-29T08:00:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 15.7,
-                "local_time": 20240129073000,
                 "formatted_datetime": "2024-01-29T07:30:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 15.0,
-                "local_time": 20240129070000,
                 "formatted_datetime": "2024-01-29T07:00:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.5,
-                "local_time": 20240129063000,
                 "formatted_datetime": "2024-01-29T06:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 14.2,
-                "local_time": 20240129062500,
                 "formatted_datetime": "2024-01-29T06:25:00"
             },
             {
                 "air_temp": 13.8,
                 "dewpt": 13.3,
-                "local_time": 20240129060000,
                 "formatted_datetime": "2024-01-29T06:00:00"
             },
             {
                 "air_temp": 13.7,
                 "dewpt": 13.2,
-                "local_time": 20240129053000,
                 "formatted_datetime": "2024-01-29T05:30:00"
             },
             {
                 "air_temp": 14.2,
                 "dewpt": 13.7,
-                "local_time": 20240129050000,
                 "formatted_datetime": "2024-01-29T05:00:00"
             },
             {
                 "air_temp": 13.9,
                 "dewpt": 13.6,
-                "local_time": 20240129043000,
                 "formatted_datetime": "2024-01-29T04:30:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 12.6,
-                "local_time": 20240129040000,
                 "formatted_datetime": "2024-01-29T04:00:00"
             },
             {
                 "air_temp": 13.0,
                 "dewpt": 12.4,
-                "local_time": 20240129033000,
                 "formatted_datetime": "2024-01-29T03:30:00"
             },
             {
                 "air_temp": 13.3,
                 "dewpt": 12.7,
-                "local_time": 20240129030000,
                 "formatted_datetime": "2024-01-29T03:00:00"
             },
             {
                 "air_temp": 13.3,
                 "dewpt": 12.5,
-                "local_time": 20240129023000,
                 "formatted_datetime": "2024-01-29T02:30:00"
             },
             {
                 "air_temp": 14.0,
                 "dewpt": 12.9,
-                "local_time": 20240129020000,
                 "formatted_datetime": "2024-01-29T02:00:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 13.2,
-                "local_time": 20240129013000,
                 "formatted_datetime": "2024-01-29T01:30:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 13.4,
-                "local_time": 20240129010000,
                 "formatted_datetime": "2024-01-29T01:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 13.7,
-                "local_time": 20240129003000,
                 "formatted_datetime": "2024-01-29T00:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 13.9,
-                "local_time": 20240129000000,
                 "formatted_datetime": "2024-01-29T00:00:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 13.9,
-                "local_time": 20240128233000,
                 "formatted_datetime": "2024-01-28T23:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 14.4,
-                "local_time": 20240128230000,
                 "formatted_datetime": "2024-01-28T23:00:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 14.7,
-                "local_time": 20240128223000,
                 "formatted_datetime": "2024-01-28T22:30:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 14.7,
-                "local_time": 20240128221300,
                 "formatted_datetime": "2024-01-28T22:13:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 14.7,
-                "local_time": 20240128220000,
                 "formatted_datetime": "2024-01-28T22:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 14.7,
-                "local_time": 20240128213000,
                 "formatted_datetime": "2024-01-28T21:30:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 14.7,
-                "local_time": 20240128210000,
                 "formatted_datetime": "2024-01-28T21:00:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 14.7,
-                "local_time": 20240128203000,
                 "formatted_datetime": "2024-01-28T20:30:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 15.0,
-                "local_time": 20240128200000,
                 "formatted_datetime": "2024-01-28T20:00:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 15.1,
-                "local_time": 20240128193000,
                 "formatted_datetime": "2024-01-28T19:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 15.5,
-                "local_time": 20240128191000,
                 "formatted_datetime": "2024-01-28T19:10:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 15.3,
-                "local_time": 20240128190000,
                 "formatted_datetime": "2024-01-28T19:00:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 15.9,
-                "local_time": 20240128183000,
                 "formatted_datetime": "2024-01-28T18:30:00"
             },
             {
                 "air_temp": 20.8,
                 "dewpt": 16.2,
-                "local_time": 20240128180000,
                 "formatted_datetime": "2024-01-28T18:00:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 17.3,
-                "local_time": 20240128173000,
                 "formatted_datetime": "2024-01-28T17:30:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 17.7,
-                "local_time": 20240128170000,
                 "formatted_datetime": "2024-01-28T17:00:00"
             },
             {
                 "air_temp": 23.2,
                 "dewpt": 17.4,
-                "local_time": 20240128163000,
                 "formatted_datetime": "2024-01-28T16:30:00"
             },
             {
                 "air_temp": 23.6,
                 "dewpt": 16.1,
-                "local_time": 20240128160000,
                 "formatted_datetime": "2024-01-28T16:00:00"
             },
             {
                 "air_temp": 23.4,
                 "dewpt": 13.3,
-                "local_time": 20240128153000,
                 "formatted_datetime": "2024-01-28T15:30:00"
             },
             {
                 "air_temp": 23.7,
                 "dewpt": 14.4,
-                "local_time": 20240128150000,
                 "formatted_datetime": "2024-01-28T15:00:00"
             },
             {
                 "air_temp": 23.5,
                 "dewpt": 15.0,
-                "local_time": 20240128143000,
                 "formatted_datetime": "2024-01-28T14:30:00"
             },
             {
                 "air_temp": 23.3,
                 "dewpt": 14.3,
-                "local_time": 20240128140000,
                 "formatted_datetime": "2024-01-28T14:00:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 13.4,
-                "local_time": 20240128133000,
                 "formatted_datetime": "2024-01-28T13:30:00"
             },
             {
                 "air_temp": 22.0,
                 "dewpt": 12.5,
-                "local_time": 20240128130000,
                 "formatted_datetime": "2024-01-28T13:00:00"
             }
         ]
@@ -2122,2007 +1790,1693 @@
         "location": "Cabramurra",
         "observations": [
             {
+                "air_temp": 14.3,
+                "dewpt": 11.8,
+                "formatted_datetime": "2024-02-14T11:30:00"
+            },
+            {
+                "air_temp": 14.0,
+                "dewpt": 12.4,
+                "formatted_datetime": "2024-02-14T10:00:00"
+            },
+            {
+                "air_temp": 13.2,
+                "dewpt": 12.7,
+                "formatted_datetime": "2024-02-14T09:30:00"
+            },
+            {
+                "air_temp": 12.5,
+                "dewpt": 12.3,
+                "formatted_datetime": "2024-02-14T09:00:00"
+            },
+            {
                 "air_temp": 22.9,
                 "dewpt": 12.5,
-                "local_time": 20240213143000,
                 "formatted_datetime": "2024-02-13T14:30:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 7.6,
-                "local_time": 20240204210000,
                 "formatted_datetime": "2024-02-04T21:00:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 7.9,
-                "local_time": 20240204203000,
                 "formatted_datetime": "2024-02-04T20:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 7.9,
-                "local_time": 20240204200000,
                 "formatted_datetime": "2024-02-04T20:00:00"
             },
             {
                 "air_temp": 22.2,
                 "dewpt": 8.0,
-                "local_time": 20240204193000,
                 "formatted_datetime": "2024-02-04T19:30:00"
             },
             {
                 "air_temp": 22.7,
                 "dewpt": 8.0,
-                "local_time": 20240204190000,
                 "formatted_datetime": "2024-02-04T19:00:00"
             },
             {
                 "air_temp": 23.3,
                 "dewpt": 8.2,
-                "local_time": 20240204183000,
                 "formatted_datetime": "2024-02-04T18:30:00"
             },
             {
                 "air_temp": 23.4,
                 "dewpt": 8.3,
-                "local_time": 20240204180000,
                 "formatted_datetime": "2024-02-04T18:00:00"
             },
             {
                 "air_temp": 24.1,
                 "dewpt": 7.7,
-                "local_time": 20240204173000,
                 "formatted_datetime": "2024-02-04T17:30:00"
             },
             {
                 "air_temp": 24.2,
                 "dewpt": 6.0,
-                "local_time": 20240204170000,
                 "formatted_datetime": "2024-02-04T17:00:00"
             },
             {
                 "air_temp": 25.0,
                 "dewpt": 6.7,
-                "local_time": 20240204163000,
                 "formatted_datetime": "2024-02-04T16:30:00"
             },
             {
                 "air_temp": 23.2,
                 "dewpt": 7.3,
-                "local_time": 20240204160000,
                 "formatted_datetime": "2024-02-04T16:00:00"
             },
             {
                 "air_temp": 22.9,
                 "dewpt": 4.4,
-                "local_time": 20240204153000,
                 "formatted_datetime": "2024-02-04T15:30:00"
             },
             {
                 "air_temp": 23.3,
                 "dewpt": 5.7,
-                "local_time": 20240204152500,
                 "formatted_datetime": "2024-02-04T15:25:00"
             },
             {
                 "air_temp": 24.9,
                 "dewpt": 7.1,
-                "local_time": 20240204150000,
                 "formatted_datetime": "2024-02-04T15:00:00"
             },
             {
                 "air_temp": 25.0,
                 "dewpt": 7.2,
-                "local_time": 20240204145300,
                 "formatted_datetime": "2024-02-04T14:53:00"
             },
             {
                 "air_temp": 25.6,
                 "dewpt": 7.2,
-                "local_time": 20240204143000,
                 "formatted_datetime": "2024-02-04T14:30:00"
             },
             {
                 "air_temp": 24.9,
                 "dewpt": 5.7,
-                "local_time": 20240204140000,
                 "formatted_datetime": "2024-02-04T14:00:00"
             },
             {
                 "air_temp": 24.1,
                 "dewpt": 5.9,
-                "local_time": 20240204133200,
                 "formatted_datetime": "2024-02-04T13:32:00"
             },
             {
                 "air_temp": 24.3,
                 "dewpt": 7.9,
-                "local_time": 20240204133000,
                 "formatted_datetime": "2024-02-04T13:30:00"
             },
             {
                 "air_temp": 23.8,
                 "dewpt": 8.2,
-                "local_time": 20240204130000,
                 "formatted_datetime": "2024-02-04T13:00:00"
             },
             {
                 "air_temp": 23.6,
                 "dewpt": 9.6,
-                "local_time": 20240204123000,
                 "formatted_datetime": "2024-02-04T12:30:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 10.4,
-                "local_time": 20240204120000,
                 "formatted_datetime": "2024-02-04T12:00:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 10.7,
-                "local_time": 20240204113000,
                 "formatted_datetime": "2024-02-04T11:30:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 10.3,
-                "local_time": 20240204110000,
                 "formatted_datetime": "2024-02-04T11:00:00"
             },
             {
                 "air_temp": 21.3,
                 "dewpt": 8.9,
-                "local_time": 20240204103000,
                 "formatted_datetime": "2024-02-04T10:30:00"
             },
             {
                 "air_temp": 20.8,
                 "dewpt": 7.1,
-                "local_time": 20240204100000,
                 "formatted_datetime": "2024-02-04T10:00:00"
             },
             {
                 "air_temp": 19.9,
                 "dewpt": 5.2,
-                "local_time": 20240204093000,
                 "formatted_datetime": "2024-02-04T09:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 5.2,
-                "local_time": 20240204090000,
                 "formatted_datetime": "2024-02-04T09:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 5.9,
-                "local_time": 20240204083000,
                 "formatted_datetime": "2024-02-04T08:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 5.5,
-                "local_time": 20240204080000,
                 "formatted_datetime": "2024-02-04T08:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 5.0,
-                "local_time": 20240204073000,
                 "formatted_datetime": "2024-02-04T07:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 5.2,
-                "local_time": 20240204070000,
                 "formatted_datetime": "2024-02-04T07:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 6.3,
-                "local_time": 20240204063000,
                 "formatted_datetime": "2024-02-04T06:30:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 6.6,
-                "local_time": 20240204060000,
                 "formatted_datetime": "2024-02-04T06:00:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 6.6,
-                "local_time": 20240204053000,
                 "formatted_datetime": "2024-02-04T05:30:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 7.4,
-                "local_time": 20240204050000,
                 "formatted_datetime": "2024-02-04T05:00:00"
             },
             {
                 "air_temp": 17.5,
                 "dewpt": 7.8,
-                "local_time": 20240204043000,
                 "formatted_datetime": "2024-02-04T04:30:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 7.4,
-                "local_time": 20240204040000,
                 "formatted_datetime": "2024-02-04T04:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 7.4,
-                "local_time": 20240204033000,
                 "formatted_datetime": "2024-02-04T03:30:00"
             },
             {
                 "air_temp": 17.8,
                 "dewpt": 7.2,
-                "local_time": 20240204030000,
                 "formatted_datetime": "2024-02-04T03:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 7.4,
-                "local_time": 20240204023000,
                 "formatted_datetime": "2024-02-04T02:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 7.6,
-                "local_time": 20240204020000,
                 "formatted_datetime": "2024-02-04T02:00:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 7.8,
-                "local_time": 20240204013000,
                 "formatted_datetime": "2024-02-04T01:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 8.3,
-                "local_time": 20240204010000,
                 "formatted_datetime": "2024-02-04T01:00:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 7.9,
-                "local_time": 20240204003000,
                 "formatted_datetime": "2024-02-04T00:30:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 7.5,
-                "local_time": 20240204000000,
                 "formatted_datetime": "2024-02-04T00:00:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 7.4,
-                "local_time": 20240203233000,
                 "formatted_datetime": "2024-02-03T23:30:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 7.5,
-                "local_time": 20240203230000,
                 "formatted_datetime": "2024-02-03T23:00:00"
             },
             {
                 "air_temp": 18.6,
                 "dewpt": 7.7,
-                "local_time": 20240203223000,
                 "formatted_datetime": "2024-02-03T22:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 7.7,
-                "local_time": 20240203220000,
                 "formatted_datetime": "2024-02-03T22:00:00"
             },
             {
                 "air_temp": 18.7,
                 "dewpt": 7.8,
-                "local_time": 20240203213000,
                 "formatted_datetime": "2024-02-03T21:30:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 7.7,
-                "local_time": 20240203210000,
                 "formatted_datetime": "2024-02-03T21:00:00"
             },
             {
                 "air_temp": 19.1,
                 "dewpt": 7.5,
-                "local_time": 20240203203000,
                 "formatted_datetime": "2024-02-03T20:30:00"
             },
             {
                 "air_temp": 20.6,
                 "dewpt": 7.9,
-                "local_time": 20240203200000,
                 "formatted_datetime": "2024-02-03T20:00:00"
             },
             {
                 "air_temp": 21.5,
                 "dewpt": 7.3,
-                "local_time": 20240203193000,
                 "formatted_datetime": "2024-02-03T19:30:00"
             },
             {
                 "air_temp": 22.0,
                 "dewpt": 7.8,
-                "local_time": 20240203190000,
                 "formatted_datetime": "2024-02-03T19:00:00"
             },
             {
                 "air_temp": 22.7,
                 "dewpt": 9.5,
-                "local_time": 20240203183000,
                 "formatted_datetime": "2024-02-03T18:30:00"
             },
             {
                 "air_temp": 23.1,
                 "dewpt": 10.5,
-                "local_time": 20240203180000,
                 "formatted_datetime": "2024-02-03T18:00:00"
             },
             {
                 "air_temp": 22.4,
                 "dewpt": 9.6,
-                "local_time": 20240203173000,
                 "formatted_datetime": "2024-02-03T17:30:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 10.6,
-                "local_time": 20240203170000,
                 "formatted_datetime": "2024-02-03T17:00:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 10.6,
-                "local_time": 20240203163000,
                 "formatted_datetime": "2024-02-03T16:30:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 10.6,
-                "local_time": 20240203160000,
                 "formatted_datetime": "2024-02-03T16:00:00"
             },
             {
                 "air_temp": 21.7,
                 "dewpt": 9.6,
-                "local_time": 20240203153000,
                 "formatted_datetime": "2024-02-03T15:30:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 9.3,
-                "local_time": 20240203150000,
                 "formatted_datetime": "2024-02-03T15:00:00"
             },
             {
                 "air_temp": 21.3,
                 "dewpt": 9.2,
-                "local_time": 20240203143000,
                 "formatted_datetime": "2024-02-03T14:30:00"
             },
             {
                 "air_temp": 20.7,
                 "dewpt": 9.0,
-                "local_time": 20240203140000,
                 "formatted_datetime": "2024-02-03T14:00:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 9.7,
-                "local_time": 20240203133000,
                 "formatted_datetime": "2024-02-03T13:30:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 10.8,
-                "local_time": 20240203130000,
                 "formatted_datetime": "2024-02-03T13:00:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 10.3,
-                "local_time": 20240203123000,
                 "formatted_datetime": "2024-02-03T12:30:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 9.7,
-                "local_time": 20240203120000,
                 "formatted_datetime": "2024-02-03T12:00:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 9.3,
-                "local_time": 20240203113000,
                 "formatted_datetime": "2024-02-03T11:30:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 8.4,
-                "local_time": 20240203110000,
                 "formatted_datetime": "2024-02-03T11:00:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 7.9,
-                "local_time": 20240203103000,
                 "formatted_datetime": "2024-02-03T10:30:00"
             },
             {
                 "air_temp": 17.6,
                 "dewpt": 6.5,
-                "local_time": 20240203100000,
                 "formatted_datetime": "2024-02-03T10:00:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 6.8,
-                "local_time": 20240203093000,
                 "formatted_datetime": "2024-02-03T09:30:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 6.3,
-                "local_time": 20240203090000,
                 "formatted_datetime": "2024-02-03T09:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 5.9,
-                "local_time": 20240203083000,
                 "formatted_datetime": "2024-02-03T08:30:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 5.9,
-                "local_time": 20240203080000,
                 "formatted_datetime": "2024-02-03T08:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 5.3,
-                "local_time": 20240203073000,
                 "formatted_datetime": "2024-02-03T07:30:00"
             },
             {
                 "air_temp": 15.0,
                 "dewpt": 4.7,
-                "local_time": 20240203070000,
                 "formatted_datetime": "2024-02-03T07:00:00"
             },
             {
                 "air_temp": 14.4,
                 "dewpt": 4.7,
-                "local_time": 20240203063000,
                 "formatted_datetime": "2024-02-03T06:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 4.2,
-                "local_time": 20240203060000,
                 "formatted_datetime": "2024-02-03T06:00:00"
             },
             {
                 "air_temp": 15.0,
                 "dewpt": 4.4,
-                "local_time": 20240203053000,
                 "formatted_datetime": "2024-02-03T05:30:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 3.0,
-                "local_time": 20240203050000,
                 "formatted_datetime": "2024-02-03T05:00:00"
             },
             {
                 "air_temp": 15.4,
                 "dewpt": 2.6,
-                "local_time": 20240203043000,
                 "formatted_datetime": "2024-02-03T04:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 2.3,
-                "local_time": 20240203040000,
                 "formatted_datetime": "2024-02-03T04:00:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 3.1,
-                "local_time": 20240203033000,
                 "formatted_datetime": "2024-02-03T03:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 3.4,
-                "local_time": 20240203030000,
                 "formatted_datetime": "2024-02-03T03:00:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 4.0,
-                "local_time": 20240203023000,
                 "formatted_datetime": "2024-02-03T02:30:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 4.3,
-                "local_time": 20240203020000,
                 "formatted_datetime": "2024-02-03T02:00:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 4.0,
-                "local_time": 20240203013000,
                 "formatted_datetime": "2024-02-03T01:30:00"
             },
             {
                 "air_temp": 15.1,
                 "dewpt": 4.5,
-                "local_time": 20240203010000,
                 "formatted_datetime": "2024-02-03T01:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 4.4,
-                "local_time": 20240203003000,
                 "formatted_datetime": "2024-02-03T00:30:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 5.3,
-                "local_time": 20240203000000,
                 "formatted_datetime": "2024-02-03T00:00:00"
             },
             {
                 "air_temp": 15.4,
                 "dewpt": 5.6,
-                "local_time": 20240202233000,
                 "formatted_datetime": "2024-02-02T23:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 5.6,
-                "local_time": 20240202230000,
                 "formatted_datetime": "2024-02-02T23:00:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 5.7,
-                "local_time": 20240202223000,
                 "formatted_datetime": "2024-02-02T22:30:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 5.9,
-                "local_time": 20240202220000,
                 "formatted_datetime": "2024-02-02T22:00:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 7.2,
-                "local_time": 20240202213000,
                 "formatted_datetime": "2024-02-02T21:30:00"
             },
             {
                 "air_temp": 16.9,
                 "dewpt": 7.5,
-                "local_time": 20240202210000,
                 "formatted_datetime": "2024-02-02T21:00:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 7.2,
-                "local_time": 20240202203000,
                 "formatted_datetime": "2024-02-02T20:30:00"
             },
             {
                 "air_temp": 18.2,
                 "dewpt": 7.6,
-                "local_time": 20240202200000,
                 "formatted_datetime": "2024-02-02T20:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 8.2,
-                "local_time": 20240202193000,
                 "formatted_datetime": "2024-02-02T19:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 8.1,
-                "local_time": 20240202190000,
                 "formatted_datetime": "2024-02-02T19:00:00"
             },
             {
                 "air_temp": 20.4,
                 "dewpt": 8.4,
-                "local_time": 20240202183000,
                 "formatted_datetime": "2024-02-02T18:30:00"
             },
             {
                 "air_temp": 20.3,
                 "dewpt": 7.0,
-                "local_time": 20240202180000,
                 "formatted_datetime": "2024-02-02T18:00:00"
             },
             {
                 "air_temp": 21.4,
                 "dewpt": 8.7,
-                "local_time": 20240202173000,
                 "formatted_datetime": "2024-02-02T17:30:00"
             },
             {
                 "air_temp": 20.6,
                 "dewpt": 6.2,
-                "local_time": 20240202170000,
                 "formatted_datetime": "2024-02-02T17:00:00"
             },
             {
                 "air_temp": 20.7,
                 "dewpt": 6.6,
-                "local_time": 20240202163000,
                 "formatted_datetime": "2024-02-02T16:30:00"
             },
             {
                 "air_temp": 20.7,
                 "dewpt": 6.3,
-                "local_time": 20240202160000,
                 "formatted_datetime": "2024-02-02T16:00:00"
             },
             {
                 "air_temp": 20.2,
                 "dewpt": 5.1,
-                "local_time": 20240202153000,
                 "formatted_datetime": "2024-02-02T15:30:00"
             },
             {
                 "air_temp": 20.4,
                 "dewpt": 6.0,
-                "local_time": 20240202150000,
                 "formatted_datetime": "2024-02-02T15:00:00"
             },
             {
                 "air_temp": 20.0,
                 "dewpt": 7.1,
-                "local_time": 20240202143000,
                 "formatted_datetime": "2024-02-02T14:30:00"
             },
             {
                 "air_temp": 19.3,
                 "dewpt": 4.6,
-                "local_time": 20240202140000,
                 "formatted_datetime": "2024-02-02T14:00:00"
             },
             {
                 "air_temp": 19.3,
                 "dewpt": 4.3,
-                "local_time": 20240202133000,
                 "formatted_datetime": "2024-02-02T13:30:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 6.2,
-                "local_time": 20240202130000,
                 "formatted_datetime": "2024-02-02T13:00:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 6.3,
-                "local_time": 20240202123000,
                 "formatted_datetime": "2024-02-02T12:30:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 6.6,
-                "local_time": 20240202120000,
                 "formatted_datetime": "2024-02-02T12:00:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 4.2,
-                "local_time": 20240202113000,
                 "formatted_datetime": "2024-02-02T11:30:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 0.1,
-                "local_time": 20240202110000,
                 "formatted_datetime": "2024-02-02T11:00:00"
             },
             {
                 "air_temp": 17.1,
                 "dewpt": 1.9,
-                "local_time": 20240202103000,
                 "formatted_datetime": "2024-02-02T10:30:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 0.5,
-                "local_time": 20240202100000,
                 "formatted_datetime": "2024-02-02T10:00:00"
             },
             {
                 "air_temp": 16.0,
                 "dewpt": 3.1,
-                "local_time": 20240202093000,
                 "formatted_datetime": "2024-02-02T09:30:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 4.1,
-                "local_time": 20240202090000,
                 "formatted_datetime": "2024-02-02T09:00:00"
             },
             {
                 "air_temp": 14.6,
                 "dewpt": 3.7,
-                "local_time": 20240202083000,
                 "formatted_datetime": "2024-02-02T08:30:00"
             },
             {
                 "air_temp": 14.2,
                 "dewpt": 5.3,
-                "local_time": 20240202080000,
                 "formatted_datetime": "2024-02-02T08:00:00"
             },
             {
                 "air_temp": 13.6,
                 "dewpt": 4.5,
-                "local_time": 20240202073000,
                 "formatted_datetime": "2024-02-02T07:30:00"
             },
             {
                 "air_temp": 12.2,
                 "dewpt": 4.7,
-                "local_time": 20240202070000,
                 "formatted_datetime": "2024-02-02T07:00:00"
             },
             {
                 "air_temp": 11.1,
                 "dewpt": 4.8,
-                "local_time": 20240202063000,
                 "formatted_datetime": "2024-02-02T06:30:00"
             },
             {
                 "air_temp": 11.4,
                 "dewpt": 4.6,
-                "local_time": 20240202060000,
                 "formatted_datetime": "2024-02-02T06:00:00"
             },
             {
                 "air_temp": 12.0,
                 "dewpt": 4.5,
-                "local_time": 20240202053000,
                 "formatted_datetime": "2024-02-02T05:30:00"
             },
             {
                 "air_temp": 12.7,
                 "dewpt": 4.7,
-                "local_time": 20240202050000,
                 "formatted_datetime": "2024-02-02T05:00:00"
             },
             {
                 "air_temp": 12.9,
                 "dewpt": 4.8,
-                "local_time": 20240202043000,
                 "formatted_datetime": "2024-02-02T04:30:00"
             },
             {
                 "air_temp": 12.5,
                 "dewpt": 4.7,
-                "local_time": 20240202040000,
                 "formatted_datetime": "2024-02-02T04:00:00"
             },
             {
                 "air_temp": 13.2,
                 "dewpt": 5.1,
-                "local_time": 20240202033000,
                 "formatted_datetime": "2024-02-02T03:30:00"
             },
             {
                 "air_temp": 13.0,
                 "dewpt": 5.2,
-                "local_time": 20240202030000,
                 "formatted_datetime": "2024-02-02T03:00:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 5.0,
-                "local_time": 20240202023000,
                 "formatted_datetime": "2024-02-02T02:30:00"
             },
             {
                 "air_temp": 13.5,
                 "dewpt": 5.4,
-                "local_time": 20240202020000,
                 "formatted_datetime": "2024-02-02T02:00:00"
             },
             {
                 "air_temp": 13.6,
                 "dewpt": 5.5,
-                "local_time": 20240202013000,
                 "formatted_datetime": "2024-02-02T01:30:00"
             },
             {
                 "air_temp": 13.8,
                 "dewpt": 5.4,
-                "local_time": 20240202010000,
                 "formatted_datetime": "2024-02-02T01:00:00"
             },
             {
                 "air_temp": 13.9,
                 "dewpt": 5.3,
-                "local_time": 20240202003000,
                 "formatted_datetime": "2024-02-02T00:30:00"
             },
             {
                 "air_temp": 14.3,
                 "dewpt": 5.1,
-                "local_time": 20240202000000,
                 "formatted_datetime": "2024-02-02T00:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 5.5,
-                "local_time": 20240201233000,
                 "formatted_datetime": "2024-02-01T23:30:00"
             },
             {
                 "air_temp": 15.1,
                 "dewpt": 6.1,
-                "local_time": 20240201230000,
                 "formatted_datetime": "2024-02-01T23:00:00"
             },
             {
                 "air_temp": 15.4,
                 "dewpt": 6.2,
-                "local_time": 20240201223000,
                 "formatted_datetime": "2024-02-01T22:30:00"
             },
             {
                 "air_temp": 15.9,
                 "dewpt": 6.9,
-                "local_time": 20240201220000,
                 "formatted_datetime": "2024-02-01T22:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 6.7,
-                "local_time": 20240201213000,
                 "formatted_datetime": "2024-02-01T21:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.6,
-                "local_time": 20240201093000,
                 "formatted_datetime": "2024-02-01T09:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.7,
-                "local_time": 20240201090000,
                 "formatted_datetime": "2024-02-01T09:00:00"
             },
             {
                 "air_temp": 14.4,
                 "dewpt": 14.2,
-                "local_time": 20240201083000,
                 "formatted_datetime": "2024-02-01T08:30:00"
             },
             {
                 "air_temp": 13.8,
                 "dewpt": 13.6,
-                "local_time": 20240201080000,
                 "formatted_datetime": "2024-02-01T08:00:00"
             },
             {
                 "air_temp": 13.4,
                 "dewpt": 13.2,
-                "local_time": 20240201073000,
                 "formatted_datetime": "2024-02-01T07:30:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 13.1,
-                "local_time": 20240201070000,
                 "formatted_datetime": "2024-02-01T07:00:00"
             },
             {
                 "air_temp": 12.9,
                 "dewpt": 12.9,
-                "local_time": 20240201063000,
                 "formatted_datetime": "2024-02-01T06:30:00"
             },
             {
                 "air_temp": 12.9,
                 "dewpt": 12.9,
-                "local_time": 20240201060000,
                 "formatted_datetime": "2024-02-01T06:00:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 12.9,
-                "local_time": 20240201053000,
                 "formatted_datetime": "2024-02-01T05:30:00"
             },
             {
                 "air_temp": 13.2,
                 "dewpt": 13.0,
-                "local_time": 20240201050000,
                 "formatted_datetime": "2024-02-01T05:00:00"
             },
             {
                 "air_temp": 13.2,
                 "dewpt": 13.0,
-                "local_time": 20240201043000,
                 "formatted_datetime": "2024-02-01T04:30:00"
             },
             {
                 "air_temp": 11.7,
                 "dewpt": 11.7,
-                "local_time": 20240201040000,
                 "formatted_datetime": "2024-02-01T04:00:00"
             },
             {
                 "air_temp": 11.2,
                 "dewpt": 11.2,
-                "local_time": 20240201033000,
                 "formatted_datetime": "2024-02-01T03:30:00"
             },
             {
                 "air_temp": 11.2,
                 "dewpt": 11.2,
-                "local_time": 20240201030000,
                 "formatted_datetime": "2024-02-01T03:00:00"
             },
             {
                 "air_temp": 11.4,
                 "dewpt": 11.4,
-                "local_time": 20240201023000,
                 "formatted_datetime": "2024-02-01T02:30:00"
             },
             {
                 "air_temp": 11.8,
                 "dewpt": 11.8,
-                "local_time": 20240201020000,
                 "formatted_datetime": "2024-02-01T02:00:00"
             },
             {
                 "air_temp": 11.9,
                 "dewpt": 11.9,
-                "local_time": 20240201013000,
                 "formatted_datetime": "2024-02-01T01:30:00"
             },
             {
                 "air_temp": 12.1,
                 "dewpt": 12.1,
-                "local_time": 20240201010000,
                 "formatted_datetime": "2024-02-01T01:00:00"
             },
             {
                 "air_temp": 12.1,
                 "dewpt": 12.1,
-                "local_time": 20240201003000,
                 "formatted_datetime": "2024-02-01T00:30:00"
             },
             {
                 "air_temp": 12.2,
                 "dewpt": 12.0,
-                "local_time": 20240201000000,
                 "formatted_datetime": "2024-02-01T00:00:00"
             },
             {
                 "air_temp": 12.5,
                 "dewpt": 12.3,
-                "local_time": 20240131233000,
                 "formatted_datetime": "2024-01-31T23:30:00"
             },
             {
                 "air_temp": 12.8,
                 "dewpt": 12.6,
-                "local_time": 20240131230000,
                 "formatted_datetime": "2024-01-31T23:00:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 12.9,
-                "local_time": 20240131223000,
                 "formatted_datetime": "2024-01-31T22:30:00"
             },
             {
                 "air_temp": 13.7,
                 "dewpt": 13.5,
-                "local_time": 20240131220000,
                 "formatted_datetime": "2024-01-31T22:00:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 13.9,
-                "local_time": 20240131213000,
                 "formatted_datetime": "2024-01-31T21:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.5,
-                "local_time": 20240131210000,
                 "formatted_datetime": "2024-01-31T21:00:00"
             },
             {
                 "air_temp": 15.6,
                 "dewpt": 14.1,
-                "local_time": 20240131203000,
                 "formatted_datetime": "2024-01-31T20:30:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 13.9,
-                "local_time": 20240131200000,
                 "formatted_datetime": "2024-01-31T20:00:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 13.4,
-                "local_time": 20240131193000,
                 "formatted_datetime": "2024-01-31T19:30:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 7.7,
-                "local_time": 20240131190000,
                 "formatted_datetime": "2024-01-31T19:00:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 6.7,
-                "local_time": 20240131183000,
                 "formatted_datetime": "2024-01-31T18:30:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 5.3,
-                "local_time": 20240131180000,
                 "formatted_datetime": "2024-01-31T18:00:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 5.7,
-                "local_time": 20240131173000,
                 "formatted_datetime": "2024-01-31T17:30:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 7.1,
-                "local_time": 20240131170000,
                 "formatted_datetime": "2024-01-31T17:00:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 8.3,
-                "local_time": 20240131163000,
                 "formatted_datetime": "2024-01-31T16:30:00"
             },
             {
                 "air_temp": 22.2,
                 "dewpt": 11.6,
-                "local_time": 20240131160000,
                 "formatted_datetime": "2024-01-31T16:00:00"
             },
             {
                 "air_temp": 22.3,
                 "dewpt": 13.1,
-                "local_time": 20240131153000,
                 "formatted_datetime": "2024-01-31T15:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 14.7,
-                "local_time": 20240131150000,
                 "formatted_datetime": "2024-01-31T15:00:00"
             },
             {
                 "air_temp": 21.0,
                 "dewpt": 14.6,
-                "local_time": 20240131143000,
                 "formatted_datetime": "2024-01-31T14:30:00"
             },
             {
                 "air_temp": 20.0,
                 "dewpt": 15.2,
-                "local_time": 20240131140000,
                 "formatted_datetime": "2024-01-31T14:00:00"
             },
             {
                 "air_temp": 20.7,
                 "dewpt": 15.7,
-                "local_time": 20240131133000,
                 "formatted_datetime": "2024-01-31T13:30:00"
             },
             {
                 "air_temp": 21.1,
                 "dewpt": 15.6,
-                "local_time": 20240131130000,
                 "formatted_datetime": "2024-01-31T13:00:00"
             },
             {
                 "air_temp": 20.3,
                 "dewpt": 15.3,
-                "local_time": 20240131123000,
                 "formatted_datetime": "2024-01-31T12:30:00"
             },
             {
                 "air_temp": 20.3,
                 "dewpt": 15.1,
-                "local_time": 20240131120000,
                 "formatted_datetime": "2024-01-31T12:00:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 15.9,
-                "local_time": 20240131113000,
                 "formatted_datetime": "2024-01-31T11:30:00"
             },
             {
                 "air_temp": 20.5,
                 "dewpt": 13.9,
-                "local_time": 20240131110000,
                 "formatted_datetime": "2024-01-31T11:00:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 12.6,
-                "local_time": 20240131103000,
                 "formatted_datetime": "2024-01-31T10:30:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 14.3,
-                "local_time": 20240131100000,
                 "formatted_datetime": "2024-01-31T10:00:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 14.8,
-                "local_time": 20240131093000,
                 "formatted_datetime": "2024-01-31T09:30:00"
             },
             {
                 "air_temp": 17.5,
                 "dewpt": 14.8,
-                "local_time": 20240131090000,
                 "formatted_datetime": "2024-01-31T09:00:00"
             },
             {
                 "air_temp": 17.3,
                 "dewpt": 15.3,
-                "local_time": 20240131083000,
                 "formatted_datetime": "2024-01-31T08:30:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 15.5,
-                "local_time": 20240131080000,
                 "formatted_datetime": "2024-01-31T08:00:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 15.6,
-                "local_time": 20240131073000,
                 "formatted_datetime": "2024-01-31T07:30:00"
             },
             {
                 "air_temp": 15.4,
                 "dewpt": 15.2,
-                "local_time": 20240131070000,
                 "formatted_datetime": "2024-01-31T07:00:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 14.8,
-                "local_time": 20240131063000,
                 "formatted_datetime": "2024-01-31T06:30:00"
             },
             {
                 "air_temp": 14.9,
                 "dewpt": 14.9,
-                "local_time": 20240131060000,
                 "formatted_datetime": "2024-01-31T06:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.7,
-                "local_time": 20240131053000,
                 "formatted_datetime": "2024-01-31T05:30:00"
             },
             {
                 "air_temp": 14.3,
                 "dewpt": 14.3,
-                "local_time": 20240131050000,
                 "formatted_datetime": "2024-01-31T05:00:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 14.1,
-                "local_time": 20240131043000,
                 "formatted_datetime": "2024-01-31T04:30:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 13.9,
-                "local_time": 20240131040000,
                 "formatted_datetime": "2024-01-31T04:00:00"
             },
             {
                 "air_temp": 14.2,
                 "dewpt": 14.0,
-                "local_time": 20240131033000,
                 "formatted_datetime": "2024-01-31T03:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 14.3,
-                "local_time": 20240131030000,
                 "formatted_datetime": "2024-01-31T03:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.5,
-                "local_time": 20240131023000,
                 "formatted_datetime": "2024-01-31T02:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 14.5,
-                "local_time": 20240131020000,
                 "formatted_datetime": "2024-01-31T02:00:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 15.1,
-                "local_time": 20240131013000,
                 "formatted_datetime": "2024-01-31T01:30:00"
             },
             {
                 "air_temp": 15.3,
                 "dewpt": 15.1,
-                "local_time": 20240131010000,
                 "formatted_datetime": "2024-01-31T01:00:00"
             },
             {
                 "air_temp": 15.4,
                 "dewpt": 15.2,
-                "local_time": 20240131003000,
                 "formatted_datetime": "2024-01-31T00:30:00"
             },
             {
                 "air_temp": 15.6,
                 "dewpt": 14.6,
-                "local_time": 20240131000000,
                 "formatted_datetime": "2024-01-31T00:00:00"
             },
             {
                 "air_temp": 16.2,
                 "dewpt": 13.5,
-                "local_time": 20240130233000,
                 "formatted_datetime": "2024-01-30T23:30:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 11.4,
-                "local_time": 20240130230000,
                 "formatted_datetime": "2024-01-30T23:00:00"
             },
             {
                 "air_temp": 19.1,
                 "dewpt": 10.9,
-                "local_time": 20240130223000,
                 "formatted_datetime": "2024-01-30T22:30:00"
             },
             {
                 "air_temp": 19.3,
                 "dewpt": 11.1,
-                "local_time": 20240130220000,
                 "formatted_datetime": "2024-01-30T22:00:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 11.1,
-                "local_time": 20240130213000,
                 "formatted_datetime": "2024-01-30T21:30:00"
             },
             {
                 "air_temp": 18.9,
                 "dewpt": 11.0,
-                "local_time": 20240130210000,
                 "formatted_datetime": "2024-01-30T21:00:00"
             },
             {
                 "air_temp": 19.3,
                 "dewpt": 11.3,
-                "local_time": 20240130203000,
                 "formatted_datetime": "2024-01-30T20:30:00"
             },
             {
                 "air_temp": 20.6,
                 "dewpt": 11.5,
-                "local_time": 20240130200000,
                 "formatted_datetime": "2024-01-30T20:00:00"
             },
             {
                 "air_temp": 21.6,
                 "dewpt": 12.2,
-                "local_time": 20240130193000,
                 "formatted_datetime": "2024-01-30T19:30:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 12.5,
-                "local_time": 20240130190000,
                 "formatted_datetime": "2024-01-30T19:00:00"
             },
             {
                 "air_temp": 22.3,
                 "dewpt": 12.8,
-                "local_time": 20240130183000,
                 "formatted_datetime": "2024-01-30T18:30:00"
             },
             {
                 "air_temp": 22.4,
                 "dewpt": 13.2,
-                "local_time": 20240130180000,
                 "formatted_datetime": "2024-01-30T18:00:00"
             },
             {
                 "air_temp": 22.9,
                 "dewpt": 14.2,
-                "local_time": 20240130173000,
                 "formatted_datetime": "2024-01-30T17:30:00"
             },
             {
                 "air_temp": 22.2,
                 "dewpt": 12.7,
-                "local_time": 20240130170000,
                 "formatted_datetime": "2024-01-30T17:00:00"
             },
             {
                 "air_temp": 23.1,
                 "dewpt": 14.4,
-                "local_time": 20240130163000,
                 "formatted_datetime": "2024-01-30T16:30:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 13.8,
-                "local_time": 20240130160000,
                 "formatted_datetime": "2024-01-30T16:00:00"
             },
             {
                 "air_temp": 22.8,
                 "dewpt": 13.8,
-                "local_time": 20240130153000,
                 "formatted_datetime": "2024-01-30T15:30:00"
             },
             {
                 "air_temp": 22.3,
                 "dewpt": 12.8,
-                "local_time": 20240130150000,
                 "formatted_datetime": "2024-01-30T15:00:00"
             },
             {
                 "air_temp": 20.9,
                 "dewpt": 12.8,
-                "local_time": 20240130143000,
                 "formatted_datetime": "2024-01-30T14:30:00"
             },
             {
                 "air_temp": 21.7,
                 "dewpt": 13.9,
-                "local_time": 20240130140000,
                 "formatted_datetime": "2024-01-30T14:00:00"
             },
             {
                 "air_temp": 22.2,
                 "dewpt": 13.8,
-                "local_time": 20240130133000,
                 "formatted_datetime": "2024-01-30T13:30:00"
             },
             {
                 "air_temp": 21.3,
                 "dewpt": 13.0,
-                "local_time": 20240130130000,
                 "formatted_datetime": "2024-01-30T13:00:00"
             },
             {
                 "air_temp": 21.4,
                 "dewpt": 12.8,
-                "local_time": 20240130123000,
                 "formatted_datetime": "2024-01-30T12:30:00"
             },
             {
                 "air_temp": 20.8,
                 "dewpt": 12.2,
-                "local_time": 20240130120000,
                 "formatted_datetime": "2024-01-30T12:00:00"
             },
             {
                 "air_temp": 20.3,
                 "dewpt": 11.8,
-                "local_time": 20240130113000,
                 "formatted_datetime": "2024-01-30T11:30:00"
             },
             {
                 "air_temp": 20.0,
                 "dewpt": 13.0,
-                "local_time": 20240130110000,
                 "formatted_datetime": "2024-01-30T11:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 10.8,
-                "local_time": 20240130103000,
                 "formatted_datetime": "2024-01-30T10:30:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 10.9,
-                "local_time": 20240130100000,
                 "formatted_datetime": "2024-01-30T10:00:00"
             },
             {
                 "air_temp": 17.4,
                 "dewpt": 10.3,
-                "local_time": 20240130093000,
                 "formatted_datetime": "2024-01-30T09:30:00"
             },
             {
                 "air_temp": 16.7,
                 "dewpt": 10.3,
-                "local_time": 20240130090000,
                 "formatted_datetime": "2024-01-30T09:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 11.1,
-                "local_time": 20240130083000,
                 "formatted_datetime": "2024-01-30T08:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 10.7,
-                "local_time": 20240130080000,
                 "formatted_datetime": "2024-01-30T08:00:00"
             },
             {
                 "air_temp": 13.9,
                 "dewpt": 11.4,
-                "local_time": 20240130073000,
                 "formatted_datetime": "2024-01-30T07:30:00"
             },
             {
                 "air_temp": 13.5,
                 "dewpt": 11.2,
-                "local_time": 20240130070000,
                 "formatted_datetime": "2024-01-30T07:00:00"
             },
             {
                 "air_temp": 12.9,
                 "dewpt": 12.6,
-                "local_time": 20240130063000,
                 "formatted_datetime": "2024-01-30T06:30:00"
             },
             {
                 "air_temp": 13.0,
                 "dewpt": 12.5,
-                "local_time": 20240130060000,
                 "formatted_datetime": "2024-01-30T06:00:00"
             },
             {
                 "air_temp": 13.2,
                 "dewpt": 13.0,
-                "local_time": 20240130053000,
                 "formatted_datetime": "2024-01-30T05:30:00"
             },
             {
                 "air_temp": 13.1,
                 "dewpt": 13.1,
-                "local_time": 20240130050000,
                 "formatted_datetime": "2024-01-30T05:00:00"
             },
             {
                 "air_temp": 13.3,
                 "dewpt": 13.1,
-                "local_time": 20240130043000,
                 "formatted_datetime": "2024-01-30T04:30:00"
             },
             {
                 "air_temp": 13.5,
                 "dewpt": 13.5,
-                "local_time": 20240130040000,
                 "formatted_datetime": "2024-01-30T04:00:00"
             },
             {
                 "air_temp": 13.3,
                 "dewpt": 13.3,
-                "local_time": 20240130033000,
                 "formatted_datetime": "2024-01-30T03:30:00"
             },
             {
                 "air_temp": 13.2,
                 "dewpt": 13.0,
-                "local_time": 20240130030000,
                 "formatted_datetime": "2024-01-30T03:00:00"
             },
             {
                 "air_temp": 13.4,
                 "dewpt": 13.4,
-                "local_time": 20240130023000,
                 "formatted_datetime": "2024-01-30T02:30:00"
             },
             {
                 "air_temp": 13.4,
                 "dewpt": 13.4,
-                "local_time": 20240130020000,
                 "formatted_datetime": "2024-01-30T02:00:00"
             },
             {
                 "air_temp": 13.5,
                 "dewpt": 13.3,
-                "local_time": 20240130013000,
                 "formatted_datetime": "2024-01-30T01:30:00"
             },
             {
                 "air_temp": 13.6,
                 "dewpt": 13.4,
-                "local_time": 20240130010000,
                 "formatted_datetime": "2024-01-30T01:00:00"
             },
             {
                 "air_temp": 13.9,
                 "dewpt": 13.7,
-                "local_time": 20240130003000,
                 "formatted_datetime": "2024-01-30T00:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 14.3,
-                "local_time": 20240130000000,
                 "formatted_datetime": "2024-01-30T00:00:00"
             },
             {
                 "air_temp": 15.7,
                 "dewpt": 15.7,
-                "local_time": 20240129233000,
                 "formatted_datetime": "2024-01-29T23:30:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 16.4,
-                "local_time": 20240129230000,
                 "formatted_datetime": "2024-01-29T23:00:00"
             },
             {
                 "air_temp": 17.5,
                 "dewpt": 16.5,
-                "local_time": 20240129223000,
                 "formatted_datetime": "2024-01-29T22:30:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 14.2,
-                "local_time": 20240129220000,
                 "formatted_datetime": "2024-01-29T22:00:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 11.5,
-                "local_time": 20240129213000,
                 "formatted_datetime": "2024-01-29T21:30:00"
             },
             {
                 "air_temp": 18.7,
                 "dewpt": 9.2,
-                "local_time": 20240129210000,
                 "formatted_datetime": "2024-01-29T21:00:00"
             },
             {
                 "air_temp": 19.0,
                 "dewpt": 8.9,
-                "local_time": 20240129203000,
                 "formatted_datetime": "2024-01-29T20:30:00"
             },
             {
                 "air_temp": 20.0,
                 "dewpt": 9.3,
-                "local_time": 20240129200000,
                 "formatted_datetime": "2024-01-29T20:00:00"
             },
             {
                 "air_temp": 21.0,
                 "dewpt": 8.3,
-                "local_time": 20240129193000,
                 "formatted_datetime": "2024-01-29T19:30:00"
             },
             {
                 "air_temp": 21.6,
                 "dewpt": 10.1,
-                "local_time": 20240129190000,
                 "formatted_datetime": "2024-01-29T19:00:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 9.7,
-                "local_time": 20240129183000,
                 "formatted_datetime": "2024-01-29T18:30:00"
             },
             {
                 "air_temp": 22.6,
                 "dewpt": 9.7,
-                "local_time": 20240129180000,
                 "formatted_datetime": "2024-01-29T18:00:00"
             },
             {
                 "air_temp": 22.5,
                 "dewpt": 9.0,
-                "local_time": 20240129173000,
                 "formatted_datetime": "2024-01-29T17:30:00"
             },
             {
                 "air_temp": 22.1,
                 "dewpt": 8.6,
-                "local_time": 20240129170000,
                 "formatted_datetime": "2024-01-29T17:00:00"
             },
             {
                 "air_temp": 21.9,
                 "dewpt": 9.4,
-                "local_time": 20240129163000,
                 "formatted_datetime": "2024-01-29T16:30:00"
             },
             {
                 "air_temp": 21.5,
                 "dewpt": 9.1,
-                "local_time": 20240129160000,
                 "formatted_datetime": "2024-01-29T16:00:00"
             },
             {
                 "air_temp": 21.8,
                 "dewpt": 10.3,
-                "local_time": 20240129153000,
                 "formatted_datetime": "2024-01-29T15:30:00"
             },
             {
                 "air_temp": 21.3,
                 "dewpt": 9.9,
-                "local_time": 20240129150000,
                 "formatted_datetime": "2024-01-29T15:00:00"
             },
             {
                 "air_temp": 20.9,
                 "dewpt": 9.8,
-                "local_time": 20240129143000,
                 "formatted_datetime": "2024-01-29T14:30:00"
             },
             {
                 "air_temp": 20.9,
                 "dewpt": 11.8,
-                "local_time": 20240129140000,
                 "formatted_datetime": "2024-01-29T14:00:00"
             },
             {
                 "air_temp": 19.8,
                 "dewpt": 11.8,
-                "local_time": 20240129133000,
                 "formatted_datetime": "2024-01-29T13:30:00"
             },
             {
                 "air_temp": 19.7,
                 "dewpt": 9.9,
-                "local_time": 20240129130000,
                 "formatted_datetime": "2024-01-29T13:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 12.5,
-                "local_time": 20240129123000,
                 "formatted_datetime": "2024-01-29T12:30:00"
             },
             {
                 "air_temp": 19.3,
                 "dewpt": 11.6,
-                "local_time": 20240129120000,
                 "formatted_datetime": "2024-01-29T12:00:00"
             },
             {
                 "air_temp": 18.7,
                 "dewpt": 12.0,
-                "local_time": 20240129113000,
                 "formatted_datetime": "2024-01-29T11:30:00"
             },
             {
                 "air_temp": 18.3,
                 "dewpt": 13.0,
-                "local_time": 20240129110000,
                 "formatted_datetime": "2024-01-29T11:00:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 12.4,
-                "local_time": 20240129103000,
                 "formatted_datetime": "2024-01-29T10:30:00"
             },
             {
                 "air_temp": 17.7,
                 "dewpt": 12.8,
-                "local_time": 20240129100000,
                 "formatted_datetime": "2024-01-29T10:00:00"
             },
             {
                 "air_temp": 16.6,
                 "dewpt": 11.5,
-                "local_time": 20240129093000,
                 "formatted_datetime": "2024-01-29T09:30:00"
             },
             {
                 "air_temp": 16.7,
                 "dewpt": 11.0,
-                "local_time": 20240129090000,
                 "formatted_datetime": "2024-01-29T09:00:00"
             },
             {
                 "air_temp": 16.1,
                 "dewpt": 10.4,
-                "local_time": 20240129083000,
                 "formatted_datetime": "2024-01-29T08:30:00"
             },
             {
                 "air_temp": 15.6,
                 "dewpt": 9.7,
-                "local_time": 20240129080000,
                 "formatted_datetime": "2024-01-29T08:00:00"
             },
             {
                 "air_temp": 15.0,
                 "dewpt": 8.9,
-                "local_time": 20240129073000,
                 "formatted_datetime": "2024-01-29T07:30:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 8.2,
-                "local_time": 20240129070000,
                 "formatted_datetime": "2024-01-29T07:00:00"
             },
             {
                 "air_temp": 14.7,
                 "dewpt": 8.0,
-                "local_time": 20240129063000,
                 "formatted_datetime": "2024-01-29T06:30:00"
             },
             {
                 "air_temp": 14.4,
                 "dewpt": 8.6,
-                "local_time": 20240129060000,
                 "formatted_datetime": "2024-01-29T06:00:00"
             },
             {
                 "air_temp": 14.2,
                 "dewpt": 8.6,
-                "local_time": 20240129053000,
                 "formatted_datetime": "2024-01-29T05:30:00"
             },
             {
                 "air_temp": 14.5,
                 "dewpt": 8.9,
-                "local_time": 20240129050000,
                 "formatted_datetime": "2024-01-29T05:00:00"
             },
             {
                 "air_temp": 13.9,
                 "dewpt": 9.5,
-                "local_time": 20240129043000,
                 "formatted_datetime": "2024-01-29T04:30:00"
             },
             {
                 "air_temp": 14.8,
                 "dewpt": 9.6,
-                "local_time": 20240129040000,
                 "formatted_datetime": "2024-01-29T04:00:00"
             },
             {
                 "air_temp": 14.1,
                 "dewpt": 9.7,
-                "local_time": 20240129033000,
                 "formatted_datetime": "2024-01-29T03:30:00"
             },
             {
                 "air_temp": 14.6,
                 "dewpt": 9.8,
-                "local_time": 20240129030000,
                 "formatted_datetime": "2024-01-29T03:00:00"
             },
             {
                 "air_temp": 14.6,
                 "dewpt": 9.6,
-                "local_time": 20240129023000,
                 "formatted_datetime": "2024-01-29T02:30:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 9.6,
-                "local_time": 20240129020000,
                 "formatted_datetime": "2024-01-29T02:00:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 9.6,
-                "local_time": 20240129013000,
                 "formatted_datetime": "2024-01-29T01:30:00"
             },
             {
                 "air_temp": 15.2,
                 "dewpt": 9.1,
-                "local_time": 20240129010000,
                 "formatted_datetime": "2024-01-29T01:00:00"
             },
             {
                 "air_temp": 15.5,
                 "dewpt": 8.0,
-                "local_time": 20240129003000,
                 "formatted_datetime": "2024-01-29T00:30:00"
             },
             {
                 "air_temp": 15.8,
                 "dewpt": 7.1,
-                "local_time": 20240129000000,
                 "formatted_datetime": "2024-01-29T00:00:00"
             },
             {
                 "air_temp": 16.2,
                 "dewpt": 6.9,
-                "local_time": 20240128233000,
                 "formatted_datetime": "2024-01-28T23:30:00"
             },
             {
                 "air_temp": 16.2,
                 "dewpt": 6.1,
-                "local_time": 20240128230000,
                 "formatted_datetime": "2024-01-28T23:00:00"
             },
             {
                 "air_temp": 16.3,
                 "dewpt": 5.3,
-                "local_time": 20240128223000,
                 "formatted_datetime": "2024-01-28T22:30:00"
             },
             {
                 "air_temp": 16.5,
                 "dewpt": 5.2,
-                "local_time": 20240128220000,
                 "formatted_datetime": "2024-01-28T22:00:00"
             },
             {
                 "air_temp": 16.8,
                 "dewpt": 5.1,
-                "local_time": 20240128213000,
                 "formatted_datetime": "2024-01-28T21:30:00"
             },
             {
                 "air_temp": 16.4,
                 "dewpt": 4.4,
-                "local_time": 20240128210000,
                 "formatted_datetime": "2024-01-28T21:00:00"
             },
             {
                 "air_temp": 17.0,
                 "dewpt": 4.0,
-                "local_time": 20240128203000,
                 "formatted_datetime": "2024-01-28T20:30:00"
             },
             {
                 "air_temp": 18.1,
                 "dewpt": 4.7,
-                "local_time": 20240128200000,
                 "formatted_datetime": "2024-01-28T20:00:00"
             },
             {
                 "air_temp": 18.8,
                 "dewpt": 7.3,
-                "local_time": 20240128193000,
                 "formatted_datetime": "2024-01-28T19:30:00"
             },
             {
                 "air_temp": 19.1,
                 "dewpt": 6.2,
-                "local_time": 20240128190000,
                 "formatted_datetime": "2024-01-28T19:00:00"
             },
             {
                 "air_temp": 19.4,
                 "dewpt": 7.2,
-                "local_time": 20240128183000,
                 "formatted_datetime": "2024-01-28T18:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 8.4,
-                "local_time": 20240128180000,
                 "formatted_datetime": "2024-01-28T18:00:00"
             },
             {
                 "air_temp": 20.5,
                 "dewpt": 9.4,
-                "local_time": 20240128173000,
                 "formatted_datetime": "2024-01-28T17:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 10.2,
-                "local_time": 20240128170000,
                 "formatted_datetime": "2024-01-28T17:00:00"
             },
             {
                 "air_temp": 19.7,
                 "dewpt": 9.9,
-                "local_time": 20240128163000,
                 "formatted_datetime": "2024-01-28T16:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 9.7,
-                "local_time": 20240128160000,
                 "formatted_datetime": "2024-01-28T16:00:00"
             },
             {
                 "air_temp": 19.5,
                 "dewpt": 9.1,
-                "local_time": 20240128153000,
                 "formatted_datetime": "2024-01-28T15:30:00"
             },
             {
                 "air_temp": 20.1,
                 "dewpt": 10.2,
-                "local_time": 20240128150000,
                 "formatted_datetime": "2024-01-28T15:00:00"
             },
             {
                 "air_temp": 18.4,
                 "dewpt": 9.5,
-                "local_time": 20240128143000,
                 "formatted_datetime": "2024-01-28T14:30:00"
             },
             {
                 "air_temp": 18.5,
                 "dewpt": 9.8,
-                "local_time": 20240128140000,
                 "formatted_datetime": "2024-01-28T14:00:00"
             },
             {
                 "air_temp": 17.9,
                 "dewpt": 9.8,
-                "local_time": 20240128133000,
                 "formatted_datetime": "2024-01-28T13:30:00"
             },
             {
                 "air_temp": 18.0,
                 "dewpt": 9.9,
-                "local_time": 20240128130000,
                 "formatted_datetime": "2024-01-28T13:00:00"
             }
         ]
