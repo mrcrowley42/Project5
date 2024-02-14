@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 import django.db.models
 from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 from django.views import generic
 from django.template import loader
@@ -12,6 +12,7 @@ from django.core import serializers
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from logging_module import logging_script
+from django.forms.models import model_to_dict
 
 
 def index(request):
@@ -20,11 +21,28 @@ def index(request):
 
 
 def admin(request):
+    wmo_dict = create_wmo_dict()
+    serialized_dict = {}
+    for key, object in wmo_dict.items():
+        serialized_dict[key] = model_to_dict(object)
+    context = {'data': Source.objects.all(), 'wmo_dict': json.dumps(serialized_dict)}
     if request.method == "POST":
-        print(request.POST.dict())
+        post_data = request.POST.dict()
+        print(post_data)
+        source = Source()
+        source.name = post_data['name']
 
-    context = {'data': Source.objects.all()}
-    return render(request, 'admin.html', context)
+        source.url = post_data['url']
+        print(post_data['wmo_id'].isnumeric())
+
+        source.wmo_id = int(post_data['wmo_id']) if post_data['wmo_id'].isnumeric() else 0
+        if post_data['id']:
+            source.id = int(post_data['id'])
+        print(source)
+        source.save()
+        return redirect('admin')
+
+    return render(request, 'admin.html', context={'data': context})
 
 
 def dev_page(request):
@@ -59,6 +77,8 @@ def user_request(request):
     """
     Request for data from the server
 
+    Data format: [{wmo_id: x, location: y, observations: [{...}, {...}]}, ...]
+
     Parameters:
 
     - wmo = location ID (supports multiple)
@@ -85,8 +105,7 @@ def user_request(request):
         return obs_time if obs_time else default
 
     def convert_wind_dir(wind_dir):
-        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW',
-                         'NNW']
+        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
         if wind_dir in wind_dir_list:
             dir_index = wind_dir_list.index(wind_dir)
             return dir_index * 22.5
@@ -109,8 +128,8 @@ def user_request(request):
             kwargs = dict(wmo=wmo,
                           local_date_time_full__gt=convert_time(after_time),
                           local_date_time_full__lt=convert_time(before_time, True))
-            obs_objects = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
-            wmo_data = [observation_dict(obs) for obs in obs_objects]
+            observations = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
+            wmo_data = [observation_dict(obs) for obs in observations]
             if len(wmo_data) > 0:
                 data.append(dict(
                     wmo_id=wmo,
@@ -123,7 +142,7 @@ def user_request(request):
 
 def user_request_chart(request):
     """
-    Request for formatted chart data
+    Request for formatted chart data (data format same as user request)
 
     Parameters:
 
@@ -134,15 +153,15 @@ def user_request_chart(request):
     wmo_list = request.GET.getlist('wmo')
 
     request.path = '/user'
-    usr_request_data = json.loads(user_request(request).content)
+    data = json.loads(user_request(request).content)
 
-    data = []
     for i, wmo in enumerate(wmo_list):
-        source = Source.objects.get(id=wmo)
-        data.append(dict(wmo_id=wmo, location=source.name, observations=[]))
-        for observation in usr_request_data[i]['observations']:
+        observations = data[i]['observations']
+        data[i]['observations'] = []
+        for observation in observations:
             data_types = {data_type: observation[data_type] for data_type in data_type_list}
-            data_types['date_time'] = observation['formatted_datetime']
+            data_types['local_time'] = observation['local_time']
+            data_types['formatted_datetime'] = observation['formatted_datetime']
             data[i]['observations'].append(data_types)
     return JsonResponse(data, safe=False)
 
@@ -152,14 +171,14 @@ def table_data(request):
     result = user_request(request)
 
     first_wmo = json.loads(result.content)[0]
-    first_obj = first_wmo['observations'][0]
+    first_obs = first_wmo['observations'][0]
 
-    air_temp = first_obj['air_temp']
+    air_temp = first_obs['air_temp']
     location = first_wmo['location']
-    local_time = first_obj['local_time']
-    dew_point = first_obj['dewpt']
-    wind_dir = first_obj['wind_dir']
-    wind_spe = first_obj['wind_speed_kmh']
+    local_time = first_obs['local_time']
+    dew_point = first_obs['dewpt']
+    wind_dir = first_obs['wind_dir']
+    wind_spe = first_obs['wind_speed_kmh']
 
     context = {'data': [['Location', location, 'Air Temperature', air_temp],
                         ['Time', local_time, 'Dew Point', dew_point],

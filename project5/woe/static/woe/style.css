@@ -6,10 +6,20 @@ input {
     padding: 8px;
 }
 
+.editableTable{
+    /* margin-left: auto;
+    margin-right:auto; */
+}
+
 .editableTable td {
 
     padding: 0px;
 }
+
+.editableTable input{
+    /* width: 100%; */
+}
+
 
 html {
 
@@ -19,11 +29,16 @@ html {
 table,
 th,
 td {
-    border: 1px solid rgb(189, 187, 187);
+
     padding: 8px;
     font-size: 1.2rem;
     border-collapse: collapse;
     margin-top: 20px;
+}
+
+td,
+th {
+    border: 1px solid rgb(189, 187, 187);
 }
 
 .navigation {
@@ -130,9 +145,14 @@ select {
     padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: rgb(27, 117, 208);
+    background-color: #007bff;
     color: white;
     cursor: pointer;
+}
+
+.fileUpload button :hover {
+
+    background-color: #0069d9;
 }
 
 .fileUpload {
@@ -142,20 +162,115 @@ select {
 
 .submitButton {
     border: none;
-    
     font-size: 16px;
     border-radius: 4px;
     margin-top: 20px;
     padding: 12px;
     margin-right: 10px;
     margin-bottom: 10px;
-    background-color: rgb(27, 117, 208);
+    background-color: #007bff;
     color: white;
     cursor: pointer;
     display: inline-block;
 }
 
+.submitButton:hover {
+
+    background-color: #0069d9;
+}
+
 h1 {
-line-height: 135%;
+    line-height: 135%;
 
 }
+
+.editableTable {
+
+    
+    margin-top: 20px;
+}
+
+
+
+
+.sourceTable td {
+    padding: 12px;
+    
+
+}
+
+
+.sourceTable th {
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    background-color: white;
+}
+
+.editRow {
+    color: rgb(150, 150, 150);
+
+}
+
+.editRow:hover {
+    color: rgb(50, 50, 50);
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 130px #F0F ; */
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.idColumn {
+
+    visibility: hidden;
+    border: none;
+    display: none;
+}
+

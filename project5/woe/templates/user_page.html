@@ -3,6 +3,13 @@
 {% block scripts %}
 {% load static %}
 <script src="{% static 'woe/Chart.js' %}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", (event)=>{
+    do_ajax(document.getElementById('location_select_opt1'), 'ajax_location_1');
+    do_ajax(document.getElementById('location_select_opt2'), 'ajax_location_2');
+    do_ajax(document.getElementById('location_select_opt3'), 'ajax_location_3');
+});
+</script>
 {% endblock %}
 {% block content %}
 <h1>User Page</h1>
