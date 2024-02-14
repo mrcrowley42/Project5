@@ -81,11 +81,21 @@
             console.log(wmo_id);
             console.log(wmo_mapping[wmo_id]);
             observation = wmo_mapping[wmo_id];
+            document.getElementById("new_wmo").readOnly = true;
             document.getElementById("new_id").value = observation.id;
             document.getElementById("new_name").value = observation.name;
             document.getElementById("new_wmo").value = observation.wmo_id;
             document.getElementById("new_url").value = observation.url;
            }
+        else {
+        document.getElementById("new_wmo").readOnly = false;
+        document.getElementById("new_id").value = "";
+        document.getElementById("new_name").value = "";
+        document.getElementById("new_wmo").value = "";
+        document.getElementById("new_url").value = "";
+        }
+
+
 
         // Get the modal
         var modal = document.getElementById("myModal");
