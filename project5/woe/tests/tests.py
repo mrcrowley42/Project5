@@ -47,19 +47,20 @@ class ApiTests(TestCase):
 
 class UserRequestTests(TestCase):
     """ Tests the user request endpoint is working as expected """
-    with open('woe/tests/data/user_request_data.json', 'r') as fh:
-        user_request_data = json.load(fh)
+    def get_expected(self):
+        with open('woe/tests/data/user_request_data.json', 'r') as fh:
+            return json.load(fh)
 
     def test_basic_user_request(self):
         """ Test response received from `wmo = 2` """
-        response = self.client.get('/user', {'wmo': 2}).json()
+        response = self.client.get('/user', {'wmo': 3}).json()
 
-        self.assertEqual(self.user_request_data, response)
+        self.assertEqual(self.get_expected(), response)
 
     def test_limited_user_request(self):
         """ Test response received from `wmo = 2` and `limit = 3` """
-        response = self.client.get('/user', {'wmo': 2, 'limit': 3}).json()
-        expected = self.user_request_data
+        response = self.client.get('/user', {'wmo': 3, 'limit': 3}).json()
+        expected = self.get_expected()
         expected[0]['observations'] = expected[0]['observations'][:3]  # remove last object
         self.assertEqual(expected, response)
 
@@ -67,7 +68,8 @@ class UserRequestTests(TestCase):
         """ Test response received from `wmo = 2` and `before = 20240201090000` and `after = 20240129090000`
 
         Essentially getting everything before the first `wmo=2` object and after the last `wmo=2` object """
-        response = self.client.get('/user', {'wmo': 2, 'before': 20240201090000, 'after': 20240129090000}).json()
-        expected = self.user_request_data
-        expected[0]['observations'] = expected[0]['observations'][1:3]  # remove first and last object
+        response = self.client.get('/user', {'wmo': 3, 'before': 20240204210000, 'after': 20240128130000}).json()
+        expected = self.get_expected()
+        observations = expected[0]['observations']
+        expected[0]['observations'] = observations[1:len(observations) - 1]  # remove first and last object
         self.assertEqual(expected, response)
