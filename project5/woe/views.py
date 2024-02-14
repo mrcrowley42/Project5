@@ -9,6 +9,7 @@ from django.urls import reverse
 from django.views import generic
 from django.template import loader
 from django.core import serializers
+from scripts import api_functions
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from logging_module import logging_script
@@ -183,3 +184,9 @@ def table_data(request):
                         ['Time', local_time, 'Dew Point', dew_point],
                         ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
     return render(request, 'table_data.html', context)
+
+
+def do_manual_ingest(request):
+    """ calls api_functions to ingest data """
+    api_functions.run()
+    return redirect('admin')
