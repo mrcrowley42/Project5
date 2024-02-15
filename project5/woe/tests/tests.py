@@ -1,5 +1,5 @@
 import json
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.test import TestCase
 from django.core import serializers
 from project5.logging_module import logging_script
@@ -73,3 +73,25 @@ class UserRequestTests(TestCase):
         observations = expected[0]['observations']
         expected[0]['observations'] = observations[1:len(observations) - 1]  # remove first and last object
         self.assertEqual(expected, response)
+
+
+class DBTests(TestCase):
+    """ Tests various features that interact with the database """
+    def test_edit_source(self):
+        new_name = 'newname'
+        source = Source.objects.get(id=1)
+        self.client.post('/admin/', {'id': source.id, 'name': new_name, 'wmo_id': source.wmo_id, 'url': source.url})
+        self.assertEqual(Source.objects.get(id=1).name, new_name)
+
+    def test_delete_source(self):
+        old_sources_len = len(Source.objects.all())
+
+        # removes object 2
+        self.client.post('/remove_from_source_table', {'id': '2'})
+        new_sources_len = len(Source.objects.all())
+        self.assertEqual(old_sources_len - 1, new_sources_len)
+
+        # doesn't remove object 1
+        self.client.post('/remove_from_source_table', {'id': '1'})
+        unchanged_sources_len = len(Source.objects.all())
+        self.assertEqual(unchanged_sources_len, new_sources_len)
