@@ -77,6 +77,17 @@
         <option value="{{loc.id}}">{{loc.location}}</option>
         {% endfor %}
     </select>
+    <select id="type_select_opt1" name="type_select">
+        <option value="dewpt">Dew Point</option>
+        <option value="dewpt">Air Temperature</option>
+        <option value="dewpt">Wind Speed</option>
+        <option value="dewpt">Wind Direction</option>
+    </select>
+    <select id="timeframe_select_opt1" name="timeframe_select">
+        <option value="24hr">Last 24 Hours</option>
+        <option value="week">Last 7 Days</option>
+        <option value="month">Last 30 Days</option>
+    </select>
     <br>
     <canvas id="chart_single" style="width:100%;max-width:700px;"></canvas>
 </div>
