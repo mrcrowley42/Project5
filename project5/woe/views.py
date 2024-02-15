@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import datetime, date
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from scripts import api_functions
@@ -7,6 +7,7 @@ from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_
 from .models import Source, Observation
 from django.forms.models import model_to_dict
 from django.conf import settings
+
 
 
 def index(request):
@@ -145,8 +146,7 @@ def user_request_chart(request):
 
 
 def table_data(request):
-    """Returns html table.
-    """
+    """Returns html table content."""
     request.path = '/user'
     result = user_request(request)
 
@@ -185,3 +185,12 @@ def remove_from_source_table(request):
         pass
 
     return redirect('admin')
+
+
+def load_log(request):
+    """Returns the current days' log contents."""
+    filepath = settings.LOGGING_OUTPUT_PATH + "woe_log_" + str(date.today()) + '.log'
+    with open(filepath) as fp:
+        log_data = fp.read()
+
+    return JsonResponse(log_data, safe=False)

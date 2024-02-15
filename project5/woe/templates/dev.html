@@ -9,35 +9,43 @@
     <button type="submit">Upload Json</button>
 </form>
 
-<button class="submitButton" type="button" onclick="loadLog()">View Log File</button>
+<button class="submitButton" type="button" onclick="showLog()">View Log</button>
 
-<div id="myModal" class="modal">
-    <div class="modal-content">
+<div id="myModal" class="modal" >
+    <div class="modal-content" >
         <span class="close">&times;</span>
 
 
-<textarea id="logContent" readonly style="resize:none; scroll:auto; width: 100%"></textarea>
+        <textarea id="logContent" readonly style="resize:none; scroll:auto; width: 100%; height: 50vh;"></textarea>
 
     </div>
 </div>
 
 <script>
-    function loadLog() {
-        document.getElementById("logContent").value = "hello there";
+    async function loadLog() {
+    var response = await fetch("/load_log");
+    var data = await response.json();
+    return data;
+    }
 
-        var modal = document.getElementById("myModal");
-        var span = document.getElementsByClassName("close")[0];
-        modal.style.display = "block";
-        span.onclick = function() {
+    function showLog() {
+    loadLog().then(function(logData) {
+    document.getElementById("logContent").value = logData;
+
+
+    });
+
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    span.onclick = function() {
+        modal.style.display = "none";
+        }
+    window.onclick = function(event) {
+        if (event.target == modal) {
             modal.style.display = "none";
             }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                }
-            }
-    location.href = '/do_manual_ingest';
-
+        }
 }
 
 
