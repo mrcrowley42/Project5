@@ -31,7 +31,7 @@ class Source(models.Model):
 
 class Observation(models.Model):
     """ Defines the Observations table."""
-    wmo = models.ForeignKey(Source, default=1, on_delete=models.SET_DEFAULT)
+    wmo = models.ForeignKey(Source, default=1, blank=True, on_delete=models.CASCADE)
     local_date_time_full = models.IntegerField(default=None, blank=True, null=True)
     air_temp = models.FloatField(max_length=255, default=None, blank=True, null=True)
     dewpt = models.FloatField(max_length=255, default=None, blank=True, null=True)

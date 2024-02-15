@@ -86,6 +86,9 @@ def run():
         except requests.exceptions.ConnectionError as error:
             logging_script.log(f"Endpoint could not be reached", logging.WARNING)
             continue
+        except requests.exceptions.MissingSchema as error:
+            logging_script.log(f"Endpoint is invalid", logging.DEBUG)
+            continue
 
         obs = enter_observation(data, wmo_dict)
         if obs.md5_hash() not in last_n_entries:

@@ -145,24 +145,29 @@ def user_request_chart(request):
 
 
 def table_data(request):
-    """Returns html table."""
+    """Returns html table.
+    """
     request.path = '/user'
     result = user_request(request)
 
-    first_wmo = json.loads(result.content)[0]
-    first_obs = first_wmo['observations'][0]
+    if len(json.loads(result.content)):
+        first_wmo = json.loads(result.content)[0]
+        first_obs = first_wmo['observations'][0]
 
-    air_temp = first_obs['air_temp']
-    location = first_wmo['location']
-    local_time = first_obs['local_time']
-    dew_point = first_obs['dewpt']
-    wind_dir = first_obs['wind_dir']
-    wind_spe = first_obs['wind_speed_kmh']
+        air_temp = first_obs['air_temp']
+        location = first_wmo['location']
+        local_time = first_obs['local_time']
+        dew_point = first_obs['dewpt']
+        wind_dir = first_obs['wind_dir']
+        wind_spe = first_obs['wind_speed_kmh']
 
-    context = {'data': [['Location', location, 'Air Temperature', air_temp],
-                        ['Time', local_time, 'Dew Point', dew_point],
-                        ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
-    return render(request, 'table_data.html', context)
+        context = {'data': [['Location', location, 'Air Temperature', air_temp],
+                            ['Time', local_time, 'Dew Point', dew_point],
+                            ['Wind Direction', wind_dir, 'Wind Speed', wind_spe]]}
+        return render(request, 'table_data.html', context)
+    else:
+        context = {}
+        return render(request, 'table_data.html', context)
 
 
 def do_manual_ingest(request):
@@ -174,11 +179,9 @@ def do_manual_ingest(request):
 def remove_from_source_table(request):
     """Removes a source entry from the sources table. """
     post_data = int(request.POST['id'])
-    if post_data != 1:
-        # Canberra is currently the default foreign key.
-        try:
-            Source.objects.get(pk=post_data).delete()
-        except KeyError:
-            pass
+    try:
+        Source.objects.get(pk=post_data).delete()
+    except KeyError:
+        pass
 
     return redirect('admin')

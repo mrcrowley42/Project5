@@ -9,5 +9,38 @@
     <button type="submit">Upload Json</button>
 </form>
 
+<button class="submitButton" type="button" onclick="loadLog()">View Log File</button>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+
+
+<textarea id="logContent" readonly style="resize:none; scroll:auto; width: 100%"></textarea>
+
+    </div>
+</div>
+
+<script>
+    function loadLog() {
+        document.getElementById("logContent").value = "hello there";
+
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        modal.style.display = "block";
+        span.onclick = function() {
+            modal.style.display = "none";
+            }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                }
+            }
+    location.href = '/do_manual_ingest';
+
+}
+
+
+</script>
 
 {% endblock %}
