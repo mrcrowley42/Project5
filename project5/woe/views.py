@@ -1,27 +1,22 @@
 import json
-import time
 from datetime import datetime
-import logging
-import django.db.models
-from django.http import HttpResponseRedirect, HttpResponse, JsonResponse
-from django.shortcuts import get_object_or_404, render, redirect
-from django.urls import reverse
-from django.views import generic
-from django.template import loader
-from django.core import serializers
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
 from scripts import api_functions
 from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
-from logging_module import logging_script
 from django.forms.models import model_to_dict
+from django.conf import settings
 
 
 def index(request):
+    """View for the home page."""
     context = {}
     return render(request, 'index.html', context)
 
 
 def admin(request):
+    """View for the admin page."""
     wmo_dict = create_wmo_dict()
     serialized_dict = {}
     for key, object in wmo_dict.items():
@@ -47,6 +42,7 @@ def admin(request):
 
 
 def dev_page(request):
+    """View for the developer page."""
     context = {}
     if request.method == "POST":
         wmo_dict = create_wmo_dict()
@@ -67,6 +63,7 @@ def dev_page(request):
 
 
 def user_page(request):
+    """View for the user page."""
     locations = [{'id': source.id, 'location': source.name} for source in Source.objects.all()]
     context = {
         'locations': locations
@@ -88,7 +85,6 @@ def user_request(request):
     - limit = limit results by amount (must be a number)
     """
     data = []
-    datetime_format = '%Y%m%d%H%M%S'
 
     wmo_list: list = request.GET.getlist('wmo')
     before_time = request.GET.get('before')
@@ -102,27 +98,8 @@ def user_request(request):
     def convert_time(obs_time, before=False):
         default = 0
         if before:
-            default = datetime.strftime(datetime.now(), datetime_format)
+            default = datetime.strftime(datetime.now(), settings.DATETIME_FORMAT)
         return obs_time if obs_time else default
-
-    def convert_wind_dir(wind_dir):
-        wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW']
-        if wind_dir in wind_dir_list:
-            dir_index = wind_dir_list.index(wind_dir)
-            return dir_index * 22.5
-        return 0
-
-    def observation_dict(obs: Observation) -> dict:
-        """ Returns the necessary items of an Observation in a dictionary """
-        return dict(
-            id=obs.id,
-            local_time=obs.local_date_time_full,
-            formatted_datetime=datetime.strptime(str(obs.local_date_time_full), datetime_format),
-            air_temp=obs.air_temp,
-            dewpt=obs.dewpt,
-            wind_dir=convert_wind_dir(obs.wind_dir),
-            wind_speed_kmh=obs.wind_spd_kmh
-        )
 
     if len(wmo_list) > 0:
         for wmo in wmo_list:
@@ -130,7 +107,7 @@ def user_request(request):
                           local_date_time_full__gt=convert_time(after_time),
                           local_date_time_full__lt=convert_time(before_time, True))
             observations = Observation.objects.all().filter(**kwargs).order_by('-local_date_time_full')
-            wmo_data = [observation_dict(obs) for obs in observations]
+            wmo_data = [obs.to_dictionary() for obs in observations]
             if len(wmo_data) > 0:
                 data.append(dict(
                     wmo_id=wmo,
@@ -168,6 +145,7 @@ def user_request_chart(request):
 
 
 def table_data(request):
+    """Returns html table."""
     request.path = '/user'
     result = user_request(request)
 
@@ -188,7 +166,7 @@ def table_data(request):
 
 
 def do_manual_ingest(request):
-    """ calls api_functions to ingest data """
+    """Calls api_functions' run method to manually ingest data."""
     api_functions.run()
     return redirect('admin')
 
@@ -197,12 +175,10 @@ def remove_from_source_table(request):
     """Removes a source entry from the sources table. """
     post_data = int(request.POST['id'])
     if post_data != 1:
-        # Canberra is the default foreign key.
-
+        # Canberra is currently the default foreign key.
         try:
             Source.objects.get(pk=post_data).delete()
         except KeyError:
             pass
-
 
     return redirect('admin')
