@@ -54,8 +54,6 @@ class Observation(models.Model):
 
     def to_dictionary(self) -> dict:
         """Returns the necessary items of an Observation into a dictionary."""
-        datetime_format = '%Y%m%d%H%M%S'
-
         def convert_wind_dir(wind_dir):
             """Converts a wind direction to its numerical value."""
             wind_dir_list = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW',
