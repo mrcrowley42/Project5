@@ -26,7 +26,7 @@ class ApiTests(TestCase):
 
     def test_duplicates(self):
         """Test that duplicate entries when loading json from file are ignored."""
-        filenames = ['woe/tests/data/duplicates.json',]  # Expected number of entries is 2.
+        filenames = ['woe/tests/data/duplicates.json', ]  # Expected number of entries is 2.
         wmo_dict = create_wmo_dict()
         data_collection = load_json_from_file(filenames)
         start_value = len(Observation.objects.all())

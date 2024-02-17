@@ -48,7 +48,7 @@ def retrieve_urls() -> list:
     return urls
 
 
-def pull_data(url: str) -> list:
+def pull_data(url: str) -> dict:
     """Function that pulls the first row of data from the BOM API for the given URL, and returns that row."""
     api_data = requests.get(url).json()
     data_set = [line for line in api_data['observations']['data']][0]

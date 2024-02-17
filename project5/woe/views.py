@@ -1,5 +1,7 @@
 import json
 from datetime import datetime, date
+
+import django.db.models
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from scripts import api_functions
@@ -7,7 +9,7 @@ from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_
 from .models import Source, Observation
 from django.forms.models import model_to_dict
 from django.conf import settings
-
+from django.core.exceptions import ObjectDoesNotExist
 
 
 def index(request):
@@ -20,8 +22,8 @@ def admin(request):
     """View for the admin page."""
     wmo_dict = create_wmo_dict()
     serialized_dict = {}
-    for key, object in wmo_dict.items():
-        serialized_dict[key] = model_to_dict(object)
+    for key, obj in wmo_dict.items():
+        serialized_dict[key] = model_to_dict(obj)
     context = {'data': Source.objects.all(), 'wmo_dict': json.dumps(serialized_dict)}
     if request.method == "POST":
         post_data = request.POST.dict()
@@ -183,12 +185,14 @@ def remove_from_source_table(request):
         Source.objects.get(pk=post_data).delete()
     except KeyError:
         pass
+    except ObjectDoesNotExist:
+        pass
 
     return redirect('admin')
 
 
 def load_log(request):
-    """Returns the current days' log contents."""
+    """Returns the contents of the current days' log."""
     filepath = settings.LOGGING_OUTPUT_PATH + "woe_log_" + str(date.today()) + '.log'
     with open(filepath) as fp:
         log_data = fp.read()
