@@ -10,6 +10,7 @@ from .models import Source, Observation
 from django.forms.models import model_to_dict
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
+from .tasks import update_data
 
 
 def index(request):
@@ -174,7 +175,8 @@ def table_data(request):
 
 def do_manual_ingest(request):
     """Calls api_functions' run method to manually ingest data."""
-    api_functions.run()
+    # api_functions.run()
+    update_data()
     return redirect('admin')
 
 

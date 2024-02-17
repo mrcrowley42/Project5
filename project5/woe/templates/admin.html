@@ -4,7 +4,7 @@
 {% block content %}
 <h1>Admin Page</h1>
 <h2>Sources table</h2>
-<table id="myTable" class="sourceTable">
+<table class="sourceTable" id="myTable">
     <tr>
         <th class="idColumn">ID</th>
         <th>Name</th>
@@ -19,16 +19,16 @@
         <td>{{source.name}}</td>
         <td>{{source.wmo_id}}</td>
         <td>{{source.url}}</td>
-        <td title="Edit" onclick="editSource(this)" class="editRow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon"
-                 viewBox="0 0 16 16">
+        <td class="editRow" onclick="editSource(this)" title="Edit">
+            <svg class="icon" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
+                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
             </svg>
         </td>
-        <td title="Remove" onclick="removeSource(this)"
-            class="editRow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon"
-                 viewBox="0 0 16 16">
+        <td class="editRow" onclick="removeSource(this)"
+            title="Remove">
+            <svg class="icon" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
+                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                 <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
             </svg>
@@ -36,20 +36,20 @@
     </tr>
     {% endfor %}
 </table>
-<button title="Click to add a new data source" class="submitButton" type="button" onclick="editSource()">Add Source +
+<button class="submitButton" onclick="editSource()" title="Click to add a new data source" type="button">Add Source +
 </button>
-<button title="Click to ingest new data from sources" class="submitButton" type="button" onclick="manualIngest()">Do
+<button class="submitButton" onclick="manualIngest()" title="Click to ingest new data from sources" type="button">Do
     Manual Ingest
 </button>
-<button title="Click to Reload the Webserver" class="submitButton" type="button" onclick="reloadServer()">Reload
+<button class="submitButton" onclick="reloadServer()" title="Click to Reload the Webserver" type="button">Reload
     Server
 </button>
 <!--Popup Window-->
 
-<div id="myModal" class="modal">
+<div class="modal" id="myModal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <form class="test" name="hi" method="post" enctype="multipart/form-data" action="">
+        <form action="" class="test" enctype="multipart/form-data" method="post" name="hi">
             {% csrf_token %}
             <table class="editableTable" id="editSourceTable">
                 <tr>
@@ -85,11 +85,8 @@
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         request.send("id=" + source_id);
 
-
     }
 }
-
-
 
     function editSource(element=false) {
         var wmo_mapping = {{ data.wmo_dict| safe }};
@@ -105,15 +102,14 @@
             document.getElementById("new_url").value = observation.url;
            }
         else {
-        document.getElementById("new_wmo").readOnly = false;
-        document.getElementById("new_id").value = "";
-        document.getElementById("new_name").value = "";
-        document.getElementById("new_wmo").value = "";
-        document.getElementById("new_url").value = "";
+            document.getElementById("new_wmo").readOnly = false;
+            document.getElementById("new_id").value = "";
+            document.getElementById("new_name").value = "";
+            document.getElementById("new_wmo").value = "";
+            document.getElementById("new_url").value = "";
         }
 
         openModalPopup("myModal", "close");
-
 
     }
 

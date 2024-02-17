@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     {% load static %}
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <link href="{% static 'favicon.ico' %}" rel="shortcut icon" type="image/png"/>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     {% block scripts %}{% endblock %}
     <script src="{% static 'woe/WOE_JS.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'woe/style.css' %}">
+    <link href="{% static 'woe/style.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class="navigation">
