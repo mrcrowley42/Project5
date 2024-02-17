@@ -8,6 +8,7 @@ from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from .tasks import update_data_task
 from helpers.views_functions import *
+from helpers.api_functions import *
 
 
 def index(request):
