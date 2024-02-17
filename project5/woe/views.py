@@ -46,7 +46,20 @@ def dev_page(request):
     """View for the developer page."""
     context = {}
     if request.method == "POST":
-        upload_json(request)
+        # Take files uploaded by the user and saves the compatible json to database.
+        wmo_dict = create_wmo_dict()
+        try:
+            json_files = [file for file in request.FILES.getlist('document') if file.content_type == "application/json"]
+            for json_file in json_files:
+                file_contents = json_file.file.read()
+                observations = load_json_from_memory(file_contents)
+                for observation in observations:
+                    obs = enter_observation(observation, wmo_dict)
+                    obs.save()
+        # IMPROVE THIS
+        except Exception as error:
+            print(type(error).__name__, error.args)
+            pass
 
     return render(request, 'dev.html', context)
 
@@ -83,12 +96,6 @@ def user_request(request):
         limit = max(0, int(limit))
     except ValueError as e:
         raise ValueError(f"Parameter 'limit' ({limit}) is not a valid number.\n{e}")
-
-    def convert_time(obs_time, before=False):
-        default = 0
-        if before:
-            default = datetime.strftime(datetime.now(), settings.DATETIME_FORMAT)
-        return obs_time if obs_time else default
 
     if len(wmo_list) > 0:
         for wmo in wmo_list:
