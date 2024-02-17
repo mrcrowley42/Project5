@@ -1,10 +1,10 @@
 from celery import shared_task
-from scripts import api_functions
+from helpers import api_functions
 
 
 @shared_task
-def update_data():
+def update_data_task():
     print("Updating data!")
-    # Update the data via scripts.api_functions
-    api_functions.run()
+    # Update the data via api_functions.update_data
+    api_functions.update_data()
     return True

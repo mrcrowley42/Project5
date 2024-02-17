@@ -68,8 +68,8 @@ def enter_observation(observation: dict, wmo_dict: dict) -> Observation:
     return obs
 
 
-def run():
-    """The function that runs when the script is executed.
+def update_data():
+    """
 
     Retrieves the URLs for each source in the database, then pulls the most recent observation for each one.
     Object is then saved to database if it isn't present in the last 100 entries of the db."""

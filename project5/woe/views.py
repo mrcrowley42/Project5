@@ -1,16 +1,13 @@
 import json
 from datetime import datetime, date
-
-import django.db.models
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
-from scripts import api_functions
-from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from django.forms.models import model_to_dict
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
-from .tasks import update_data
+from .tasks import update_data_task
+from helpers.views_functions import *
 
 
 def index(request):
@@ -49,19 +46,7 @@ def dev_page(request):
     """View for the developer page."""
     context = {}
     if request.method == "POST":
-        wmo_dict = create_wmo_dict()
-        try:
-            json_files = [file for file in request.FILES.getlist('document') if file.content_type == "application/json"]
-            for json_file in json_files:
-                file_contents = json_file.file.read()
-                observations = load_json_from_memory(file_contents)
-                for observation in observations:
-                    obs = enter_observation(observation, wmo_dict)
-                    obs.save()
-        # IMPROVE THIS
-        except Exception as error:
-            print(type(error).__name__, error.args)
-            pass
+        upload_json(request)
 
     return render(request, 'dev.html', context)
 
@@ -176,7 +161,7 @@ def table_data(request):
 def do_manual_ingest(request):
     """Calls api_functions' run method to manually ingest data."""
     # api_functions.run()
-    update_data()
+    update_data_task()
     return redirect('admin')
 
 

@@ -1,10 +1,5 @@
-import json
-from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.test import TestCase
-from django.core import serializers
-from project5.logging_module import logging_script
-from woe.models import Source, Observation
-from project5.scripts.api_functions import *
+from helpers.api_functions import *
 
 
 class ApiTests(TestCase):
