@@ -1,16 +1,14 @@
 import json
 from datetime import datetime, date
-
-import django.db.models
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
-from scripts import api_functions
-from scripts.api_functions import load_json_from_memory, create_wmo_dict, enter_observation
 from .models import Source, Observation
 from django.forms.models import model_to_dict
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
-from .tasks import update_data
+from .tasks import update_data_task
+from helpers.views_functions import *
+from helpers.api_functions import *
 
 
 def index(request):
@@ -49,6 +47,7 @@ def dev_page(request):
     """View for the developer page."""
     context = {}
     if request.method == "POST":
+        # Take files uploaded by the user and saves the compatible json to database.
         wmo_dict = create_wmo_dict()
         try:
             json_files = [file for file in request.FILES.getlist('document') if file.content_type == "application/json"]
@@ -98,12 +97,6 @@ def user_request(request):
         limit = max(0, int(limit))
     except ValueError as e:
         raise ValueError(f"Parameter 'limit' ({limit}) is not a valid number.\n{e}")
-
-    def convert_time(obs_time, before=False):
-        default = 0
-        if before:
-            default = datetime.strftime(datetime.now(), settings.DATETIME_FORMAT)
-        return obs_time if obs_time else default
 
     if len(wmo_list) > 0:
         for wmo in wmo_list:
@@ -176,7 +169,7 @@ def table_data(request):
 def do_manual_ingest(request):
     """Calls api_functions' run method to manually ingest data."""
     # api_functions.run()
-    update_data()
+    update_data_task()
     return redirect('admin')
 
 

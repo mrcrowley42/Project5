@@ -50,7 +50,7 @@ def retrieve_urls() -> list:
 
 def pull_data(url: str) -> dict:
     """Function that pulls the first row of data from the BOM API for the given URL, and returns that row."""
-    api_data = requests.get(url).json()
+    api_data = requests.get(url, timeout=15).json()
     data_set = [line for line in api_data['observations']['data']][0]
     return data_set
 
@@ -68,8 +68,8 @@ def enter_observation(observation: dict, wmo_dict: dict) -> Observation:
     return obs
 
 
-def run():
-    """The function that runs when the script is executed.
+def update_data():
+    """
 
     Retrieves the URLs for each source in the database, then pulls the most recent observation for each one.
     Object is then saved to database if it isn't present in the last 100 entries of the db."""

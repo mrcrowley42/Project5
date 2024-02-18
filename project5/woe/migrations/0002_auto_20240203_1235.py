@@ -2,7 +2,8 @@ import os
 import glob
 import csv
 from django.db import migrations
-from scripts import api_functions
+from helpers import api_functions
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # Establish a relative filepath
 
 
