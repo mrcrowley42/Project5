@@ -1,3 +1,11 @@
+:root{
+--bg-color:  rgb(249, 249, 252);
+--text-color: rgb(30, 30, 30);
+--content-bg:  rgb(255, 255, 255);
+--content-border: #DDD;
+
+}
+
 input {
     background-color: transparent;
     font-size: 16px;
@@ -23,7 +31,7 @@ input {
 
 html {
 
-    color: rgb(30, 30, 30);
+    color: var(--text-color);
 }
 
 table,
@@ -74,18 +82,18 @@ table tr:nth-child(even) {
 body {
     font-family: sans-serif;
     margin: 0px;
-    background-color: rgb(249, 249, 252);
+    background-color: var(--bg-color);
 }
 
 
 .content {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--content-bg);
     font-size: 16px;
     line-height: 135%;
     margin: 20px;
     /* margin-top: 113px; */
     border-radius: 10px;
-    border: 1px solid #DDD;
+    border: 1px solid var(--content-border);
     padding: 20px;
 }
 
@@ -139,7 +147,7 @@ select {
 
 .fileUpload button {
     border: none;
-    font-size: 16px;
+    font-size: 162px;
     border-radius: 4px;
     margin-top: 20px;
     padding: 12px;

@@ -26,11 +26,13 @@
     }
 
     function showLog() {
+    openModalPopup("myModal", "close");
+
     loadLog().then(function(logData) {
     document.getElementById("logContent").value = logData;
     });
 
-    openModalPopup("myModal", "close");
+
 }
 </script>
 
