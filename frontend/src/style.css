@@ -1,0 +1,283 @@
+input {
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    margin: 0px;
+    padding: 8px;
+}
+
+.editableTable{
+    /* margin-left: auto;
+    margin-right:auto; */
+}
+
+.editableTable td {
+
+    padding: 0px;
+}
+
+.editableTable input{
+    /* width: 100%; */
+}
+
+
+html {
+
+    color: rgb(30, 30, 30);
+}
+
+table,
+th,
+td {
+
+    padding: 8px;
+    font-size: 1.2rem;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td,
+th {
+    border: 1px solid rgb(189, 187, 187);
+}
+
+.navigation {
+    padding: 20px;
+    padding-bottom: 10px;
+    background-color: #e8e8e8;
+    /* position: fixed; */
+    /* width: 100%; */
+    display: block;
+    overflow: hidden;
+    top: 0px;
+
+}
+
+.navigation a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-title {
+    font-weight: bold;
+}
+
+
+table tr:nth-child(odd) {
+    background-color: rgb(249, 249, 252);
+}
+
+table tr:nth-child(even) {
+    background-color: #FFF;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: rgb(249, 249, 252);
+}
+
+
+.content {
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 135%;
+    margin: 20px;
+    /* margin-top: 113px; */
+    border-radius: 10px;
+    border: 1px solid #DDD;
+    padding: 20px;
+}
+
+.navigation button {
+    font-size: 18px;
+    /* border: 1px solid rgb(212, 206, 206); */
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #e8e8e8;
+}
+
+.navigation button:hover {
+    background-color: rgb(151, 84, 210);
+    color: white;
+}
+
+select {
+    margin-top: 5px;
+    padding: 8px;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+.fileUpload button,
+.fileUpload input {
+    font-size: inherit;
+    cursor: pointer;
+
+}
+
+.fileUpload input::file-selector-button {
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 6px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* border: none;
+    font-size: 16px;    font-weight: 400;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(27, 117, 208);
+    color: white;
+    cursor: pointer; */
+}
+
+.fileUpload button {
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0069d9;
+}
+
+.fileUpload {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.submitButton {
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.submitButton:hover {
+
+    background-color: #0069d9;
+}
+
+h1 {
+    line-height: 135%;
+
+}
+
+.editableTable {
+
+    
+    margin-top: 20px;
+}
+
+
+
+
+.sourceTable td {
+    padding: 12px;
+    
+
+}
+
+
+.sourceTable th {
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    background-color: white;
+}
+
+.editRow {
+    color: rgb(150, 150, 150);
+
+
+}
+
+.editRow:hover {
+    color: rgb(50, 50, 50);
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 130px #F0F ; */
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.idColumn {
+
+    visibility: hidden;
+    border: none;
+    display: none;
+}
+
+.icon{
+display: inline-block;
+vertical-align: -.125em;
+fill: currentcolor;
+
+}
+
