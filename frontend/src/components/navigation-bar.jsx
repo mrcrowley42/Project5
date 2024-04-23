@@ -16,6 +16,9 @@ export default function NavBar(){
         <a href="/user">
             <button>User</button>
         </a>
+        <a href="/other">
+            <button>Other</button>
+        </a>
     </div>
 
     
