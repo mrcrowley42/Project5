@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route, NavLink, Outlet } from 'react-router-dom'
 
 function Index() {
   return (
-    <div className='content'>
+    <>
       <ExampleList />
     <MyButton multiplier={3} />
     <MyButton multiplier={13} />
@@ -15,7 +15,7 @@ function Index() {
 
 
       <MyButton />
-    </div>
+    </>
   )
 }
 
@@ -25,16 +25,39 @@ function Other() {
   )
 }
 
+function Dev() {
+  return (
+    <div>dev page!</div>
+  )
+}
+
+
+function Admin() {
+  return (
+    <div>admin page!</div>
+  )
+}
+
+function User() {
+  return (
+    <div>user page!</div>
+  )
+}
+
 export default function App() {
   return (
       <BrowserRouter>
         <div className='App'>
           <NavBar />
+          <div className='content'>
 
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/other" element={<Other />} />
+            <Route path="/dev" element={<Dev />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/user" element={<User />} />
           </Routes>
+      </div>
       </div>
       </BrowserRouter>
   );

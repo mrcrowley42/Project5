@@ -4,18 +4,18 @@ export default function NavBar(){
     return (
     
         <div className="navigation">
-        {/* <a href="{% url 'index' %}"> */}
+        <a href="/">
             <button className="nav-title">WOE</button>
-        {/* </a> */}
-        {/* <a href="{% url 'admin' %}"> */}
+        </a>
+        <a href="/admin">
             <button>Admin</button>
-        {/* </a> */}
-        {/* <a href="{% url 'dev_page' %}"> */}
+        </a>
+        <a href="/dev">
             <button>Dev</button>
-        {/* </a> */}
-        {/* <a href="{% url 'user_page' %}"> */}
+        </a>
+        <a href="/user">
             <button>User</button>
-        {/* </a> */}
+        </a>
     </div>
 
     
