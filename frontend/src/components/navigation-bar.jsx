@@ -5,7 +5,7 @@ export default function NavBar(){
     
         <div className="navigation">
         {/* <a href="{% url 'index' %}"> */}
-            <button class="nav-title">WOE</button>
+            <button className="nav-title">WOE</button>
         {/* </a> */}
         {/* <a href="{% url 'admin' %}"> */}
             <button>Admin</button>

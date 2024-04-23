@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_celery_beat'
+    'django_celery_beat',
+    'rest_framework',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'project5_dj.urls'
@@ -137,3 +141,5 @@ DEBUG_LEVEL = 'debug'
 LOGGING_OUTPUT_PATH = "logging_module/logs/"
 
 DATETIME_FORMAT = '%Y%m%d%H%M%S'
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -67,7 +67,7 @@ function show_selected(element) {
 
 function do_ajax(dropdown, div_id) {
     let xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
+    xhttp.onreadystatechange examples.map(example =>= function () {
     if (this.readyState === 4 && this.status === 200) {
         document.getElementById(div_id).innerHTML = '' + this.responseText;
     }
