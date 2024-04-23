@@ -15,11 +15,11 @@ export default function WeatherTable(){
         .catch(err => console.log(err))},[])
 
 const rows = examples.map(example =>
-        
+
     //key={example.id}
     <tr >
         <td>{example.wmo_id}</td>
-        <td>{example.email}</td>
+        <td>{example.location}</td>
         <td>{example.website}</td>
         <td>{example.id}</td>
     </tr>);
