@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import axios from 'axios';
 
 export default function WeatherTable(){
 
@@ -48,38 +47,3 @@ export default function WeatherTable(){
         </>
     );
 }
-
-
-
-
-
-
-//     const [examples, setWeather] = useState([]);
-
-    
-//     useEffect(() => {
-
-//         axios.get('')
-//       .then(response => {
-//         setWeather(response.data.observations);
-//       })
-//       .catch(error => {
-//         console.log(error);
-//       });
-//   }, []);
-
-
-// // const rows = examples.map(example =>
-
-// //     //key={example.id}
-// //     <tr >
-// //         <td>{example.wmo_id}</td>
-// //         <td>{example.name}</td>
-// //         <td>{example.website}</td>
-// //         <td>{example.id}</td>
-// //     </tr>);
-
-// return (
-//    
-//     );
-// }

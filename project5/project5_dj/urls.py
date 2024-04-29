@@ -21,6 +21,7 @@ from woe import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', views.admin, name='admin'),
+    path('admin_api/', views.admin_api, name='admin_api'),
     path('dev/', views.dev_page, name='dev_page'),
     path('user/', views.user_page, name='user_page'),
     path('load_log', views.load_log, name='load_log'),
