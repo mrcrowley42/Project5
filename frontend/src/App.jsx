@@ -4,20 +4,11 @@ import MyButton from './components/example-button';
 import NavBar from './components/navigation-bar';
 import WeatherTable from './components/weather-table';
 import { BrowserRouter, Routes, Route, NavLink, Outlet } from 'react-router-dom';
+
+import Index from './pages/Index';
 import Dev from './pages/Dev';
 import Admin from './pages/Admin';
 import User from './pages/User';
-
-function Index() {
-  return (
-    <>
-      <h1>Home Page</h1>
-      <p>
-        Weather observations borrowed (stolen) from the BOM and displayed in new, life-changing ways.
-      </p>
-    </>
-  )
-}
 
 function Other() {
   return (
