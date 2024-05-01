@@ -66,7 +66,7 @@ def admin_api(request):
         source.save()
         return redirect('admin')
 
-    return JsonResponse(context['wmo_dict'], safe=False)
+    return JsonResponse(serialized_dict, safe=False)
 
 def dev_page(request):
     """View for the developer page."""
