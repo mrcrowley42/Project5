@@ -15,8 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from woe import views
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'admins', views.SourceView, 'admin')
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -31,4 +35,5 @@ urlpatterns = [
     path('table_data', views.table_data, name="table_data"),
     path('remove_from_source_table', views.remove_from_source_table, name='delete_source'),
     path('django_admin/', admin.site.urls),
+    path('api/', include(router.urls)),
 ]

@@ -142,4 +142,8 @@ LOGGING_OUTPUT_PATH = "logging_module/logs/"
 
 DATETIME_FORMAT = '%Y%m%d%H%M%S'
 
-CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+     'http://localhost:3000'
+]

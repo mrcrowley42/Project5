@@ -9,6 +9,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from .tasks import update_data_task
 from helpers.views_functions import *
 from helpers.api_functions import *
+from .serializers import SourceSerializer
+from rest_framework import viewsets
 
 
 def index(request):
@@ -67,6 +69,7 @@ def admin_api(request):
         return redirect('admin')
 
     return JsonResponse(serialized_dict, safe=False)
+    
 
 def dev_page(request):
     """View for the developer page."""
@@ -218,3 +221,7 @@ def load_log(request):
         log_data = fp.read()
 
     return JsonResponse(log_data, safe=False)
+
+class SourceView(viewsets.ModelViewSet):
+    serializer_class = SourceSerializer
+    queryset = Source.objects.all()
