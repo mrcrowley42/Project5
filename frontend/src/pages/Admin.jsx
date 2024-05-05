@@ -8,16 +8,22 @@ export default function Admin() {
 
 
   function manualIngest() {
-   
-   
+
+
     alert('Ingesting data...')
-}
+  }
+
+  function addEntry() {
+    setVisible(true);
+
+
+  }
 
   function Content() {
 
     return (
       <>
-        <form action="" className="test" encType="multipart/form-data" method="post" name="hi">
+        <form action="http://127.0.0.1:8000/admin/" className="test" encType="multipart/form-data" method="post" name="hi">
 
           <table className="editableTable" id="editSourceTable">
             <thead>
@@ -39,7 +45,6 @@ export default function Admin() {
           </table>
           <button className="submitButton" type="submit">Update</button>
         </form>
-        <h3>{stuff}</h3>
       </>
     )
   }
@@ -48,6 +53,27 @@ export default function Admin() {
     setVisible(true);
     var value = e.target.closest('tr').rowIndex - 1;
     setStuff(value);
+
+  }
+
+  function deleteEntry(e, id) {
+    var value = e.target.closest('tr').rowIndex - 1;
+    var sourceId = sources[value].id;
+    console.log(sourceId);
+    // if (confirm("Are you sure you want to delete this entry?")){
+    //   console.log("yes");
+    // }
+    var request = new XMLHttpRequest();
+
+    // https://www.youtube.com/watch?v=k6ELzQgPHMM
+
+    // request.ready
+    // url = "{% url 'delete_source' %}" ;
+    // request.open("POST", url) ;
+    // var CSRF_TOKEN = '{{ csrf_token }}';
+    // request.setRequestHeader("X-CSRFToken", CSRF_TOKEN);
+    // request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    // request.send("id=" + source_id);
 
   }
 
@@ -113,6 +139,9 @@ export default function Admin() {
                       </svg>
                     </td>
                     <td className="editRow"
+                      onClick={(e) => {
+                        deleteEntry(e, 1);
+                      }}
                       title="Remove">
                       <svg className="icon" height="16" viewBox="0 0 16 16" width="16"
                         xmlns="http://www.w3.org/2000/svg">
@@ -129,8 +158,7 @@ export default function Admin() {
         )
       }
 
-      <button className="submitButton">Add Source +
-      </button>
+      <button className="submitButton" onClick={(e) => { addEntry(e); }}>Add Source +</button>
       <> </>
       <button className="submitButton" onClick={manualIngest} title="Click to ingest new data from sources" type="button">Do
         Manual Ingest

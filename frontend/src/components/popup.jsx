@@ -5,7 +5,6 @@ export default function PopUp(props) {
             <div className="modal-content">
                 <span onClick={props.close} className="close">&times;</span>
                 {props.content}
-                <p> where is the window?</p>
             </div>
         </div>
 
