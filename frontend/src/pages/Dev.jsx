@@ -1,24 +1,35 @@
 import PopUp from "../components/popup"
 import React, { useState, useEffect } from "react";
+import axios from 'axios';
 
 
-function Content() {
-
-  return (
-    <>
-      <textarea id="logContent" readOnly style={{ resize: "none", scroll: "auto", width: "100%", height: "50vh" }} ></textarea>
-    </>
-  )
-}
 
 export default function Dev() {
-  const [visible, setVisible] = useState(false)
+
+  
+  const [visible, setVisible] = useState(false);
+  const [logData, loadLog] = useState("");
 
   function openModal() {
     setVisible(true);
+    axios.get("http://127.0.0.1:8000//load_log")
+      .then(response => response.data)
+      .then(json => {
+        loadLog(json)})
+    
+    
   }
   function closeModal() {
     setVisible(false);
+  }
+
+  function Content() {
+
+    return (
+      <>
+        <textarea id="logContent" value={logData} readOnly style={{ resize: "none", scroll: "auto", width: "100%", height: "50vh" }} ></textarea>
+      </>
+    )
   }
 
   return (
